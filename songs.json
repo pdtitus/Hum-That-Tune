@@ -3,30 +3,40 @@
     "title": "Don't Stop Believin'",
     "artist": "Journey",
     "year": 1981,
+    "decade": "80s",
+    "genre": "Rock",
     "difficulty": "Easy"
   },
   {
     "title": "Billie Jean",
     "artist": "Michael Jackson",
     "year": 1983,
+    "decade": "80s",
+    "genre": "Pop",
     "difficulty": "Easy"
   },
   {
-    "title": "Sweet Child O' Mine",
-    "artist": "Guns N' Roses",
-    "year": 1987,
-    "difficulty": "Medium"
+    "title": "Hotel California",
+    "artist": "Eagles",
+    "year": 1977,
+    "decade": "70s",
+    "genre": "Rock",
+    "difficulty": "Easy"
   },
   {
     "title": "Take On Me",
     "artist": "a-ha",
     "year": 1985,
+    "decade": "80s",
+    "genre": "New Wave",
     "difficulty": "Easy"
   },
   {
     "title": "Tainted Love",
     "artist": "Soft Cell",
     "year": 1981,
+    "decade": "80s",
+    "genre": "New Wave",
     "difficulty": "Medium"
   }
 ]

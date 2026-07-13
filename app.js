@@ -1,75 +1,239 @@
 let songs = [];
+
+let deck = [];
+
 let currentSong = null;
 
+let currentTeam = 1;
 
-// Load the song database
+let numberOfTeams = 2;
+
+let selectedDecade = "random";
+
+let selectedDifficulty = "Mixed";
+
+
+// Load songs
 fetch("songs.json")
     .then(response => response.json())
     .then(data => {
+
         songs = data;
+
         console.log("Songs loaded:", songs.length);
-    })
-    .catch(error => {
-        console.error("Error loading songs:", error);
+
     });
 
 
-// Select a random song
-function getRandomSong() {
 
-    const randomIndex = Math.floor(Math.random() * songs.length);
+// Screen controls
 
-    currentSong = songs[randomIndex];
+function showScreen(screenID) {
 
-    return currentSong;
+    document
+        .getElementById("setupScreen")
+        .classList
+        .add("hidden");
+
+    document
+        .getElementById("turnScreen")
+        .classList
+        .add("hidden");
+
+    document
+        .getElementById("songScreen")
+        .classList
+        .add("hidden");
+
+
+    document
+        .getElementById(screenID)
+        .classList
+        .remove("hidden");
+
 }
 
 
-// Reveal button
+
+// Start Game button
+
+document
+    .getElementById("startButton")
+    .addEventListener("click", function () {
+
+
+        numberOfTeams =
+            Number(document.getElementById("teamSelect").value);
+
+
+        selectedDecade =
+            document.getElementById("decadeSelect").value;
+
+
+        selectedDifficulty =
+            document.getElementById("difficultySelect").value;
+
+
+        buildDeck();
+
+
+        currentTeam = 1;
+
+
+        showTurnScreen();
+
+    });
+
+
+
+// Create song deck
+
+function buildDeck() {
+
+
+    deck = songs.filter(song => {
+
+
+        let decadeMatch =
+            selectedDecade === "random" ||
+            song.decade === selectedDecade;
+
+
+        let difficultyMatch =
+            selectedDifficulty === "Mixed" ||
+            song.difficulty === selectedDifficulty;
+
+
+        return decadeMatch && difficultyMatch;
+
+
+    });
+
+
+    shuffle(deck);
+
+
+    console.log("Deck created:", deck.length);
+
+}
+
+
+
+// Shuffle function
+
+function shuffle(array) {
+
+    for (
+        let i = array.length - 1;
+        i > 0;
+        i--
+    ) {
+
+        let j = Math.floor(
+            Math.random() * (i + 1)
+        );
+
+
+        [
+            array[i],
+            array[j]
+        ] =
+        [
+            array[j],
+            array[i]
+        ];
+
+    }
+
+}
+
+
+
+// Show team screen
+
+function showTurnScreen() {
+
+    document
+        .getElementById("teamTurn")
+        .textContent =
+        "TEAM " + currentTeam + "'S TURN";
+
+
+    showScreen("turnScreen");
+
+}
+
+
+
+// Reveal song
+
 document
     .getElementById("revealButton")
     .addEventListener("click", function () {
 
-        if (songs.length === 0) {
-            alert("Songs are still loading...");
+
+        if (deck.length === 0) {
+
+            alert("No songs left!");
+
             return;
+
         }
 
-        const song = getRandomSong();
 
-        document.getElementById("songTitle").textContent = song.title;
-        document.getElementById("artist").textContent = song.artist;
-        document.getElementById("year").textContent = song.year;
-        document.getElementById("difficulty").textContent = song.difficulty;
+        currentSong =
+            deck.pop();
 
 
         document
-            .getElementById("songCard")
-            .classList
-            .remove("hidden");
+            .getElementById("songTitle")
+            .textContent =
+            currentSong.title;
 
 
         document
-            .getElementById("nextButton")
-            .classList
-            .remove("hidden");
+            .getElementById("artist")
+            .textContent =
+            currentSong.artist;
+
+
+        document
+            .getElementById("year")
+            .textContent =
+            currentSong.year;
+
+
+        document
+            .getElementById("difficulty")
+            .textContent =
+            currentSong.difficulty;
+
+
+        showScreen("songScreen");
+
 
     });
 
 
-// Next button
+
+// Next round
+
 document
     .getElementById("nextButton")
     .addEventListener("click", function () {
 
-        document
-            .getElementById("songCard")
-            .classList
-            .add("hidden");
 
-        document
-            .getElementById("nextButton")
-            .classList
-            .add("hidden");
+        currentTeam++;
+
+
+        if (currentTeam > numberOfTeams) {
+
+            currentTeam = 1;
+
+        }
+
+
+        showTurnScreen();
+
 
     });

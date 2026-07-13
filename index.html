@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,51 +10,128 @@
 
 <body>
 
-    <div class="game-container">
+<div class="game-container">
 
-        <h1>🎵 HUM THAT TUNE 🎵</h1>
-        <h2>70s & 80s Edition</h2>
+    <h1>🎵 HUM THAT TUNE 🎵</h1>
+    <h2>70s & 80s Edition</h2>
 
-        <div class="panel">
 
-            <p class="instruction">
-                CLUE GIVER ONLY
-            </p>
+    <!-- SETUP SCREEN -->
+    <div id="setupScreen" class="panel">
 
-            <button id="revealButton">
-                REVEAL SONG
-            </button>
+        <h3>GAME SETUP</h3>
 
-            <div id="songCard" class="hidden">
+        <label>
+            Teams:
+            <select id="teamSelect">
+                <option value="2">2 Teams</option>
+                <option value="3">3 Teams</option>
+                <option value="4">4 Teams</option>
+            </select>
+        </label>
 
-                <h3 id="songTitle"></h3>
 
-                <p>
-                    Artist:
-                    <span id="artist"></span>
-                </p>
+        <br><br>
 
-                <p>
-                    Year:
-                    <span id="year"></span>
-                </p>
 
-                <p>
-                    Difficulty:
-                    <span id="difficulty"></span>
-                </p>
+        <label>
+            Decade:
+            <select id="decadeSelect">
+                <option value="random">Random</option>
+                <option value="70s">70s</option>
+                <option value="80s">80s</option>
+            </select>
+        </label>
 
-            </div>
 
-            <button id="nextButton" class="hidden">
-                NEXT SONG
-            </button>
+        <br><br>
 
-        </div>
+
+        <label>
+            Difficulty:
+            <select id="difficultySelect">
+                <option value="Mixed">Mixed</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+        </label>
+
+
+        <br><br>
+
+
+        <label>
+            Timer:
+            <select id="timerSelect">
+                <option value="30">30 Seconds</option>
+                <option value="15">15 Seconds</option>
+                <option value="60">60 Seconds</option>
+            </select>
+        </label>
+
+
+        <br><br>
+
+
+        <button id="startButton">
+            START GAME
+        </button>
 
     </div>
+
+
+    <!-- TURN SCREEN -->
+    <div id="turnScreen" class="panel hidden">
+
+        <h3 id="teamTurn"></h3>
+
+        <p>
+            Pass the computer to the clue giver.
+        </p>
+
+        <button id="revealButton">
+            REVEAL SONG
+        </button>
+
+    </div>
+
+
+    <!-- SONG SCREEN -->
+    <div id="songScreen" class="panel hidden">
+
+        <h3>YOUR SONG</h3>
+
+        <h2 id="songTitle"></h2>
+
+        <p>
+            Artist:
+            <span id="artist"></span>
+        </p>
+
+        <p>
+            Year:
+            <span id="year"></span>
+        </p>
+
+        <p>
+            Difficulty:
+            <span id="difficulty"></span>
+        </p>
+
+
+        <button id="nextButton">
+            NEXT ROUND
+        </button>
+
+    </div>
+
+
+</div>
+
 
 <script src="app.js"></script>
 
 </body>
+
 </html>
