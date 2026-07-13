@@ -1,0 +1,85 @@
+body {
+    background-color: #08001a;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.game-container {
+    width: 700px;
+}
+
+
+h1 {
+    font-size: 48px;
+    color: #ff00ff;
+    text-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff;
+}
+
+
+h2 {
+    color: #00ffff;
+    text-shadow:
+        0 0 10px #00ffff;
+}
+
+
+.panel {
+    background-color: #12002b;
+    border: 3px solid #00ffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow:
+        0 0 20px #00ffff;
+}
+
+
+.instruction {
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+
+button {
+    background-color: #ff00ff;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow:
+        0 0 15px #ff00ff;
+}
+
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+#songCard {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid #ffff00;
+    border-radius: 15px;
+}
+
+
+#songTitle {
+    font-size: 36px;
+    color: #ffff00;
+}
+
+
+.hidden {
+    display: none;
+}

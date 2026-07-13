@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hum That Tune</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>🎵 HUM THAT TUNE 🎵</h1>
+        <h2>70s & 80s Edition</h2>
+
+        <div class="panel">
+
+            <p class="instruction">
+                CLUE GIVER ONLY
+            </p>
+
+            <button id="revealButton">
+                REVEAL SONG
+            </button>
+
+            <div id="songCard" class="hidden">
+
+                <h3 id="songTitle"></h3>
+
+                <p>
+                    Artist:
+                    <span id="artist"></span>
+                </p>
+
+                <p>
+                    Year:
+                    <span id="year"></span>
+                </p>
+
+                <p>
+                    Difficulty:
+                    <span id="difficulty"></span>
+                </p>
+
+            </div>
+
+            <button id="nextButton" class="hidden">
+                NEXT SONG
+            </button>
+
+        </div>
+
+    </div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
