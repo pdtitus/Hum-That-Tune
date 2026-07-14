@@ -4,13 +4,25 @@ let deck = [];
 
 let currentSong = null;
 
-let currentTeam = 1;
+
+// Game settings
 
 let numberOfTeams = 2;
 
 let selectedDecade = "random";
 
 let selectedDifficulty = "Mixed";
+
+let totalRounds = 10;
+
+let currentRound = 1;
+
+
+// Teams
+
+let teams = [];
+
+let currentTeamIndex = 0;
 
 
 // Load songs
@@ -65,8 +77,10 @@ document
         numberOfTeams =
             Number(document.getElementById("teamSelect").value);
 
-
-        selectedDecade =
+totalRounds =
+    Number(document.getElementById("roundSelect").value);
+ 
+    selectedDecade =
             document.getElementById("decadeSelect").value;
 
 
@@ -77,7 +91,11 @@ document
         buildDeck();
 
 
-        currentTeam = 1;
+        createTeams();
+
+        currentRound = 1;
+
+        currentTeamIndex = 0;
 
 
         showTurnScreen();
@@ -147,16 +165,40 @@ function shuffle(array) {
 
 }
 
+function createTeams() {
 
+    teams = [];
+
+    let passes = totalRounds / 10;
+
+
+    for (let i = 1; i <= numberOfTeams; i++) {
+
+        teams.push({
+
+            name: "Team " + i,
+
+            score: 0,
+
+            passesRemaining: passes
+
+        });
+
+    }
+
+}
 
 // Show team screen
 
 function showTurnScreen() {
 
+    let team = teams[currentTeamIndex];
+
+
     document
         .getElementById("teamTurn")
         .textContent =
-        "TEAM " + currentTeam + "'S TURN";
+        team.name + "'S TURN";
 
 
     showScreen("turnScreen");
@@ -223,12 +265,24 @@ document
     .addEventListener("click", function () {
 
 
-        currentTeam++;
+        currentRound++;
 
 
-        if (currentTeam > numberOfTeams) {
+        currentTeamIndex++;
 
-            currentTeam = 1;
+
+        if (currentTeamIndex >= teams.length) {
+
+            currentTeamIndex = 0;
+
+        }
+
+
+        if (currentRound > totalRounds) {
+
+            alert("Game Over!");
+
+            return;
 
         }
 
