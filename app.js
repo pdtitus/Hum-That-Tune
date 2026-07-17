@@ -1,3 +1,41 @@
+//================================================
+// BACKTRACK
+// 70s & 80s Music Challenge
+// Version 0.3.1
+//================================================
+
+//================================================
+// BACKTRACK CONFIGURATION
+//================================================
+
+const CONFIG = {
+
+    scoring: {
+
+        title: 2,
+
+        artist: 1,
+
+        year: 1,
+
+        yearTolerance: 1
+
+    },
+
+    gameLengths: [10, 20, 40],
+
+    timerOptions: [15, 30, 60],
+
+    passesPerTenRounds: 1
+
+};
+
+
+//================================================
+// GAME DATA
+//================================================
+
+
 let songs = [];
 
 let deck = [];
@@ -5,7 +43,9 @@ let deck = [];
 let currentSong = null;
 
 
-// Game settings
+//================================================
+// GAME SETTINGS
+//================================================
 
 let numberOfTeams = 2;
 
@@ -18,12 +58,17 @@ let totalRounds = 10;
 let currentRound = 1;
 
 
-// Teams
+//================================================
+// TEAM DATA
+//================================================
 
 let teams = [];
 
 let currentTeamIndex = 0;
 
+//================================================
+// INITIALIZATION
+//================================================
 
 // Load songs
 fetch("songs.json")
@@ -67,42 +112,9 @@ function showScreen(screenID) {
 
 
 
-// Start Game button
-
-document
-    .getElementById("startButton")
-    .addEventListener("click", function () {
-
-
-        numberOfTeams =
-            Number(document.getElementById("teamSelect").value);
-
-totalRounds =
-    Number(document.getElementById("roundSelect").value);
- 
-    selectedDecade =
-            document.getElementById("decadeSelect").value;
-
-
-        selectedDifficulty =
-            document.getElementById("difficultySelect").value;
-
-
-        buildDeck();
-
-
-        createTeams();
-
-        currentRound = 1;
-
-        currentTeamIndex = 0;
-
-
-        showTurnScreen();
-
-    });
-
-
+//================================================
+// GAME FUNCTIONS
+//================================================
 
 // Create song deck
 
@@ -190,7 +202,7 @@ function createTeams() {
 
 // Show team screen
 
-function showTurnScreen() {
+function showCurrentTeam() {
 
     let team = teams[currentTeamIndex];
 
@@ -205,7 +217,44 @@ function showTurnScreen() {
 
 }
 
+//================================================
+// EVENT LISTENERS
+//================================================
 
+// Start Game button
+
+document
+    .getElementById("startButton")
+    .addEventListener("click", function () {
+
+
+        numberOfTeams =
+            Number(document.getElementById("teamSelect").value);
+
+totalRounds =
+    Number(document.getElementById("roundSelect").value);
+ 
+    selectedDecade =
+            document.getElementById("decadeSelect").value;
+
+
+        selectedDifficulty =
+            document.getElementById("difficultySelect").value;
+
+
+        buildDeck();
+
+
+        createTeams();
+
+        currentRound = 1;
+
+        currentTeamIndex = 0;
+
+
+        showCurrentTeam();
+
+    });
 
 // Reveal song
 
@@ -223,8 +272,9 @@ document
         }
 
 
-        currentSong =
-            deck.pop();
+// Remove the next song from the shuffled deck.
+
+        currentSong = deck.pop();
 
 
         document
@@ -287,7 +337,7 @@ document
         }
 
 
-        showTurnScreen();
+        showCurrentTeam();
 
 
     });
