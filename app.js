@@ -18,8 +18,6 @@ const CONFIG = {
 
         year: 1,
 
-        yearTolerance: 1
-
     },
 
     gameLengths: [10, 20, 40],
@@ -41,6 +39,8 @@ let songs = [];
 let deck = [];
 
 let currentSong = null;
+
+let roundScore = 0;
 
 
 //================================================
@@ -261,6 +261,41 @@ function showCurrentTeam() {
 }
 
 //================================================
+// SCORING HELPERS
+//================================================
+
+function lockCategory(correctButtonId, wrongButtonId) {
+
+    document
+        .getElementById(correctButtonId)
+        .disabled = true;
+
+    document
+        .getElementById(wrongButtonId)
+        .disabled = true;
+
+}
+
+function unlockScoringButtons() {
+
+    [
+        "titleCorrect",
+        "titleWrong",
+        "artistCorrect",
+        "artistWrong",
+        "yearCorrect",
+        "yearWrong"
+    ].forEach(function(id) {
+
+        document
+            .getElementById(id)
+            .disabled = false;
+
+    });
+
+}
+
+//================================================
 // EVENT LISTENERS
 //================================================
 
@@ -318,6 +353,12 @@ document
 // Remove the next song from the shuffled deck.
 
         currentSong = deck.pop();
+        roundScore = 0;
+        unlockScoringButtons();
+
+        document
+            .getElementById("roundScore")
+            .textContent = roundScore;
 
 
         document
@@ -364,12 +405,96 @@ document
     });
 
 
+//================================================
+// SCORING BUTTONS
+//================================================
+
+document
+    .getElementById("titleCorrect")
+    .addEventListener("click", function () {
+
+        roundScore += CONFIG.scoring.title;
+
+        document
+            .getElementById("roundScore")
+            .textContent = roundScore;
+
+        lockCategory("titleCorrect", "titleWrong");
+
+    });
+
+
+document
+    .getElementById("titleWrong")
+    .addEventListener("click", function () {
+
+        lockCategory("titleCorrect", "titleWrong");
+
+    });
+
+
+
+document
+    .getElementById("artistCorrect")
+    .addEventListener("click", function () {
+
+        roundScore += CONFIG.scoring.artist;
+
+        document
+            .getElementById("roundScore")
+            .textContent = roundScore;
+
+        lockCategory("artistCorrect", "artistWrong");
+
+    });
+
+
+document
+    .getElementById("artistWrong")
+    .addEventListener("click", function () {
+
+        lockCategory("artistCorrect", "artistWrong");
+
+    });
+
+
+
+document
+    .getElementById("yearCorrect")
+    .addEventListener("click", function () {
+
+        roundScore += CONFIG.scoring.year;
+
+        document
+            .getElementById("roundScore")
+            .textContent = roundScore;
+
+        lockCategory("yearCorrect", "yearWrong");
+
+    });
+
+
+document
+    .getElementById("yearWrong")
+    .addEventListener("click", function () {
+
+        lockCategory("yearCorrect", "yearWrong");
+
+    });
+
 // Next team button
 
 document
     .getElementById("nextButton")
     .addEventListener("click", function () {
 
+// Award points to the team that just played
+
+        teams[currentTeamIndex].score += roundScore;
+
+        updateScoreboard();
+
+// Now move to the next team
 
         currentTeamIndex++;
 
@@ -392,7 +517,6 @@ document
         }
 
 
-        updateScoreboard();
 
         showCurrentTeam();
 
