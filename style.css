@@ -119,3 +119,62 @@ p {
     display: none;
 
 }
+
+/*================================================
+  SCOREBOARD
+================================================*/
+
+.scoreboard {
+
+    background-color: #12002b;
+
+    border: 2px solid #ff00ff;
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+}
+
+
+.scoreboard h3 {
+
+    margin-top: 0;
+
+}
+
+
+#scores {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.score-item {
+
+    padding: 10px;
+
+    font-size: 18px;
+
+    color: #00ffff;
+
+}
+
+#roundDisplay {
+
+    margin-top: 15px;
+
+    font-size: 18px;
+
+}

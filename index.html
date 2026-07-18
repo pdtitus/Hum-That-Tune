@@ -10,18 +10,20 @@
 
 <body>
 
-<div class="game-container"
+<div class="game-container">
 
-  <h1>🎵 HUM THAT TUNE 🎵</h1>
+  <h1>🎵 BACKTRACK 🎵</h1>
     <h2>70s & 80s Edition</h2>
-    
+
 <div id="scoreboard" class="scoreboard">
 
     <h3>🏆 SCOREBOARD</h3>
 
     <div id="scores"></div>
 
-</div>>
+    <div id="roundDisplay"></div>
+
+</div>
 
   
     <!-- SETUP SCREEN -->
@@ -139,15 +141,53 @@
         </p>
 
 
-        <button id="nextButton">
-            NEXT ROUND
+        <button id="scoreButton">
+        SCORE THIS SONG
         </button>
 
     </div>
 
+    <!-- SCORING SCREEN -->
+
+<div id="scoringScreen" class="panel hidden">
+
+    <h3>HOW DID THEY DO?</h3>
+
+
+    <p>
+        Song Title:
+        <button id="titleCorrect">YES</button>
+        <button id="titleWrong">NO</button>
+    </p>
+
+    <p>
+        Artist:
+        <button id="artistCorrect">YES</button>
+        <button id="artistWrong">NO</button>
+    </p>
+
+
+    <p>
+        Year:
+        <button id="yearCorrect">YES</button>
+        <button id="yearWrong">NO</button>
+    </p>
+
+
+    <h3>
+        Score:
+        <span id="roundScore">0</span>
+    </h3>
+
+
+        <button id="nextButton">
+        NEXT TEAM
+        </button>
 
 </div>
 
+
+</div>
 
 <script src="app.js"></script>
 

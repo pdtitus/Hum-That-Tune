@@ -102,6 +102,11 @@ function showScreen(screenID) {
         .classList
         .add("hidden");
 
+    document
+        .getElementById("scoringScreen")
+        .classList
+        .add("hidden");
+
 
     document
         .getElementById(screenID)
@@ -197,6 +202,44 @@ function createTeams() {
         });
 
     }
+
+    updateScoreboard();
+
+}
+
+//================================================
+// SCOREBOARD
+//================================================
+
+function updateScoreboard() {
+
+    let scoreHTML = "";
+
+
+    teams.forEach(team => {
+
+        scoreHTML += `
+
+            <div class="score-item">
+
+                ${team.name}<br>
+                ${team.score} pts
+
+            </div>
+
+        `;
+
+    });
+
+
+    document
+        .getElementById("scores")
+        .innerHTML = scoreHTML;
+
+    document
+        .getElementById("roundDisplay")
+        .textContent =
+        "Round " + currentRound + " of " + totalRounds;
 
 }
 
@@ -310,12 +353,22 @@ document
 
 // Next round
 
+// Score button
+
+document
+    .getElementById("scoreButton")
+    .addEventListener("click", function () {
+
+        showScreen("scoringScreen");
+
+    });
+
+
+// Next team button
+
 document
     .getElementById("nextButton")
     .addEventListener("click", function () {
-
-
-        currentRound++;
 
 
         currentTeamIndex++;
@@ -324,6 +377,8 @@ document
         if (currentTeamIndex >= teams.length) {
 
             currentTeamIndex = 0;
+
+            currentRound++;
 
         }
 
@@ -336,6 +391,8 @@ document
 
         }
 
+
+        updateScoreboard();
 
         showCurrentTeam();
 
