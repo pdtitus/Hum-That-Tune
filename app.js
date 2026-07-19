@@ -42,6 +42,10 @@ let currentSong = null;
 
 let roundScore = 0;
 
+let titleAwarded = false;
+let artistAwarded = false;
+let yearAwarded = false;
+
 
 //================================================
 // GAME SETTINGS
@@ -260,40 +264,6 @@ function showCurrentTeam() {
 
 }
 
-//================================================
-// SCORING HELPERS
-//================================================
-
-function lockCategory(correctButtonId, wrongButtonId) {
-
-    document
-        .getElementById(correctButtonId)
-        .disabled = true;
-
-    document
-        .getElementById(wrongButtonId)
-        .disabled = true;
-
-}
-
-function unlockScoringButtons() {
-
-    [
-        "titleCorrect",
-        "titleWrong",
-        "artistCorrect",
-        "artistWrong",
-        "yearCorrect",
-        "yearWrong"
-    ].forEach(function(id) {
-
-        document
-            .getElementById(id)
-            .disabled = false;
-
-    });
-
-}
 
 //================================================
 // EVENT LISTENERS
@@ -354,7 +324,10 @@ document
 
         currentSong = deck.pop();
         roundScore = 0;
-        unlockScoringButtons();
+
+        titleAwarded = false;
+        artistAwarded = false;
+        yearAwarded = false;
 
         document
             .getElementById("roundScore")
@@ -413,22 +386,25 @@ document
     .getElementById("titleCorrect")
     .addEventListener("click", function () {
 
-        roundScore += CONFIG.scoring.title;
+        if (!titleAwarded) {
+            roundScore += CONFIG.scoring.title;
+            titleAwarded = true;
+        }
 
-        document
-            .getElementById("roundScore")
-            .textContent = roundScore;
-
-        lockCategory("titleCorrect", "titleWrong");
+        document.getElementById("roundScore").textContent = roundScore;
 
     });
-
 
 document
     .getElementById("titleWrong")
     .addEventListener("click", function () {
 
-        lockCategory("titleCorrect", "titleWrong");
+        if (titleAwarded) {
+            roundScore -= CONFIG.scoring.title;
+            titleAwarded = false;
+        }
+
+        document.getElementById("roundScore").textContent = roundScore;
 
     });
 
@@ -438,47 +414,52 @@ document
     .getElementById("artistCorrect")
     .addEventListener("click", function () {
 
-        roundScore += CONFIG.scoring.artist;
+        if (!artistAwarded) {
+            roundScore += CONFIG.scoring.artist;
+            artistAwarded = true;
+        }
 
-        document
-            .getElementById("roundScore")
-            .textContent = roundScore;
-
-        lockCategory("artistCorrect", "artistWrong");
+        document.getElementById("roundScore").textContent = roundScore;
 
     });
-
 
 document
     .getElementById("artistWrong")
     .addEventListener("click", function () {
 
-        lockCategory("artistCorrect", "artistWrong");
+        if (artistAwarded) {
+            roundScore -= CONFIG.scoring.artist;
+            artistAwarded = false;
+        }
+
+        document.getElementById("roundScore").textContent = roundScore;
 
     });
-
 
 
 document
     .getElementById("yearCorrect")
     .addEventListener("click", function () {
 
-        roundScore += CONFIG.scoring.year;
+        if (!yearAwarded) {
+            roundScore += CONFIG.scoring.year;
+            yearAwarded = true;
+        }
 
-        document
-            .getElementById("roundScore")
-            .textContent = roundScore;
-
-        lockCategory("yearCorrect", "yearWrong");
+        document.getElementById("roundScore").textContent = roundScore;
 
     });
-
 
 document
     .getElementById("yearWrong")
     .addEventListener("click", function () {
 
-        lockCategory("yearCorrect", "yearWrong");
+        if (yearAwarded) {
+            roundScore -= CONFIG.scoring.year;
+            yearAwarded = false;
+        }
+
+        document.getElementById("roundScore").textContent = roundScore;
 
     });
 
