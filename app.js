@@ -61,6 +61,12 @@ let totalRounds = 10;
 
 let currentRound = 1;
 
+let selectedTimer = 30;
+
+let timerInterval = null;
+
+let timeRemaining = 0;
+
 
 //================================================
 // TEAM DATA
@@ -165,11 +171,48 @@ function revealNextSong() {
             .textContent =
             currentSong.difficulty;
 
-
+        startTimer();
         showScreen("songScreen");
 
 
     };
+
+    function startTimer() {
+
+    // Stop any previous timer
+    clearInterval(timerInterval);
+
+    timeRemaining = selectedTimer;
+
+    document
+        .getElementById("timerDisplay")
+        .textContent = timeRemaining;
+
+
+    timerInterval = setInterval(function () {
+
+        timeRemaining--;
+
+        document
+            .getElementById("timerDisplay")
+            .textContent = timeRemaining;
+
+
+        if (timeRemaining <= 0) {
+
+        clearInterval(timerInterval);
+
+        document
+        .getElementById("buzzerSound")
+        .play();
+
+        showScreen("scoringScreen");
+
+}
+
+    }, 1000);
+
+}
 
 
 
@@ -411,6 +454,8 @@ totalRounds =
 document
     .getElementById("scoreButton")
     .addEventListener("click", function () {
+
+        clearInterval(timerInterval);
 
         showScreen("scoringScreen");
 
