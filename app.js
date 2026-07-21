@@ -119,6 +119,58 @@ function showScreen(screenID) {
 
 }
 
+function revealNextSong() {
+
+    if (deck.length === 0) {
+
+        alert("No songs left!");
+
+        return;
+
+    }
+
+
+        currentSong = deck.pop();
+        roundScore = 0;
+
+        titleAwarded = false;
+        artistAwarded = false;
+        yearAwarded = false;
+
+        document
+            .getElementById("roundScore")
+            .textContent = roundScore;
+
+
+        document
+            .getElementById("songTitle")
+            .textContent =
+            currentSong.title;
+
+
+        document
+            .getElementById("artist")
+            .textContent =
+            currentSong.artist;
+
+
+        document
+            .getElementById("year")
+            .textContent =
+            currentSong.year;
+
+
+        document
+            .getElementById("difficulty")
+            .textContent =
+            currentSong.difficulty;
+
+
+        showScreen("songScreen");
+
+
+    };
+
 
 
 //================================================
@@ -259,6 +311,11 @@ function showCurrentTeam() {
         .textContent =
         team.name + "'S TURN";
 
+    document
+        .getElementById("passesRemaining")
+        .textContent =
+        teams[currentTeamIndex].passesRemaining;
+
 
     showScreen("turnScreen");
 
@@ -302,68 +359,50 @@ totalRounds =
 
         showCurrentTeam();
 
+
     });
 
 // Reveal song
 
-document
-    .getElementById("revealButton")
+        document
+        .getElementById("revealButton")
+        .addEventListener("click", function () {
+
+        revealNextSong();
+
+    });
+
+        // reduce passes...
+
+       document
+    .getElementById("passButton")
     .addEventListener("click", function () {
 
+        let team = teams[currentTeamIndex];
 
-        if (deck.length === 0) {
+        if (team.passesRemaining <= 0) {
 
-            alert("No songs left!");
+            alert("No passes remaining.");
 
             return;
 
         }
 
-
-// Remove the next song from the shuffled deck.
-
-        currentSong = deck.pop();
-        roundScore = 0;
-
-        titleAwarded = false;
-        artistAwarded = false;
-        yearAwarded = false;
+        team.passesRemaining--;
 
         document
-            .getElementById("roundScore")
-            .textContent = roundScore;
-
-
-        document
-            .getElementById("songTitle")
+            .getElementById("passesRemaining")
             .textContent =
-            currentSong.title;
+            team.passesRemaining;
 
-
-        document
-            .getElementById("artist")
-            .textContent =
-            currentSong.artist;
-
-
-        document
-            .getElementById("year")
-            .textContent =
-            currentSong.year;
-
-
-        document
-            .getElementById("difficulty")
-            .textContent =
-            currentSong.difficulty;
-
-
-        showScreen("songScreen");
-
+        revealNextSong();
 
     });
 
 
+
+
+    ;
 
 // Next round
 
