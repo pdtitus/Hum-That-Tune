@@ -6,18 +6,16 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0002",
     "title": "Easy Lover",
-    "artist": "Philip Bailey and Phil Collins",
+    "artist": "Philip Bailey & Phil Collins",
     "year": 1984,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0003",
@@ -26,8 +24,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0004",
@@ -36,8 +33,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0005",
@@ -46,8 +42,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0006",
@@ -56,8 +51,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Arena Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0007",
@@ -66,8 +60,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0008",
@@ -76,8 +69,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0009",
@@ -86,8 +78,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Yacht Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0010",
@@ -96,8 +87,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0011",
@@ -106,8 +96,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0012",
@@ -116,8 +105,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0013",
@@ -126,8 +114,7 @@
     "year": 1986,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0014",
@@ -136,8 +123,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0015",
@@ -146,8 +132,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0016",
@@ -156,8 +141,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0017",
@@ -166,18 +150,16 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0018",
     "title": "Turn to Stone",
-    "artist": "Electric Light Orchestra",
+    "artist": "ELO",
     "year": 1977,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0019",
@@ -186,8 +168,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0020",
@@ -196,8 +177,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0021",
@@ -206,8 +186,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0022",
@@ -216,8 +195,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0023",
@@ -226,8 +204,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0024",
@@ -236,8 +213,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Yacht Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0025",
@@ -246,8 +222,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0026",
@@ -256,8 +231,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0027",
@@ -266,8 +240,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0028",
@@ -276,8 +249,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0029",
@@ -286,8 +258,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0030",
@@ -296,18 +267,16 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0031",
     "title": "Don't Bring Me Down",
-    "artist": "Electric Light Orchestra",
+    "artist": "ELO",
     "year": 1979,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0032",
@@ -316,8 +285,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0033",
@@ -326,8 +294,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0034",
@@ -336,8 +303,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0035",
@@ -346,8 +312,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0036",
@@ -356,8 +321,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0037",
@@ -366,8 +330,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0038",
@@ -376,8 +339,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0039",
@@ -386,8 +348,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0040",
@@ -396,8 +357,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Synth Pop",
-    "style": "Synth Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0041",
@@ -406,8 +366,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0042",
@@ -416,8 +375,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0043",
@@ -426,8 +384,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0044",
@@ -436,8 +393,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0045",
@@ -446,8 +402,7 @@
     "year": 1989,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0046",
@@ -456,8 +411,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0047",
@@ -466,8 +420,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0048",
@@ -476,8 +429,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0049",
@@ -486,8 +438,7 @@
     "year": 1987,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0050",
@@ -496,8 +447,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0051",
@@ -506,8 +456,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0052",
@@ -516,8 +465,7 @@
     "year": 1974,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0053",
@@ -526,8 +474,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Yacht Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0054",
@@ -536,8 +483,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0055",
@@ -546,8 +492,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0056",
@@ -556,8 +501,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0057",
@@ -566,8 +510,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0058",
@@ -576,8 +519,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Yacht Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0059",
@@ -586,8 +528,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0060",
@@ -596,8 +537,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0061",
@@ -606,8 +546,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0062",
@@ -616,8 +555,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Yacht Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0063",
@@ -626,8 +564,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Arena Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0064",
@@ -636,8 +573,7 @@
     "year": 1972,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Yacht Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0065",
@@ -646,8 +582,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Arena Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0066",
@@ -656,8 +591,7 @@
     "year": 1970,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0067",
@@ -666,8 +600,7 @@
     "year": 1972,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0068",
@@ -676,8 +609,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0069",
@@ -686,8 +618,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Funk"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0070",
@@ -696,8 +627,7 @@
     "year": 1973,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0071",
@@ -706,8 +636,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0072",
@@ -716,8 +645,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0073",
@@ -726,8 +654,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0074",
@@ -736,8 +663,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0075",
@@ -746,8 +672,7 @@
     "year": 1973,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Yacht Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0076",
@@ -756,8 +681,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0077",
@@ -766,8 +690,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0078",
@@ -776,8 +699,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0079",
@@ -786,8 +708,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0080",
@@ -796,8 +717,7 @@
     "year": 1974,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0081",
@@ -806,8 +726,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0082",
@@ -816,8 +735,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0083",
@@ -826,8 +744,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0084",
@@ -836,8 +753,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0085",
@@ -846,8 +762,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0086",
@@ -856,8 +771,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0087",
@@ -866,8 +780,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0088",
@@ -876,8 +789,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0089",
@@ -886,8 +798,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0090",
@@ -896,8 +807,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0091",
@@ -906,8 +816,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0092",
@@ -916,8 +825,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Synth Pop",
-    "style": "Synth Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0093",
@@ -926,8 +834,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0094",
@@ -936,8 +843,7 @@
     "year": 1973,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0095",
@@ -946,8 +852,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0096",
@@ -956,8 +861,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0097",
@@ -966,8 +870,7 @@
     "year": 1972,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0098",
@@ -976,8 +879,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Yacht Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0099",
@@ -986,8 +888,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0100",
@@ -996,8 +897,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0101",
@@ -1006,8 +906,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0102",
@@ -1016,8 +915,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0103",
@@ -1026,8 +924,7 @@
     "year": 1972,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0104",
@@ -1036,8 +933,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0105",
@@ -1046,8 +942,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0106",
@@ -1056,8 +951,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0107",
@@ -1066,8 +960,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0108",
@@ -1076,8 +969,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0109",
@@ -1086,8 +978,7 @@
     "year": 1974,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0110",
@@ -1096,8 +987,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0111",
@@ -1106,8 +996,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0112",
@@ -1116,8 +1005,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Arena Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0113",
@@ -1126,8 +1014,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0114",
@@ -1136,8 +1023,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0115",
@@ -1146,8 +1032,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Synth Pop",
-    "style": "Synth Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0116",
@@ -1156,8 +1041,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0117",
@@ -1166,8 +1050,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0118",
@@ -1176,8 +1059,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0119",
@@ -1186,8 +1068,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0120",
@@ -1196,8 +1077,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0121",
@@ -1206,8 +1086,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0122",
@@ -1216,8 +1095,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0123",
@@ -1226,8 +1104,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0124",
@@ -1236,8 +1113,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0125",
@@ -1246,8 +1122,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Arena Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0126",
@@ -1256,8 +1131,7 @@
     "year": 1973,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0127",
@@ -1266,8 +1140,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0128",
@@ -1276,8 +1149,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Arena Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0129",
@@ -1286,8 +1158,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0130",
@@ -1296,8 +1167,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0131",
@@ -1306,8 +1176,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Arena Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0132",
@@ -1316,8 +1185,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Arena Rock"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0133",
@@ -1326,8 +1194,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0134",
@@ -1336,8 +1203,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0135",
@@ -1346,8 +1212,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0136",
@@ -1356,18 +1221,16 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0137",
     "title": "You Got Lucky",
-    "artist": "Tom Petty and the Heartbreakers",
+    "artist": "Tom Petty & the Heartbreakers",
     "year": 1982,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0138",
@@ -1376,8 +1239,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0139",
@@ -1386,8 +1248,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0140",
@@ -1396,8 +1257,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0141",
@@ -1406,8 +1266,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0142",
@@ -1416,8 +1275,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0143",
@@ -1426,8 +1284,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0144",
@@ -1436,8 +1293,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0145",
@@ -1446,8 +1302,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0146",
@@ -1456,8 +1311,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0147",
@@ -1466,8 +1320,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0148",
@@ -1476,8 +1329,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0149",
@@ -1486,8 +1338,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0150",
@@ -1496,8 +1347,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Unclassified"
   },
   {
     "id": "BT-0151",
@@ -1506,8 +1356,7 @@
     "year": 1972,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Classic Rock"
   },
   {
     "id": "BT-0152",
@@ -1516,8 +1365,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0153",
@@ -1526,8 +1374,7 @@
     "year": 1974,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0154",
@@ -1536,8 +1383,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "R&B / Soul",
-    "style": "Funk"
+    "genre": "Soul/R&B"
   },
   {
     "id": "BT-0155",
@@ -1546,8 +1392,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Classic Rock"
   },
   {
     "id": "BT-0156",
@@ -1556,8 +1401,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Classic Rock"
   },
   {
     "id": "BT-0157",
@@ -1566,8 +1410,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Disco",
-    "style": "Disco"
+    "genre": "Disco"
   },
   {
     "id": "BT-0158",
@@ -1576,18 +1419,16 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0159",
     "title": "Whenever I Call You Friend",
-    "artist": "Kenny Loggins and Stevie Nicks",
+    "artist": "Kenny Loggins & Stevie Nicks",
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0160",
@@ -1596,8 +1437,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0161",
@@ -1606,8 +1446,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Arena Rock"
   },
   {
     "id": "BT-0162",
@@ -1616,8 +1455,7 @@
     "year": 1986,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0163",
@@ -1626,8 +1464,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "New Wave",
-    "style": "New Wave"
+    "genre": "New Wave"
   },
   {
     "id": "BT-0164",
@@ -1636,8 +1473,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "New Wave",
-    "style": "New Wave"
+    "genre": "New Wave"
   },
   {
     "id": "BT-0165",
@@ -1646,8 +1482,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "New Wave",
-    "style": "New Wave"
+    "genre": "New Wave"
   },
   {
     "id": "BT-0166",
@@ -1656,8 +1491,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0167",
@@ -1666,8 +1500,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Synth Pop",
-    "style": "Synth Pop"
+    "genre": "Synth Pop"
   },
   {
     "id": "BT-0168",
@@ -1676,8 +1509,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0169",
@@ -1685,9 +1517,8 @@
     "artist": "Mike + The Mechanics",
     "year": 1985,
     "decade": "80s",
-    "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "difficulty": "Medium",
+    "genre": "Pop"
   },
   {
     "id": "BT-0170",
@@ -1696,8 +1527,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0171",
@@ -1706,8 +1536,7 @@
     "year": 1987,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0172",
@@ -1716,8 +1545,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Soundtrack",
-    "style": "Movie Soundtrack"
+    "genre": "Soundtrack"
   },
   {
     "id": "BT-0173",
@@ -1726,8 +1554,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "New Wave",
-    "style": "New Wave"
+    "genre": "New Wave"
   },
   {
     "id": "BT-0174",
@@ -1736,8 +1563,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Arena Rock"
   },
   {
     "id": "BT-0175",
@@ -1746,8 +1572,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Disco",
-    "style": "Disco"
+    "genre": "Disco"
   },
   {
     "id": "BT-0176",
@@ -1756,8 +1581,7 @@
     "year": 1987,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0177",
@@ -1766,8 +1590,7 @@
     "year": 1987,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "New Wave",
-    "style": "New Wave"
+    "genre": "New Wave"
   },
   {
     "id": "BT-0178",
@@ -1776,8 +1599,7 @@
     "year": 1987,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0179",
@@ -1786,8 +1608,7 @@
     "year": 1987,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0180",
@@ -1796,8 +1617,7 @@
     "year": 1987,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0181",
@@ -1806,18 +1626,16 @@
     "year": 1987,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Dance",
-    "style": "Mainstream"
+    "genre": "Dance"
   },
   {
     "id": "BT-0182",
     "title": "The Way It Is",
-    "artist": "Bruce Hornsby and the Range",
+    "artist": "Bruce Hornsby & the Range",
     "year": 1986,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Adult Contemporary",
-    "style": "Ballad"
+    "genre": "Adult Contemporary"
   },
   {
     "id": "BT-0183",
@@ -1825,9 +1643,8 @@
     "artist": "Mike + The Mechanics",
     "year": 1988,
     "decade": "80s",
-    "difficulty": "Hard",
-    "genre": "Adult Contemporary",
-    "style": "Ballad"
+    "difficulty": "Medium",
+    "genre": "Adult Contemporary"
   },
   {
     "id": "BT-0184",
@@ -1836,8 +1653,7 @@
     "year": 1989,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Arena Rock"
   },
   {
     "id": "BT-0185",
@@ -1846,8 +1662,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0186",
@@ -1856,8 +1671,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0187",
@@ -1866,8 +1680,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "New Wave",
-    "style": "New Wave"
+    "genre": "New Wave"
   },
   {
     "id": "BT-0188",
@@ -1876,8 +1689,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0189",
@@ -1886,8 +1698,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0190",
@@ -1896,8 +1707,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Hair Metal"
   },
   {
     "id": "BT-0191",
@@ -1906,8 +1716,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0192",
@@ -1916,8 +1725,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0193",
@@ -1926,8 +1734,7 @@
     "year": 1986,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Soundtrack",
-    "style": "Movie Soundtrack"
+    "genre": "Soundtrack"
   },
   {
     "id": "BT-0194",
@@ -1936,8 +1743,7 @@
     "year": 1987,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Adult Contemporary",
-    "style": "Ballad"
+    "genre": "Adult Contemporary"
   },
   {
     "id": "BT-0195",
@@ -1946,8 +1752,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0196",
@@ -1956,8 +1761,7 @@
     "year": 1989,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0197",
@@ -1966,8 +1770,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Novelty",
-    "style": "Novelty"
+    "genre": "Novelty"
   },
   {
     "id": "BT-0198",
@@ -1976,8 +1779,7 @@
     "year": 1989,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Hair Metal"
   },
   {
     "id": "BT-0199",
@@ -1986,18 +1788,16 @@
     "year": 1989,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0200",
     "title": "What I Am",
-    "artist": "Edie Brickell and New Bohemians",
+    "artist": "Edie Brickell & New Bohemians",
     "year": 1988,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Alternative",
-    "style": "Mainstream"
+    "genre": "Alternative"
   },
   {
     "id": "BT-0201",
@@ -2006,8 +1806,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Soundtrack",
-    "style": "Movie Soundtrack"
+    "genre": "Soundtrack"
   },
   {
     "id": "BT-0202",
@@ -2016,8 +1815,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0203",
@@ -2026,8 +1824,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0204",
@@ -2036,8 +1833,7 @@
     "year": 1986,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0205",
@@ -2046,8 +1842,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0206",
@@ -2056,8 +1851,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Adult Contemporary",
-    "style": "Ballad"
+    "genre": "Adult Contemporary"
   },
   {
     "id": "BT-0207",
@@ -2066,8 +1860,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0208",
@@ -2076,8 +1869,7 @@
     "year": 1986,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Dance",
-    "style": "Mainstream"
+    "genre": "Dance"
   },
   {
     "id": "BT-0209",
@@ -2086,8 +1878,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0210",
@@ -2096,8 +1887,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0211",
@@ -2106,8 +1896,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0212",
@@ -2116,8 +1905,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Soundtrack",
-    "style": "Movie Soundtrack"
+    "genre": "Soundtrack"
   },
   {
     "id": "BT-0213",
@@ -2126,8 +1914,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0214",
@@ -2136,8 +1923,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Dance",
-    "style": "Mainstream"
+    "genre": "Dance"
   },
   {
     "id": "BT-0215",
@@ -2146,8 +1932,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "New Wave",
-    "style": "New Wave"
+    "genre": "New Wave"
   },
   {
     "id": "BT-0216",
@@ -2156,8 +1941,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "New Wave",
-    "style": "New Wave"
+    "genre": "New Wave"
   },
   {
     "id": "BT-0217",
@@ -2166,8 +1950,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Adult Contemporary",
-    "style": "Ballad"
+    "genre": "Adult Contemporary"
   },
   {
     "id": "BT-0218",
@@ -2176,8 +1959,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "New Wave",
-    "style": "New Wave"
+    "genre": "New Wave"
   },
   {
     "id": "BT-0219",
@@ -2186,8 +1968,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "New Wave",
-    "style": "New Wave"
+    "genre": "New Wave"
   },
   {
     "id": "BT-0220",
@@ -2196,8 +1977,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0221",
@@ -2206,8 +1986,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0222",
@@ -2216,8 +1995,7 @@
     "year": 1973,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0223",
@@ -2226,8 +2004,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0224",
@@ -2236,28 +2013,25 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0225",
     "title": "Telephone Line",
-    "artist": "Electric Light Orchestra",
+    "artist": "ELO",
     "year": 1977,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0226",
     "title": "Band on the Run",
-    "artist": "Paul McCartney and Wings",
+    "artist": "Paul McCartney & Wings",
     "year": 1973,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0227",
@@ -2266,8 +2040,7 @@
     "year": 1972,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0228",
@@ -2276,8 +2049,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0229",
@@ -2286,8 +2058,7 @@
     "year": 1973,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0230",
@@ -2296,8 +2067,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0231",
@@ -2306,8 +2076,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0232",
@@ -2316,8 +2085,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Disco",
-    "style": "Disco"
+    "genre": "Disco"
   },
   {
     "id": "BT-0233",
@@ -2326,8 +2094,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Funk",
-    "style": "Funk"
+    "genre": "Funk"
   },
   {
     "id": "BT-0234",
@@ -2336,8 +2103,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "R&B / Soul",
-    "style": "Soul"
+    "genre": "Soul/R&B"
   },
   {
     "id": "BT-0235",
@@ -2346,8 +2112,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Disco",
-    "style": "Disco"
+    "genre": "Disco"
   },
   {
     "id": "BT-0236",
@@ -2356,8 +2121,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Disco",
-    "style": "Disco"
+    "genre": "Disco"
   },
   {
     "id": "BT-0237",
@@ -2366,8 +2130,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Disco",
-    "style": "Disco"
+    "genre": "Disco"
   },
   {
     "id": "BT-0238",
@@ -2376,8 +2139,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0239",
@@ -2386,8 +2148,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Disco",
-    "style": "Disco"
+    "genre": "Disco"
   },
   {
     "id": "BT-0240",
@@ -2396,8 +2157,7 @@
     "year": 1974,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0241",
@@ -2406,8 +2166,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0242",
@@ -2416,8 +2175,7 @@
     "year": 1972,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0243",
@@ -2426,8 +2184,7 @@
     "year": 1974,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0244",
@@ -2436,8 +2193,7 @@
     "year": 1973,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0245",
@@ -2446,8 +2202,7 @@
     "year": 1970,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0246",
@@ -2456,8 +2211,7 @@
     "year": 1973,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0247",
@@ -2466,8 +2220,7 @@
     "year": 1974,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0248",
@@ -2476,8 +2229,7 @@
     "year": 1970,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0249",
@@ -2486,8 +2238,7 @@
     "year": 1971,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0250",
@@ -2496,8 +2247,7 @@
     "year": 1986,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Soundtrack",
-    "style": "Movie Soundtrack"
+    "genre": "Soundtrack"
   },
   {
     "id": "BT-0251",
@@ -2506,8 +2256,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0252",
@@ -2516,8 +2265,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0253",
@@ -2526,8 +2274,7 @@
     "year": 1972,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0254",
@@ -2536,8 +2283,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0255",
@@ -2546,8 +2292,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0256",
@@ -2556,8 +2301,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Progressive Rock"
   },
   {
     "id": "BT-0257",
@@ -2566,8 +2310,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Progressive Rock"
   },
   {
     "id": "BT-0258",
@@ -2576,8 +2319,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0259",
@@ -2586,8 +2328,7 @@
     "year": 1970,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0260",
@@ -2596,8 +2337,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0261",
@@ -2606,8 +2346,7 @@
     "year": 1987,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Dance-Pop"
   },
   {
     "id": "BT-0262",
@@ -2616,8 +2355,7 @@
     "year": 1988,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0263",
@@ -2626,8 +2364,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "New Wave",
-    "style": "New Wave"
+    "genre": "New Wave"
   },
   {
     "id": "BT-0264",
@@ -2636,8 +2373,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0265",
@@ -2646,8 +2382,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Soundtrack",
-    "style": "Movie Soundtrack"
+    "genre": "Soundtrack"
   },
   {
     "id": "BT-0266",
@@ -2656,8 +2391,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0267",
@@ -2666,8 +2400,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0268",
@@ -2676,8 +2409,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0269",
@@ -2686,8 +2418,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0270",
@@ -2696,8 +2427,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Hard",
-    "genre": "Adult Contemporary",
-    "style": "Ballad"
+    "genre": "Adult Contemporary"
   },
   {
     "id": "BT-0271",
@@ -2706,8 +2436,7 @@
     "year": 1974,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
+    "genre": "Pop"
   },
   {
     "id": "BT-0272",
@@ -2716,8 +2445,7 @@
     "year": 1982,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Adult Contemporary",
-    "style": "Ballad"
+    "genre": "Adult Contemporary"
   },
   {
     "id": "BT-0273",
@@ -2726,8 +2454,7 @@
     "year": 1980,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0274",
@@ -2736,8 +2463,7 @@
     "year": 1981,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0275",
@@ -2746,8 +2472,7 @@
     "year": 1985,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Soundtrack",
-    "style": "Movie Soundtrack"
+    "genre": "Soundtrack"
   },
   {
     "id": "BT-0276",
@@ -2756,8 +2481,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0277",
@@ -2766,8 +2490,7 @@
     "year": 1986,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0278",
@@ -2776,8 +2499,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0279",
@@ -2786,8 +2508,7 @@
     "year": 1974,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0280",
@@ -2796,8 +2517,7 @@
     "year": 1975,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0281",
@@ -2806,8 +2526,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0282",
@@ -2816,8 +2535,7 @@
     "year": 1977,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0283",
@@ -2826,8 +2544,7 @@
     "year": 1978,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0284",
@@ -2836,8 +2553,7 @@
     "year": 1983,
     "decade": "80s",
     "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0285",
@@ -2846,8 +2562,7 @@
     "year": 1984,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0286",
@@ -2856,8 +2571,7 @@
     "year": 1976,
     "decade": "70s",
     "difficulty": "Easy",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0287",
@@ -2866,8 +2580,7 @@
     "year": 1979,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Soft Rock",
-    "style": "Yacht Rock"
+    "genre": "Soft Rock"
   },
   {
     "id": "BT-0288",
@@ -2876,8 +2589,7 @@
     "year": 1973,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0289",
@@ -2886,8 +2598,7 @@
     "year": 1970,
     "decade": "70s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0290",
@@ -2896,8 +2607,7 @@
     "year": 1973,
     "decade": "70s",
     "difficulty": "Hard",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   },
   {
     "id": "BT-0291",
@@ -2906,1117 +2616,6 @@
     "year": 1987,
     "decade": "80s",
     "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0292",
-    "title": "Billie Jean",
-    "artist": "Michael Jackson",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0293",
-    "title": "Beat It",
-    "artist": "Michael Jackson",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0294",
-    "title": "Thriller",
-    "artist": "Michael Jackson",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0295",
-    "title": "Man in the Mirror",
-    "artist": "Michael Jackson",
-    "year": 1988,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0296",
-    "title": "Rock with You",
-    "artist": "Michael Jackson",
-    "year": 1979,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0297",
-    "title": "Don't Stop 'Til You Get Enough",
-    "artist": "Michael Jackson",
-    "year": 1979,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Disco",
-    "style": "Disco"
-  },
-  {
-    "id": "BT-0298",
-    "title": "Bennie and the Jets",
-    "artist": "Elton John",
-    "year": 1973,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0299",
-    "title": "Crocodile Rock",
-    "artist": "Elton John",
-    "year": 1972,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0300",
-    "title": "Philadelphia Freedom",
-    "artist": "Elton John",
-    "year": 1975,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0301",
-    "title": "I'm Still Standing",
-    "artist": "Elton John",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0302",
-    "title": "Tiny Dancer",
-    "artist": "Elton John",
-    "year": 1971,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0303",
-    "title": "Rocket Man",
-    "artist": "Elton John",
-    "year": 1972,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0304",
-    "title": "Hotel California",
-    "artist": "Eagles",
-    "year": 1976,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Yacht Rock"
-  },
-  {
-    "id": "BT-0305",
-    "title": "Take It to the Limit",
-    "artist": "Eagles",
-    "year": 1975,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Yacht Rock"
-  },
-  {
-    "id": "BT-0306",
-    "title": "New Kid in Town",
-    "artist": "Eagles",
-    "year": 1976,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Yacht Rock"
-  },
-  {
-    "id": "BT-0307",
-    "title": "Life in the Fast Lane",
-    "artist": "Eagles",
-    "year": 1976,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Yacht Rock"
-  },
-  {
-    "id": "BT-0308",
-    "title": "Desperado",
-    "artist": "Eagles",
-    "year": 1973,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Yacht Rock"
-  },
-  {
-    "id": "BT-0309",
-    "title": "Stayin' Alive",
-    "artist": "Bee Gees",
-    "year": 1977,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Disco",
-    "style": "Disco"
-  },
-  {
-    "id": "BT-0310",
-    "title": "Night Fever",
-    "artist": "Bee Gees",
-    "year": 1978,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Disco",
-    "style": "Disco"
-  },
-  {
-    "id": "BT-0311",
-    "title": "How Deep Is Your Love",
-    "artist": "Bee Gees",
-    "year": 1977,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Disco"
-  },
-  {
-    "id": "BT-0312",
-    "title": "You Should Be Dancing",
-    "artist": "Bee Gees",
-    "year": 1976,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Disco",
-    "style": "Disco"
-  },
-  {
-    "id": "BT-0313",
-    "title": "Jive Talkin'",
-    "artist": "Bee Gees",
-    "year": 1975,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Disco",
-    "style": "Disco"
-  },
-  {
-    "id": "BT-0314",
-    "title": "Mandy",
-    "artist": "Barry Manilow",
-    "year": 1974,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0315",
-    "title": "Copacabana",
-    "artist": "Barry Manilow",
-    "year": 1978,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0316",
-    "title": "Can't Smile Without You",
-    "artist": "Barry Manilow",
-    "year": 1978,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0317",
-    "title": "Looks Like We Made It",
-    "artist": "Barry Manilow",
-    "year": 1977,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0318",
-    "title": "I Write the Songs",
-    "artist": "Barry Manilow",
-    "year": 1975,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0319",
-    "title": "I Wanna Dance with Somebody",
-    "artist": "Whitney Houston",
-    "year": 1987,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0320",
-    "title": "Greatest Love of All",
-    "artist": "Whitney Houston",
-    "year": 1985,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0321",
-    "title": "How Will I Know",
-    "artist": "Whitney Houston",
-    "year": 1985,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0322",
-    "title": "Saving All My Love for You",
-    "artist": "Whitney Houston",
-    "year": 1985,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0323",
-    "title": "One Moment in Time",
-    "artist": "Whitney Houston",
-    "year": 1988,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0324",
-    "title": "Careless Whisper",
-    "artist": "George Michael",
-    "year": 1984,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0325",
-    "title": "Wake Me Up Before You Go-Go",
-    "artist": "Wham!",
-    "year": 1984,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0326",
-    "title": "Everything She Wants",
-    "artist": "Wham!",
-    "year": 1984,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0327",
-    "title": "Freedom! '90",
-    "artist": "George Michael",
-    "year": 1990,
-    "decade": "80s",
-    "difficulty": "Hard",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0328",
-    "title": "Piano Man",
-    "artist": "Billy Joel",
-    "year": 1973,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0329",
-    "title": "Uptown Girl",
-    "artist": "Billy Joel",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0330",
-    "title": "Movin' Out (Anthony's Song)",
-    "artist": "Billy Joel",
-    "year": 1977,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0331",
-    "title": "Big Shot",
-    "artist": "Billy Joel",
-    "year": 1978,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0332",
-    "title": "Against All Odds",
-    "artist": "Phil Collins",
-    "year": 1984,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0333",
-    "title": "In the Air Tonight",
-    "artist": "Phil Collins",
-    "year": 1981,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0334",
-    "title": "Sussudio",
-    "artist": "Phil Collins",
-    "year": 1985,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0335",
-    "title": "Invisible Touch",
-    "artist": "Genesis",
-    "year": 1986,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0336",
-    "title": "Against the Wind",
-    "artist": "Bob Seger",
-    "year": 1980,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0337",
-    "title": "Old Time Rock & Roll",
-    "artist": "Bob Seger",
-    "year": 1978,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0338",
-    "title": "Open Arms",
-    "artist": "Journey",
-    "year": 1982,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0339",
-    "title": "Separate Ways",
-    "artist": "Journey",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0340",
-    "title": "Any Way You Want It",
-    "artist": "Journey",
-    "year": 1980,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0341",
-    "title": "The Long Run",
-    "artist": "Eagles",
-    "year": 1979,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Yacht Rock"
-  },
-  {
-    "id": "BT-0342",
-    "title": "Borderline",
-    "artist": "Madonna",
-    "year": 1984,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Synth Pop",
-    "style": "Synth Pop"
-  },
-  {
-    "id": "BT-0343",
-    "title": "Like a Virgin",
-    "artist": "Madonna",
-    "year": 1984,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Synth Pop",
-    "style": "Synth Pop"
-  },
-  {
-    "id": "BT-0344",
-    "title": "Material Girl",
-    "artist": "Madonna",
-    "year": 1984,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Synth Pop",
-    "style": "Synth Pop"
-  },
-  {
-    "id": "BT-0345",
-    "title": "Open Your Heart",
-    "artist": "Madonna",
-    "year": 1986,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Synth Pop",
-    "style": "Synth Pop"
-  },
-  {
-    "id": "BT-0346",
-    "title": "Papa Don't Preach",
-    "artist": "Madonna",
-    "year": 1986,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Synth Pop",
-    "style": "Synth Pop"
-  },
-  {
-    "id": "BT-0347",
-    "title": "Time After Time",
-    "artist": "Cyndi Lauper",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0348",
-    "title": "Girls Just Want to Have Fun",
-    "artist": "Cyndi Lauper",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0349",
-    "title": "True Colors",
-    "artist": "Cyndi Lauper",
-    "year": 1986,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0350",
-    "title": "Dancing Queen",
-    "artist": "ABBA",
-    "year": 1976,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0351",
-    "title": "Freedom",
-    "artist": "Wham!",
-    "year": 1984,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0352",
-    "title": "Land of Confusion",
-    "artist": "Genesis",
-    "year": 1986,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0353",
-    "title": "Take a Chance on Me",
-    "artist": "ABBA",
-    "year": 1977,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0354",
-    "title": "Knowing Me, Knowing You",
-    "artist": "ABBA",
-    "year": 1977,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Pop",
-    "style": "Mainstream Pop"
-  },
-  {
-    "id": "BT-0355",
-    "title": "Old Time Rock and Roll",
-    "artist": "Bob Seger",
-    "year": 1978,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0356",
-    "title": "Separate Ways (Worlds Apart)",
-    "artist": "Journey",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0357",
-    "title": "Faithfully",
-    "artist": "Journey",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0358",
-    "title": "Another One Bites the Dust",
-    "artist": "Queen",
-    "year": 1980,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0359",
-    "title": "Crazy on You",
-    "artist": "Heart",
-    "year": 1976,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0360",
-    "title": "Bohemian Rhapsody",
-    "artist": "Queen",
-    "year": 1975,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Classic Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0361",
-    "title": "Let's Groove",
-    "artist": "Earth, Wind & Fire",
-    "year": 1981,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "R&B / Soul",
-    "style": "Funk"
-  },
-  {
-    "id": "BT-0362",
-    "title": "Easy",
-    "artist": "Commodores",
-    "year": 1977,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "R&B / Soul",
-    "style": "Funk"
-  },
-  {
-    "id": "BT-0363",
-    "title": "Sweet Child O' Mine",
-    "artist": "Guns N' Roses",
-    "year": 1988,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Hard Rock"
-  },
-  {
-    "id": "BT-0364",
-    "title": "Livin' on a Prayer",
-    "artist": "Bon Jovi",
-    "year": 1986,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Hair Metal"
-  },
-  {
-    "id": "BT-0365",
-    "title": "You Give Love a Bad Name",
-    "artist": "Bon Jovi",
-    "year": 1986,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Hair Metal"
-  },
-  {
-    "id": "BT-0366",
-    "title": "Wanted Dead or Alive",
-    "artist": "Bon Jovi",
-    "year": 1987,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Hair Metal"
-  },
-  {
-    "id": "BT-0367",
-    "title": "Pour Some Sugar on Me",
-    "artist": "Def Leppard",
-    "year": 1987,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Hair Metal"
-  },
-  {
-    "id": "BT-0368",
-    "title": "Photograph",
-    "artist": "Def Leppard",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Rock",
-    "style": "Hair Metal"
-  },
-  {
-    "id": "BT-0369",
-    "title": "Every Breath You Take",
-    "artist": "The Police",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "New Wave"
-  },
-  {
-    "id": "BT-0370",
-    "title": "Message in a Bottle",
-    "artist": "The Police",
-    "year": 1979,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Rock",
-    "style": "New Wave"
-  },
-  {
-    "id": "BT-0371",
-    "title": "Roxanne",
-    "artist": "The Police",
-    "year": 1978,
-    "decade": "70s",
-    "difficulty": "Medium",
-    "genre": "Rock",
-    "style": "New Wave"
-  },
-  {
-    "id": "BT-0372",
-    "title": "With or Without You",
-    "artist": "U2",
-    "year": 1987,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0373",
-    "title": "Where the Streets Have No Name",
-    "artist": "U2",
-    "year": 1987,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0374",
-    "title": "Pride (In the Name of Love)",
-    "artist": "U2",
-    "year": 1984,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0375",
-    "title": "Centerfold",
-    "artist": "J. Geils Band",
-    "year": 1981,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Power Pop"
-  },
-  {
-    "id": "BT-0376",
-    "title": "Jack & Diane",
-    "artist": "John Mellencamp",
-    "year": 1982,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Heartland Rock"
-  },
-  {
-    "id": "BT-0377",
-    "title": "Summer of '69",
-    "artist": "Bryan Adams",
-    "year": 1985,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0378",
-    "title": "Heaven",
-    "artist": "Bryan Adams",
-    "year": 1985,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Adult Contemporary",
-    "style": "Power Ballad"
-  },
-  {
-    "id": "BT-0379",
-    "title": "Total Eclipse of the Heart",
-    "artist": "Bonnie Tyler",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Adult Contemporary",
-    "style": "Power Ballad"
-  },
-  {
-    "id": "BT-0380",
-    "title": "Born in the U.S.A.",
-    "artist": "Bruce Springsteen",
-    "year": 1984,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Heartland Rock"
-  },
-  {
-    "id": "BT-0381",
-    "title": "Dancing in the Dark",
-    "artist": "Bruce Springsteen",
-    "year": 1984,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Heartland Rock"
-  },
-  {
-    "id": "BT-0382",
-    "title": "You Shook Me All Night Long",
-    "artist": "AC/DC",
-    "year": 1980,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Hard Rock"
-  },
-  {
-    "id": "BT-0383",
-    "title": "Back in Black",
-    "artist": "AC/DC",
-    "year": 1980,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Hard Rock"
-  },
-  {
-    "id": "BT-0384",
-    "title": "The Power of Love",
-    "artist": "Huey Lewis and the News",
-    "year": 1985,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Soundtrack",
-    "style": "Movie Soundtrack"
-  },
-  {
-    "id": "BT-0385",
-    "title": "St. Elmo's Fire (Man in Motion)",
-    "artist": "John Parr",
-    "year": 1985,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Soundtrack",
-    "style": "Movie Soundtrack"
-  },
-  {
-    "id": "BT-0386",
-    "title": "Footloose",
-    "artist": "Kenny Loggins",
-    "year": 1984,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Soundtrack",
-    "style": "Movie Soundtrack"
-  },
-  {
-    "id": "BT-0387",
-    "title": "Maneater",
-    "artist": "Hall & Oates",
-    "year": 1982,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "R&B / Soul",
-    "style": "Blue-Eyed Soul"
-  },
-  {
-    "id": "BT-0388",
-    "title": "Like a Prayer",
-    "artist": "Madonna",
-    "year": 1989,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Dance Pop"
-  },
-  {
-    "id": "BT-0389",
-    "title": "Everybody Wants to Rule the World",
-    "artist": "Tears for Fears",
-    "year": 1985,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "New Wave",
-    "style": "New Romantic"
-  },
-  {
-    "id": "BT-0390",
-    "title": "Shout",
-    "artist": "Tears for Fears",
-    "year": 1985,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "New Wave",
-    "style": "New Romantic"
-  },
-  {
-    "id": "BT-0391",
-    "title": "Everybody Have Fun Tonight",
-    "artist": "Wang Chung",
-    "year": 1986,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "New Wave",
-    "style": "Dance Rock"
-  },
-  {
-    "id": "BT-0392",
-    "title": "Walk Like an Egyptian",
-    "artist": "The Bangles",
-    "year": 1986,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Pop",
-    "style": "Dance Pop"
-  },
-  {
-    "id": "BT-0393",
-    "title": "Eye of the Tiger",
-    "artist": "Survivor",
-    "year": 1982,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Soundtrack",
-    "style": "Movie Soundtrack"
-  },
-  {
-    "id": "BT-0394",
-    "title": "Walk This Way",
-    "artist": "Aerosmith",
-    "year": 1975,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Hard Rock"
-  },
-  {
-    "id": "BT-0395",
-    "title": "Give a Little Bit",
-    "artist": "Supertramp",
-    "year": 1977,
-    "decade": "70s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Progressive Rock"
-  },
-  {
-    "id": "BT-0396",
-    "title": "Hold On Loosely",
-    "artist": "38 Special",
-    "year": 1981,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Rock",
-    "style": "Southern Rock"
-  },
-  {
-    "id": "BT-0397",
-    "title": "Caught Up in You",
-    "artist": "38 Special",
-    "year": 1982,
-    "decade": "80s",
-    "difficulty": "Medium",
-    "genre": "Rock",
-    "style": "Southern Rock"
-  },
-  {
-    "id": "BT-0398",
-    "title": "Sharp Dressed Man",
-    "artist": "ZZ Top",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Blues Rock"
-  },
-  {
-    "id": "BT-0399",
-    "title": "Legs",
-    "artist": "ZZ Top",
-    "year": 1983,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Blues Rock"
-  },
-  {
-    "id": "BT-0400",
-    "title": "Come On Eileen",
-    "artist": "Dexys Midnight Runners",
-    "year": 1982,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "New Wave",
-    "style": "Celtic Pop"
-  },
-  {
-    "id": "BT-0401",
-    "title": "We Built This City",
-    "artist": "Starship",
-    "year": 1985,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Arena Rock"
-  },
-  {
-    "id": "BT-0402",
-    "title": "Nothing's Gonna Stop Us Now",
-    "artist": "Starship",
-    "year": 1987,
-    "decade": "80s",
-    "difficulty": "Easy",
-    "genre": "Rock",
-    "style": "Arena Rock"
+    "genre": "Rock"
   }
 ]
