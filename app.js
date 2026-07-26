@@ -22,7 +22,7 @@ const CONFIG = {
 
     gameLengths: [10, 20, 40],
 
-    timerOptions: [15, 30, 60],
+    timerOptions: [15, 30, 45, 60],
 
     passesPerTenRounds: 1
 
@@ -61,7 +61,7 @@ let totalRounds = 10;
 
 let currentRound = 1;
 
-let selectedTimer = 30;
+let selectedTimer = 45;
 
 let timerInterval = null;
 
@@ -198,15 +198,23 @@ function revealNextSong() {
             .textContent = timeRemaining;
 
 
-        if (timeRemaining <= 0) {
+if (timeRemaining <= 0) {
 
-        clearInterval(timerInterval);
+    clearInterval(timerInterval);
 
-        document
+    timeRemaining = 0;
+
+    document
+        .getElementById("timerDisplay")
+        .textContent = "0";
+
+    document
         .getElementById("buzzerSound")
         .play();
 
-        showScreen("scoringScreen");
+    // Stay on the song screen.
+    // Wait for the clue giver to press SCORE THIS SONG.
+    return;
 
 }
 
@@ -557,7 +565,7 @@ document
 
         teams[currentTeamIndex].score += roundScore;
 
-        updateScoreboard();
+
 
 // Now move to the next team
 
@@ -581,7 +589,7 @@ document
 
         }
 
-
+        updateScoreboard();
 
         showCurrentTeam();
 
