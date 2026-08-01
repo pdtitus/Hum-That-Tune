@@ -20,11 +20,11 @@ const CONFIG = {
 
     },
 
-    gameLengths: [5, 10, 20],
+    gameLengths: [10, 20, 40],
 
     timerOptions: [15, 30, 45, 60],
 
-    passesPerTenRounds: 2
+    passesPerTenRounds: 1
 
 };
 
@@ -57,7 +57,7 @@ let selectedDecade = "random";
 
 let selectedDifficulty = "Mixed";
 
-let totalRounds = 5;
+let totalRounds = 10;
 
 let currentRound = 1;
 
@@ -199,30 +199,27 @@ function revealNextSong() {
 
 
 if (timeRemaining <= 0) {
-
     clearInterval(timerInterval);
 
     timeRemaining = 0;
+    timerDisplay.textContent = "0";
 
-    document
-        .getElementById("timerDisplay")
-        .textContent = "0";
-
-    document
+        document
         .getElementById("buzzerSound")
         .play();
 
-    // Stay on the song screen.
-    // Wait for the clue giver to press SCORE THIS SONG.
+    // Do nothing else.
+    // Wait for the clue giver to press Reveal.
     return;
+}
 
 }
 
-    }, 1000);
+    , 1000);
 
 }
 
-
+ 
 
 //================================================
 // GAME FUNCTIONS
@@ -293,7 +290,7 @@ function createTeams() {
 
     teams = [];
 
-    let passes = totalRounds / 5;
+    let passes = totalRounds / 10;
 
 
     for (let i = 1; i <= numberOfTeams; i++) {
@@ -343,11 +340,6 @@ function updateScoreboard() {
         .getElementById("scores")
         .innerHTML = scoreHTML;
 
-    document
-        .getElementById("roundDisplay")
-        .textContent =
-        "Round " + currentRound + " of " + totalRounds;
-
 }
 
 // Show team screen
@@ -367,51 +359,16 @@ function showCurrentTeam() {
         .textContent =
         teams[currentTeamIndex].passesRemaining;
 
+    document
+        .getElementById("roundDisplay")
+        .textContent = "Round " + currentRound + " of " + totalRounds;
+
 
     showScreen("turnScreen");
 
 }
 
 
-//================================================
-// EVENT LISTENERS
-//================================================
-
-// Start Game button
-
-document
-    .getElementById("startButton")
-    .addEventListener("click", function () {
-
-
-        numberOfTeams =
-            Number(document.getElementById("teamSelect").value);
-
-totalRounds =
-    Number(document.getElementById("roundSelect").value);
- 
-    selectedDecade =
-            document.getElementById("decadeSelect").value;
-
-
-        selectedDifficulty =
-            document.getElementById("difficultySelect").value;
-
-
-        buildDeck();
-
-
-        createTeams();
-
-        currentRound = 1;
-
-        currentTeamIndex = 0;
-
-
-        showCurrentTeam();
-
-
-    });
 
 // Reveal song
 
@@ -580,7 +537,6 @@ document
 
         }
 
-        
 
         if (currentRound > totalRounds) {
 
@@ -590,7 +546,7 @@ document
 
         }
 
-        
+
 
         showCurrentTeam();
 
