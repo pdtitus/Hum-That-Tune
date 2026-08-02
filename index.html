@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hum That Tune</title>
+    <title>BACKTRACK</title>
     <link rel="stylesheet" href="style.css">
     <audio id="buzzerSound" src="buzzer.mp3"></audio>
 </head>
@@ -16,17 +16,7 @@
   <h1>🎵 BACKTRACK 🎵</h1>
     <h2>70s & 80s Edition</h2>
 
-<div id="scoreboard" class="scoreboard">
 
-    <h3>🏆 SCOREBOARD</h3>
-
-    <div id="scores"></div>
-
-    <div id="roundDisplay"></div>
-
-</div>
-
-  
     <!-- SETUP SCREEN -->
     <div id="setupScreen" class="panel">
 
@@ -94,6 +84,16 @@
 
     </div>
 
+    
+    <div id="scoreboard" class="scoreboard">
+
+        <h3>🏆 SCOREBOARD</h3>
+
+        <div id="scores"></div>
+
+        <div id="roundDisplay"></div>
+
+    </div>
 
     <!-- TURN SCREEN -->
     <div id="turnScreen" class="panel hidden">
@@ -185,6 +185,28 @@
         <button id="nextButton">
         NEXT TEAM
         </button>
+
+</div>
+
+<!-- GAME OVER SCREEN -->
+
+<div id="gameOverScreen" class="panel hidden">
+
+    <h2>🏆 GAME OVER! 🏆</h2>
+
+    <h3 id="winnerDisplay"></h3>
+
+    <div id="finalScores"></div>
+
+    <br>
+
+    <button id="playAgainButton">
+        PLAY AGAIN
+    </button>
+
+    <button id="newGameButton">
+        NEW GAME
+    </button>
 
 </div>
 

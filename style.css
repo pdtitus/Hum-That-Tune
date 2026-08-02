@@ -120,6 +120,29 @@ p {
 
 }
 
+
+.pass-disabled {
+
+    opacity: 0.35;
+
+    cursor: default;
+
+    box-shadow: none;
+
+}
+
+.pass-disabled:hover {
+
+    transform: none;
+
+}
+
+
+#setupScreen:not(.hidden) ~ #scoreboard {
+    display: none;
+}
+
+
 /*================================================
   SCOREBOARD
 ================================================*/

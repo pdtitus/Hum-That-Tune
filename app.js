@@ -367,6 +367,17 @@ function showCurrentTeam() {
         .textContent =
         teams[currentTeamIndex].passesRemaining;
 
+        const passButton = document.getElementById("passButton");
+
+    if (team.passesRemaining === 0) {
+
+        passButton.classList.add("pass-disabled");
+
+    } else {
+
+        passButton.classList.remove("pass-disabled");
+
+    }
 
     showScreen("turnScreen");
 
@@ -407,7 +418,6 @@ totalRounds =
 
         currentTeamIndex = 0;
 
-
         showCurrentTeam();
 
 
@@ -433,8 +443,6 @@ totalRounds =
 
         if (team.passesRemaining <= 0) {
 
-            alert("No passes remaining.");
-
             return;
 
         }
@@ -445,6 +453,18 @@ totalRounds =
             .getElementById("passesRemaining")
             .textContent =
             team.passesRemaining;
+
+            const passButton = document.getElementById("passButton");
+
+        if (team.passesRemaining === 0) {
+
+            passButton.classList.add("pass-disabled");
+
+        } else {
+
+            passButton.classList.remove("pass-disabled");
+
+        }
 
         revealNextSong();
 
@@ -562,37 +582,30 @@ document
     .addEventListener("click", function () {
 
 // Award points to the team that just played
-
-        teams[currentTeamIndex].score += roundScore;
-
-        updateScoreboard();
+teams[currentTeamIndex].score += roundScore;
 
 // Now move to the next team
+currentTeamIndex++;
 
-        currentTeamIndex++;
+if (currentTeamIndex >= teams.length) {
 
+    currentTeamIndex = 0;
+    currentRound++;
 
-        if (currentTeamIndex >= teams.length) {
+}
 
-            currentTeamIndex = 0;
+// NOW update the scoreboard
+updateScoreboard();
 
-            currentRound++;
+if (currentRound > totalRounds) {
 
-        }
+    // (Eventually this will call showGameOver())
+    alert("Game Over!");
+    return;
 
-        
+}
 
-        if (currentRound > totalRounds) {
-
-            alert("Game Over!");
-
-            return;
-
-        }
-
-        
-
-        showCurrentTeam();
+showCurrentTeam();
 
 
     });

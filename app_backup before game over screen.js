@@ -20,11 +20,11 @@ const CONFIG = {
 
     },
 
-    gameLengths: [10, 20, 40],
+    gameLengths: [5, 10, 20],
 
     timerOptions: [15, 30, 45, 60],
 
-    passesPerTenRounds: 1
+    passesPerTenRounds: 2
 
 };
 
@@ -57,7 +57,7 @@ let selectedDecade = "random";
 
 let selectedDifficulty = "Mixed";
 
-let totalRounds = 10;
+let totalRounds = 5;
 
 let currentRound = 1;
 
@@ -199,27 +199,30 @@ function revealNextSong() {
 
 
 if (timeRemaining <= 0) {
+
     clearInterval(timerInterval);
 
     timeRemaining = 0;
-    timerDisplay.textContent = "0";
 
-        document
+    document
+        .getElementById("timerDisplay")
+        .textContent = "0";
+
+    document
         .getElementById("buzzerSound")
         .play();
 
-    // Do nothing else.
-    // Wait for the clue giver to press Reveal.
+    // Stay on the song screen.
+    // Wait for the clue giver to press SCORE THIS SONG.
     return;
-}
 
 }
 
-    , 1000);
+    }, 1000);
 
 }
 
- 
+
 
 //================================================
 // GAME FUNCTIONS
@@ -290,7 +293,7 @@ function createTeams() {
 
     teams = [];
 
-    let passes = totalRounds / 10;
+    let passes = totalRounds / 5;
 
 
     for (let i = 1; i <= numberOfTeams; i++) {
@@ -340,6 +343,11 @@ function updateScoreboard() {
         .getElementById("scores")
         .innerHTML = scoreHTML;
 
+    document
+        .getElementById("roundDisplay")
+        .textContent =
+        "Round " + currentRound + " of " + totalRounds;
+
 }
 
 // Show team screen
@@ -359,16 +367,61 @@ function showCurrentTeam() {
         .textContent =
         teams[currentTeamIndex].passesRemaining;
 
-    document
-        .getElementById("roundDisplay")
-        .textContent = "Round " + currentRound + " of " + totalRounds;
+        const passButton = document.getElementById("passButton");
 
+    if (team.passesRemaining === 0) {
+
+        passButton.classList.add("pass-disabled");
+
+    } else {
+
+        passButton.classList.remove("pass-disabled");
+
+    }
 
     showScreen("turnScreen");
 
 }
 
 
+//================================================
+// EVENT LISTENERS
+//================================================
+
+// Start Game button
+
+document
+    .getElementById("startButton")
+    .addEventListener("click", function () {
+
+
+        numberOfTeams =
+            Number(document.getElementById("teamSelect").value);
+
+totalRounds =
+    Number(document.getElementById("roundSelect").value);
+ 
+    selectedDecade =
+            document.getElementById("decadeSelect").value;
+
+
+        selectedDifficulty =
+            document.getElementById("difficultySelect").value;
+
+
+        buildDeck();
+
+
+        createTeams();
+
+        currentRound = 1;
+
+        currentTeamIndex = 0;
+
+        showCurrentTeam();
+
+
+    });
 
 // Reveal song
 
@@ -390,8 +443,6 @@ function showCurrentTeam() {
 
         if (team.passesRemaining <= 0) {
 
-            alert("No passes remaining.");
-
             return;
 
         }
@@ -402,6 +453,18 @@ function showCurrentTeam() {
             .getElementById("passesRemaining")
             .textContent =
             team.passesRemaining;
+
+            const passButton = document.getElementById("passButton");
+
+        if (team.passesRemaining === 0) {
+
+            passButton.classList.add("pass-disabled");
+
+        } else {
+
+            passButton.classList.remove("pass-disabled");
+
+        }
 
         revealNextSong();
 
@@ -537,6 +600,7 @@ document
 
         }
 
+        
 
         if (currentRound > totalRounds) {
 
@@ -546,7 +610,7 @@ document
 
         }
 
-
+        
 
         showCurrentTeam();
 
