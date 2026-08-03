@@ -97,6 +97,19 @@ fetch("songs.json")
 
 function showScreen(screenID) {
 
+    const titleArea = document.getElementById("titleArea");
+
+    if (screenID === "setupScreen") {
+
+    titleArea.classList.remove("hidden");
+
+    }
+    else {
+        
+    titleArea.classList.add("hidden");
+    } 
+   
+   
     document
         .getElementById("setupScreen")
         .classList
