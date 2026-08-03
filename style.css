@@ -21,7 +21,7 @@ h1 {
     text-shadow:
         0 0 10px #ff00ff,
         0 0 25px #ff00ff;
-    margin-bottom: 5px;
+    margin-bottom: 0;
 }
 
 
@@ -36,8 +36,9 @@ h2 {
     background-color: #12002b;
     border: 3px solid #00ffff;
     border-radius: 20px;
-    padding: 35px;
-    margin-top: 30px;
+    padding: 22px;
+    margin-top: 6px;
+    margin bottom: 12px;
 
     box-shadow:
         0 0 20px #00ffff;
@@ -47,6 +48,8 @@ h2 {
 h3 {
     font-size: 30px;
     color: #ffff00;
+    margin-top: 0;
+    margin-bottom: 12px;
     text-shadow:
         0 0 10px #ffff00;
 }
@@ -73,15 +76,15 @@ button {
 
     border: none;
 
-    padding: 18px 45px;
+    padding: 14px 36px;
 
-    font-size: 22px;
+    font-size: 20px;
 
     border-radius: 12px;
 
     cursor: pointer;
 
-    margin-top: 25px;
+    margin-top: 16px;
 
     box-shadow:
         0 0 15px #ff00ff;
@@ -110,6 +113,7 @@ button:hover {
 p {
 
     font-size: 22px;
+    margin: 10px 0;
 
 }
 
