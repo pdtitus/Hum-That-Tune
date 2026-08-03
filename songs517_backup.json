@@ -1,0 +1,5172 @@
+[
+  {
+    "id": "BT-0001",
+    "title": "Hold the Line",
+    "artist": "Toto",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0002",
+    "title": "Easy Lover",
+    "artist": "Philip Bailey and Phil Collins",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0003",
+    "title": "My Life",
+    "artist": "Billy Joel",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0004",
+    "title": "Jessie's Girl",
+    "artist": "Rick Springfield",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0005",
+    "title": "Rosanna",
+    "artist": "Toto",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0006",
+    "title": "Don't Stop Believin'",
+    "artist": "Journey",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0007",
+    "title": "Still the One",
+    "artist": "Orleans",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0008",
+    "title": "Baby Come Back",
+    "artist": "Player",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0009",
+    "title": "Heartache Tonight",
+    "artist": "Eagles",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0010",
+    "title": "Broken Wings",
+    "artist": "Mr. Mister",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0011",
+    "title": "Missing You",
+    "artist": "John Waite",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0012",
+    "title": "Head Over Heels",
+    "artist": "Tears for Fears",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0013",
+    "title": "Your Love",
+    "artist": "The Outfield",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0014",
+    "title": "The Search Is Over",
+    "artist": "Survivor",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0015",
+    "title": "Dream Weaver",
+    "artist": "Gary Wright",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0016",
+    "title": "Lido Shuffle",
+    "artist": "Boz Scaggs",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0017",
+    "title": "Goodbye Stranger",
+    "artist": "Supertramp",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0018",
+    "title": "Turn to Stone",
+    "artist": "Electric Light Orchestra",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0019",
+    "title": "One Thing Leads to Another",
+    "artist": "The Fixx",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0020",
+    "title": "Twilight Zone",
+    "artist": "Golden Earring",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0021",
+    "title": "Hold On Loosely",
+    "artist": ".38 Special",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0022",
+    "title": "Life in a Northern Town",
+    "artist": "Dream Academy",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0023",
+    "title": "Magnet and Steel",
+    "artist": "Walter Egan",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0024",
+    "title": "Cool Change",
+    "artist": "Little River Band",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0025",
+    "title": "Steppin' Out",
+    "artist": "Joe Jackson",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0026",
+    "title": "You May Be Right",
+    "artist": "Billy Joel",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0027",
+    "title": "What a Fool Believes",
+    "artist": "The Doobie Brothers",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0028",
+    "title": "Africa",
+    "artist": "Toto",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0029",
+    "title": "Centerfold",
+    "artist": "The J. Geils Band",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0030",
+    "title": "Sister Christian",
+    "artist": "Night Ranger",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0031",
+    "title": "Don't Bring Me Down",
+    "artist": "Electric Light Orchestra",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0032",
+    "title": "The Breakup Song",
+    "artist": "Greg Kihn Band",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0033",
+    "title": "Take the Long Way Home",
+    "artist": "Supertramp",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0034",
+    "title": "Every Time You Go Away",
+    "artist": "Paul Young",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0035",
+    "title": "When It's Love",
+    "artist": "Van Halen",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0036",
+    "title": "The Warrior",
+    "artist": "Scandal",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0037",
+    "title": "I Keep Forgettin'",
+    "artist": "Michael McDonald",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0038",
+    "title": "Sara",
+    "artist": "Starship",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0039",
+    "title": "The Flame",
+    "artist": "Cheap Trick",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0040",
+    "title": "Forever Young",
+    "artist": "Alphaville",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Synth Pop",
+    "style": "Synth Pop"
+  },
+  {
+    "id": "BT-0041",
+    "title": "Minute by Minute",
+    "artist": "The Doobie Brothers",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0042",
+    "title": "Cool Night",
+    "artist": "Paul Davis",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0043",
+    "title": "Valotte",
+    "artist": "Julian Lennon",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0044",
+    "title": "On the Loose",
+    "artist": "Saga",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0045",
+    "title": "No Myth",
+    "artist": "Michael Penn",
+    "year": 1989,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0046",
+    "title": "Love Is Alive",
+    "artist": "Gary Wright",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0047",
+    "title": "Kyrie",
+    "artist": "Mr. Mister",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0048",
+    "title": "What About Me",
+    "artist": "Moving Pictures",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0049",
+    "title": "Shattered Dreams",
+    "artist": "Johnny Hates Jazz",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0050",
+    "title": "Someday, Someway",
+    "artist": "Marshall Crenshaw",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0051",
+    "title": "Only the Good Die Young",
+    "artist": "Billy Joel",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0052",
+    "title": "Rikki Don't Lose That Number",
+    "artist": "Steely Dan",
+    "year": 1974,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0053",
+    "title": "You Can Do Magic",
+    "artist": "America",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0054",
+    "title": "Down Under",
+    "artist": "Men at Work",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0055",
+    "title": "Hurts So Good",
+    "artist": "John Mellencamp",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0056",
+    "title": "Cruel to Be Kind",
+    "artist": "Nick Lowe",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0057",
+    "title": "Ride Like the Wind",
+    "artist": "Christopher Cross",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0058",
+    "title": "Biggest Part of Me",
+    "artist": "Ambrosia",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0059",
+    "title": "Fool (If You Think It's Over)",
+    "artist": "Chris Rea",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0060",
+    "title": "Whatcha Gonna Do?",
+    "artist": "Pablo Cruise",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0061",
+    "title": "Baker Street",
+    "artist": "Gerry Rafferty",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0062",
+    "title": "Reminiscing",
+    "artist": "Little River Band",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0063",
+    "title": "Double Vision",
+    "artist": "Foreigner",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0064",
+    "title": "Take It Easy",
+    "artist": "Eagles",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0065",
+    "title": "Hot Blooded",
+    "artist": "Foreigner",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0066",
+    "title": "Ride Captain Ride",
+    "artist": "Blues Image",
+    "year": 1970,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0067",
+    "title": "Long Cool Woman (In a Black Dress)",
+    "artist": "The Hollies",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0068",
+    "title": "Fooled Around and Fell in Love",
+    "artist": "Elvin Bishop",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0069",
+    "title": "September",
+    "artist": "Earth, Wind & Fire",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Funk"
+  },
+  {
+    "id": "BT-0070",
+    "title": "Goodbye Yellow Brick Road",
+    "artist": "Elton John",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0071",
+    "title": "Heat of the Moment",
+    "artist": "Asia",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0072",
+    "title": "Crazy Little Thing Called Love",
+    "artist": "Queen",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0073",
+    "title": "Leather and Lace",
+    "artist": "Stevie Nicks & Don Henley",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0074",
+    "title": "Diamond Girl",
+    "artist": "Seals & Crofts",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0075",
+    "title": "Sultans of Swing",
+    "artist": "Dire Straits",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0076",
+    "title": "December, 1963 (Oh, What a Night)",
+    "artist": "The Four Seasons",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0077",
+    "title": "Carry On Wayward Son",
+    "artist": "Kansas",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0078",
+    "title": "Low Rider",
+    "artist": "War",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0079",
+    "title": "Jackie Blue",
+    "artist": "Ozark Mountain Daredevils",
+    "year": 1974,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0080",
+    "title": "Still Rock and Roll to Me",
+    "artist": "Billy Joel",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0081",
+    "title": "Owner of a Lonely Heart",
+    "artist": "Yes",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0082",
+    "title": "Working for the Weekend",
+    "artist": "Loverboy",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0083",
+    "title": "Even the Nights Are Better",
+    "artist": "Air Supply",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0084",
+    "title": "The Logical Song",
+    "artist": "Supertramp",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0085",
+    "title": "I Go Crazy",
+    "artist": "Paul Davis",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0086",
+    "title": "Smoke from a Distant Fire",
+    "artist": "Sanford-Townsend Band",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0087",
+    "title": "Love Will Find a Way",
+    "artist": "Pablo Cruise",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0088",
+    "title": "Escape (The Piña Colada Song)",
+    "artist": "Rupert Holmes",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0089",
+    "title": "Heart of Glass",
+    "artist": "Blondie",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0090",
+    "title": "Hit Me with Your Best Shot",
+    "artist": "Pat Benatar",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0091",
+    "title": "Take On Me",
+    "artist": "a-ha",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Synth Pop",
+    "style": "Synth Pop"
+  },
+  {
+    "id": "BT-0092",
+    "title": "Vacation",
+    "artist": "The Go-Go's",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0093",
+    "title": "Turn the Page",
+    "artist": "Bob Seger",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0094",
+    "title": "Miracles",
+    "artist": "Jefferson Starship",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0095",
+    "title": "You're Only Lonely",
+    "artist": "J.D. Souther",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0096",
+    "title": "Listen to the Music",
+    "artist": "The Doobie Brothers",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0097",
+    "title": "How Much I Feel",
+    "artist": "Ambrosia",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0098",
+    "title": "Heart and Soul",
+    "artist": "Huey Lewis & The News",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0099",
+    "title": "Private Eyes",
+    "artist": "Hall & Oates",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0100",
+    "title": "Lonely Boy",
+    "artist": "Andrew Gold",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0101",
+    "title": "Thunder Island",
+    "artist": "Jay Ferguson",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0102",
+    "title": "Cherry Cherry",
+    "artist": "Neil Diamond",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0103",
+    "title": "Dance with Me",
+    "artist": "Orleans",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0104",
+    "title": "Driver's Seat",
+    "artist": "Sniff 'n' the Tears",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0105",
+    "title": "I'm Not in Love",
+    "artist": "10cc",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0106",
+    "title": "Baby Hold On",
+    "artist": "Eddie Money",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0107",
+    "title": "Life's Been Good",
+    "artist": "Joe Walsh",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0108",
+    "title": "How Long",
+    "artist": "Ace",
+    "year": 1974,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0109",
+    "title": "867-5309/Jenny",
+    "artist": "Tommy Tutone",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0110",
+    "title": "The Stroke",
+    "artist": "Billy Squier",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0111",
+    "title": "Keep on Loving You",
+    "artist": "REO Speedwagon",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0112",
+    "title": "Back on the Chain Gang",
+    "artist": "The Pretenders",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0113",
+    "title": "Hold Me Now",
+    "artist": "Thompson Twins",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0114",
+    "title": "Promises, Promises",
+    "artist": "Naked Eyes",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Synth Pop",
+    "style": "Synth Pop"
+  },
+  {
+    "id": "BT-0115",
+    "title": "Der Kommissar",
+    "artist": "After the Fire",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0116",
+    "title": "Only the Lonely",
+    "artist": "The Motels",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0117",
+    "title": "Lunatic Fringe",
+    "artist": "Red Rider",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0118",
+    "title": "Shakin'",
+    "artist": "Eddie Money",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0119",
+    "title": "Say You Love Me",
+    "artist": "Fleetwood Mac",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0120",
+    "title": "Dream Police",
+    "artist": "Cheap Trick",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0121",
+    "title": "Rockin' Into the Night",
+    "artist": ".38 Special",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0122",
+    "title": "The Things We Do for Love",
+    "artist": "10cc",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0123",
+    "title": "Shake It Up",
+    "artist": "The Cars",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0124",
+    "title": "Urgent",
+    "artist": "Foreigner",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0125",
+    "title": "Takin' Care of Business",
+    "artist": "Bachman-Turner Overdrive",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0126",
+    "title": "Jet Airliner",
+    "artist": "Steve Miller Band",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0127",
+    "title": "Lights",
+    "artist": "Journey",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0128",
+    "title": "Love Hurts",
+    "artist": "Nazareth",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0129",
+    "title": "Heartbreaker",
+    "artist": "Pat Benatar",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0130",
+    "title": "Blue Collar Man",
+    "artist": "Styx",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0131",
+    "title": "Feels Like the First Time",
+    "artist": "Foreigner",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0132",
+    "title": "Turn the Beat Around",
+    "artist": "Vicki Sue Robinson",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0133",
+    "title": "Good Girls Don't",
+    "artist": "The Knack",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0134",
+    "title": "Love Is Like Oxygen",
+    "artist": "Sweet",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0135",
+    "title": "One on One",
+    "artist": "Hall & Oates",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0136",
+    "title": "You Got Lucky",
+    "artist": "Tom Petty and the Heartbreakers",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0137",
+    "title": "Breaking Us in Two",
+    "artist": "Joe Jackson",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0138",
+    "title": "Jeopardy",
+    "artist": "Greg Kihn Band",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0139",
+    "title": "Human Nature",
+    "artist": "Michael Jackson",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0140",
+    "title": "Suddenly Last Summer",
+    "artist": "The Motels",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0141",
+    "title": "Back Where You Belong",
+    "artist": ".38 Special",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0142",
+    "title": "Hold Me",
+    "artist": "Fleetwood Mac",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0143",
+    "title": "You Make My Dreams",
+    "artist": "Hall & Oates",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0144",
+    "title": "Only Time Will Tell",
+    "artist": "Asia",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0145",
+    "title": "Winning",
+    "artist": "Santana",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0146",
+    "title": "The One You Love",
+    "artist": "Glenn Frey",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0147",
+    "title": "I Can't Go for That (No Can Do)",
+    "artist": "Hall & Oates",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0148",
+    "title": "Sausalito Summernight",
+    "artist": "Diesel",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0149",
+    "title": "Hollywood Nights",
+    "artist": "Bob Seger",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0150",
+    "title": "Baby Blue",
+    "artist": "Badfinger",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0151",
+    "title": "Right Down the Line",
+    "artist": "Gerry Rafferty",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0152",
+    "title": "You're No Good",
+    "artist": "Linda Ronstadt",
+    "year": 1974,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0153",
+    "title": "Shining Star",
+    "artist": "Earth, Wind & Fire",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "R&B / Soul",
+    "style": "Funk"
+  },
+  {
+    "id": "BT-0154",
+    "title": "Couldn't Get It Right",
+    "artist": "Climax Blues Band",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0155",
+    "title": "Still the Same",
+    "artist": "Bob Seger",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0156",
+    "title": "Boogie Oogie Oogie",
+    "artist": "A Taste of Honey",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Disco",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0157",
+    "title": "Hot Child in the City",
+    "artist": "Nick Gilder",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0158",
+    "title": "Whenever I Call You Friend",
+    "artist": "Kenny Loggins and Stevie Nicks",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0159",
+    "title": "Kiss on My List",
+    "artist": "Hall & Oates",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0160",
+    "title": "Waiting for a Girl Like You",
+    "artist": "Foreigner",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0161",
+    "title": "Don't Dream It's Over",
+    "artist": "Crowded House",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0162",
+    "title": "Voices Carry",
+    "artist": "'Til Tuesday",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0163",
+    "title": "The Safety Dance",
+    "artist": "Men Without Hats",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0164",
+    "title": "Don't Change",
+    "artist": "INXS",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0165",
+    "title": "Who Can It Be Now?",
+    "artist": "Men at Work",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0166",
+    "title": "Sweet Dreams (Are Made of This)",
+    "artist": "Eurythmics",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Synth Pop",
+    "style": "Synth Pop"
+  },
+  {
+    "id": "BT-0167",
+    "title": "Silent Running",
+    "artist": "Mike + The Mechanics",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0168",
+    "title": "All I Need Is a Miracle",
+    "artist": "Mike + The Mechanics",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0169",
+    "title": "Say It Isn't So",
+    "artist": "Hall & Oates",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0170",
+    "title": "Electric Blue",
+    "artist": "Icehouse",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0171",
+    "title": "Somebody's Baby",
+    "artist": "Jackson Browne",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  },
+  {
+    "id": "BT-0172",
+    "title": "I Melt with You",
+    "artist": "Modern English",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0173",
+    "title": "Fantasy",
+    "artist": "Aldo Nova",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0174",
+    "title": "Hold Back the Night",
+    "artist": "The Trammps",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Disco",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0175",
+    "title": "Love Changes Everything",
+    "artist": "Climie Fisher",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0176",
+    "title": "Need You Tonight",
+    "artist": "INXS",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0177",
+    "title": "Never Gonna Give You Up",
+    "artist": "Rick Astley",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0178",
+    "title": "Heaven Is a Place on Earth",
+    "artist": "Belinda Carlisle",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0179",
+    "title": "Faith",
+    "artist": "George Michael",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0180",
+    "title": "Pump Up the Volume",
+    "artist": "MARRS",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Dance",
+    "style": "Mainstream"
+  },
+  {
+    "id": "BT-0181",
+    "title": "The Way It Is",
+    "artist": "Bruce Hornsby and the Range",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0182",
+    "title": "The Living Years",
+    "artist": "Mike + The Mechanics",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0183",
+    "title": "When I See You Smile",
+    "artist": "Bad English",
+    "year": 1989,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0184",
+    "title": "Eternal Flame",
+    "artist": "The Bangles",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0185",
+    "title": "Angel Eyes",
+    "artist": "The Jeff Healey Band",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0186",
+    "title": "The Promise",
+    "artist": "When in Rome",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0187",
+    "title": "Wild, Wild West",
+    "artist": "The Escape Club",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0188",
+    "title": "Waiting for a Star to Fall",
+    "artist": "Boy Meets Girl",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0189",
+    "title": "Every Rose Has Its Thorn",
+    "artist": "Poison",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0190",
+    "title": "Straight Up",
+    "artist": "Paula Abdul",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0191",
+    "title": "She Drives Me Crazy",
+    "artist": "Fine Young Cannibals",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0192",
+    "title": "If You Leave",
+    "artist": "Orchestral Manoeuvres in the Dark",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  },
+  {
+    "id": "BT-0193",
+    "title": "Don't Shed a Tear",
+    "artist": "Paul Carrack",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0194",
+    "title": "End of the Line",
+    "artist": "Traveling Wilburys",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0195",
+    "title": "Room to Move",
+    "artist": "Animotion",
+    "year": 1989,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0196",
+    "title": "Don't Worry, Be Happy",
+    "artist": "Bobby McFerrin",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Novelty",
+    "style": "Novelty"
+  },
+  {
+    "id": "BT-0197",
+    "title": "Forever",
+    "artist": "Kiss",
+    "year": 1989,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0198",
+    "title": "Toy Soldiers",
+    "artist": "Martika",
+    "year": 1989,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0199",
+    "title": "What I Am",
+    "artist": "Edie Brickell and New Bohemians",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Alternative",
+    "style": "Mainstream"
+  },
+  {
+    "id": "BT-0200",
+    "title": "The Power of Love",
+    "artist": "Huey Lewis & The News",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  },
+  {
+    "id": "BT-0201",
+    "title": "Abracadabra",
+    "artist": "Steve Miller Band",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0202",
+    "title": "What I Like About You",
+    "artist": "The Romantics",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0203",
+    "title": "Addicted to Love",
+    "artist": "Robert Palmer",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0204",
+    "title": "One Night in Bangkok",
+    "artist": "Murray Head",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0205",
+    "title": "Never Gonna Let You Go",
+    "artist": "Sergio Mendes",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0206",
+    "title": "Rock Me Amadeus",
+    "artist": "Falco",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0207",
+    "title": "I Can't Wait",
+    "artist": "Nu Shooz",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Dance",
+    "style": "Mainstream"
+  },
+  {
+    "id": "BT-0208",
+    "title": "Talk to Ya Later",
+    "artist": "The Tubes",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0209",
+    "title": "Never Tear Us Apart",
+    "artist": "INXS",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0210",
+    "title": "Glory Days",
+    "artist": "Bruce Springsteen",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0211",
+    "title": "The Heat Is On",
+    "artist": "Glenn Frey",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  },
+  {
+    "id": "BT-0212",
+    "title": "Walk of Life",
+    "artist": "Dire Straits",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0213",
+    "title": "You Spin Me Round (Like a Record)",
+    "artist": "Dead or Alive",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Dance",
+    "style": "Mainstream"
+  },
+  {
+    "id": "BT-0214",
+    "title": "Rio",
+    "artist": "Duran Duran",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0215",
+    "title": "Our House",
+    "artist": "Madness",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0216",
+    "title": "Making Love Out of Nothing at All",
+    "artist": "Air Supply",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0217",
+    "title": "The Reflex",
+    "artist": "Duran Duran",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0218",
+    "title": "Love Plus One",
+    "artist": "Haircut One Hundred",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0219",
+    "title": "Go Your Own Way",
+    "artist": "Fleetwood Mac",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0220",
+    "title": "Dreams",
+    "artist": "Fleetwood Mac",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0221",
+    "title": "Long Train Runnin'",
+    "artist": "The Doobie Brothers",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0222",
+    "title": "More Than a Feeling",
+    "artist": "Boston",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0223",
+    "title": "You're My Best Friend",
+    "artist": "Queen",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0224",
+    "title": "Telephone Line",
+    "artist": "Electric Light Orchestra",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0225",
+    "title": "Band on the Run",
+    "artist": "Paul McCartney and Wings",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0226",
+    "title": "Brandy (You're a Fine Girl)",
+    "artist": "Looking Glass",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0227",
+    "title": "Moonlight Feels Right",
+    "artist": "Starbuck",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0228",
+    "title": "Dream On",
+    "artist": "Aerosmith",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0229",
+    "title": "Help Is on Its Way",
+    "artist": "Little River Band",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0230",
+    "title": "Show Me the Way",
+    "artist": "Peter Frampton",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0231",
+    "title": "More, More, More",
+    "artist": "Andrea True Connection",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Disco",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0232",
+    "title": "Love Rollercoaster",
+    "artist": "Ohio Players",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Funk",
+    "style": "Funk"
+  },
+  {
+    "id": "BT-0233",
+    "title": "Best of My Love",
+    "artist": "The Emotions",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "R&B / Soul",
+    "style": "Soul"
+  },
+  {
+    "id": "BT-0234",
+    "title": "I Love the Nightlife",
+    "artist": "Alicia Bridges",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Disco",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0235",
+    "title": "Hot Stuff",
+    "artist": "Donna Summer",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Disco",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0236",
+    "title": "We Are Family",
+    "artist": "Sister Sledge",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Disco",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0237",
+    "title": "Lady",
+    "artist": "Little River Band",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0238",
+    "title": "Good Times",
+    "artist": "Chic",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Disco",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0239",
+    "title": "Can't Get Enough",
+    "artist": "Bad Company",
+    "year": 1974,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0240",
+    "title": "Dreamboat Annie",
+    "artist": "Heart",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0241",
+    "title": "Summer Breeze",
+    "artist": "Seals & Crofts",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0242",
+    "title": "Come and Get Your Love",
+    "artist": "Redbone",
+    "year": 1974,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0243",
+    "title": "Rock and Roll, Hoochie Koo",
+    "artist": "Rick Derringer",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0244",
+    "title": "Love Grows (Where My Rosemary Goes)",
+    "artist": "Edison Lighthouse",
+    "year": 1970,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0245",
+    "title": "Shambala",
+    "artist": "Three Dog Night",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0246",
+    "title": "The Night Chicago Died",
+    "artist": "Paper Lace",
+    "year": 1974,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0247",
+    "title": "Vehicle",
+    "artist": "The Ides of March",
+    "year": 1970,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0248",
+    "title": "Baby I'm-a Want You",
+    "artist": "Bread",
+    "year": 1971,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0249",
+    "title": "Take My Breath Away",
+    "artist": "Berlin",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  },
+  {
+    "id": "BT-0250",
+    "title": "The Boys Are Back in Town",
+    "artist": "Thin Lizzy",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0251",
+    "title": "Renegade",
+    "artist": "Styx",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0252",
+    "title": "Hold Your Head Up",
+    "artist": "Argent",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0253",
+    "title": "The Spirit of Radio",
+    "artist": "Rush",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0254",
+    "title": "Turn Up the Radio",
+    "artist": "Autograph",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0255",
+    "title": "Don't Answer Me",
+    "artist": "The Alan Parsons Project",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0256",
+    "title": "Eye in the Sky",
+    "artist": "The Alan Parsons Project",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0257",
+    "title": "Twilight",
+    "artist": "Electric Light Orchestra",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0258",
+    "title": "All Right Now",
+    "artist": "Free",
+    "year": 1970,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0259",
+    "title": "Magic Man",
+    "artist": "Heart",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0260",
+    "title": "Point of No Return",
+    "artist": "Exposé",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0261",
+    "title": "The Look",
+    "artist": "Roxette",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0262",
+    "title": "Obsession",
+    "artist": "Animotion",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0263",
+    "title": "Break My Stride",
+    "artist": "Matthew Wilder",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0264",
+    "title": "Maniac",
+    "artist": "Michael Sembello",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  },
+  {
+    "id": "BT-0265",
+    "title": "The Lucky One",
+    "artist": "Laura Branigan",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0266",
+    "title": "Ah! Leah!",
+    "artist": "Donnie Iris",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0267",
+    "title": "Walking on Sunshine",
+    "artist": "Katrina and the Waves",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0268",
+    "title": "Der Kommissar",
+    "artist": "Falco",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0269",
+    "title": "Only a Lonely Heart Sees",
+    "artist": "Felix Cavaliere",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0270",
+    "title": "Rock Me Gently",
+    "artist": "Andy Kim",
+    "year": 1974,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0271",
+    "title": "Baby Come to Me",
+    "artist": "Patti Austin & James Ingram",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0272",
+    "title": "Living After Midnight",
+    "artist": "Judas Priest",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0273",
+    "title": "Young Turks",
+    "artist": "Rod Stewart",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0274",
+    "title": "Burning Heart",
+    "artist": "Survivor",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  },
+  {
+    "id": "BT-0275",
+    "title": "Hold On",
+    "artist": "Ian Gomm",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0276",
+    "title": "Living in America",
+    "artist": "The Steve Miller Band",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0277",
+    "title": "On and On",
+    "artist": "Stephen Bishop",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0278",
+    "title": "You Ain't Seen Nothing Yet",
+    "artist": "Bachman-Turner Overdrive",
+    "year": 1974,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0279",
+    "title": "Baby Come Back",
+    "artist": "Ambrosia",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0280",
+    "title": "Strange Way",
+    "artist": "Firefall",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0281",
+    "title": "Sentimental Lady",
+    "artist": "Bob Welch",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0282",
+    "title": "Blue Morning, Blue Day",
+    "artist": "Foreigner",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0283",
+    "title": "The Heart of Rock & Roll",
+    "artist": "Huey Lewis & The News",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0284",
+    "title": "Love Somebody",
+    "artist": "Rick Springfield",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0285",
+    "title": "I'd Really Love to See You Tonight",
+    "artist": "England Dan & John Ford Coley",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0286",
+    "title": "Romeo's Tune",
+    "artist": "Steve Forbert",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0287",
+    "title": "Heartbreaker",
+    "artist": "Grand Funk Railroad",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0288",
+    "title": "No Time",
+    "artist": "The Guess Who",
+    "year": 1970,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0289",
+    "title": "Twistin' the Night Away",
+    "artist": "Rod Stewart",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0290",
+    "title": "Touch of Grey",
+    "artist": "Grateful Dead",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0291",
+    "title": "Billie Jean",
+    "artist": "Michael Jackson",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0292",
+    "title": "Beat It",
+    "artist": "Michael Jackson",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0293",
+    "title": "Thriller",
+    "artist": "Michael Jackson",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0294",
+    "title": "Man in the Mirror",
+    "artist": "Michael Jackson",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0295",
+    "title": "Rock with You",
+    "artist": "Michael Jackson",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0296",
+    "title": "Don't Stop 'Til You Get Enough",
+    "artist": "Michael Jackson",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Disco",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0297",
+    "title": "Bennie and the Jets",
+    "artist": "Elton John",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0298",
+    "title": "Crocodile Rock",
+    "artist": "Elton John",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0299",
+    "title": "Philadelphia Freedom",
+    "artist": "Elton John",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0300",
+    "title": "I'm Still Standing",
+    "artist": "Elton John",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0301",
+    "title": "Tiny Dancer",
+    "artist": "Elton John",
+    "year": 1971,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0302",
+    "title": "Rocket Man",
+    "artist": "Elton John",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0303",
+    "title": "Hotel California",
+    "artist": "Eagles",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0304",
+    "title": "Take It to the Limit",
+    "artist": "Eagles",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0305",
+    "title": "New Kid in Town",
+    "artist": "Eagles",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0306",
+    "title": "Life in the Fast Lane",
+    "artist": "Eagles",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0307",
+    "title": "Desperado",
+    "artist": "Eagles",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0308",
+    "title": "Stayin' Alive",
+    "artist": "Bee Gees",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Disco",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0309",
+    "title": "Night Fever",
+    "artist": "Bee Gees",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Disco",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0310",
+    "title": "How Deep Is Your Love",
+    "artist": "Bee Gees",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0311",
+    "title": "You Should Be Dancing",
+    "artist": "Bee Gees",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Disco",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0312",
+    "title": "Jive Talkin'",
+    "artist": "Bee Gees",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Disco",
+    "style": "Disco"
+  },
+  {
+    "id": "BT-0313",
+    "title": "Mandy",
+    "artist": "Barry Manilow",
+    "year": 1974,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0314",
+    "title": "Copacabana",
+    "artist": "Barry Manilow",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0315",
+    "title": "Can't Smile Without You",
+    "artist": "Barry Manilow",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0316",
+    "title": "Looks Like We Made It",
+    "artist": "Barry Manilow",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0317",
+    "title": "I Write the Songs",
+    "artist": "Barry Manilow",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0318",
+    "title": "I Wanna Dance with Somebody",
+    "artist": "Whitney Houston",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0319",
+    "title": "Greatest Love of All",
+    "artist": "Whitney Houston",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0320",
+    "title": "How Will I Know",
+    "artist": "Whitney Houston",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0321",
+    "title": "Saving All My Love for You",
+    "artist": "Whitney Houston",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0322",
+    "title": "One Moment in Time",
+    "artist": "Whitney Houston",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0323",
+    "title": "Careless Whisper",
+    "artist": "George Michael",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0324",
+    "title": "Wake Me Up Before You Go-Go",
+    "artist": "Wham!",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0325",
+    "title": "Everything She Wants",
+    "artist": "Wham!",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0326",
+    "title": "Freedom! '90",
+    "artist": "George Michael",
+    "year": 1990,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0327",
+    "title": "Piano Man",
+    "artist": "Billy Joel",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0328",
+    "title": "Uptown Girl",
+    "artist": "Billy Joel",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0329",
+    "title": "Movin' Out (Anthony's Song)",
+    "artist": "Billy Joel",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0330",
+    "title": "Big Shot",
+    "artist": "Billy Joel",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0331",
+    "title": "Against All Odds",
+    "artist": "Phil Collins",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0332",
+    "title": "In the Air Tonight",
+    "artist": "Phil Collins",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0333",
+    "title": "Sussudio",
+    "artist": "Phil Collins",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0334",
+    "title": "Invisible Touch",
+    "artist": "Genesis",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0335",
+    "title": "Against the Wind",
+    "artist": "Bob Seger",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0336",
+    "title": "Old Time Rock & Roll",
+    "artist": "Bob Seger",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0337",
+    "title": "Open Arms",
+    "artist": "Journey",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0338",
+    "title": "Separate Ways",
+    "artist": "Journey",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0339",
+    "title": "Any Way You Want It",
+    "artist": "Journey",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0340",
+    "title": "The Long Run",
+    "artist": "Eagles",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0341",
+    "title": "Borderline",
+    "artist": "Madonna",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Synth Pop",
+    "style": "Synth Pop"
+  },
+  {
+    "id": "BT-0342",
+    "title": "Like a Virgin",
+    "artist": "Madonna",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Synth Pop",
+    "style": "Synth Pop"
+  },
+  {
+    "id": "BT-0343",
+    "title": "Material Girl",
+    "artist": "Madonna",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Synth Pop",
+    "style": "Synth Pop"
+  },
+  {
+    "id": "BT-0344",
+    "title": "Open Your Heart",
+    "artist": "Madonna",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Synth Pop",
+    "style": "Synth Pop"
+  },
+  {
+    "id": "BT-0345",
+    "title": "Papa Don't Preach",
+    "artist": "Madonna",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Synth Pop",
+    "style": "Synth Pop"
+  },
+  {
+    "id": "BT-0346",
+    "title": "Time After Time",
+    "artist": "Cyndi Lauper",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0347",
+    "title": "Girls Just Want to Have Fun",
+    "artist": "Cyndi Lauper",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0348",
+    "title": "True Colors",
+    "artist": "Cyndi Lauper",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0349",
+    "title": "Dancing Queen",
+    "artist": "ABBA",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0350",
+    "title": "Freedom",
+    "artist": "Wham!",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0351",
+    "title": "Land of Confusion",
+    "artist": "Genesis",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0352",
+    "title": "Take a Chance on Me",
+    "artist": "ABBA",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0353",
+    "title": "Knowing Me, Knowing You",
+    "artist": "ABBA",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0354",
+    "title": "Old Time Rock and Roll",
+    "artist": "Bob Seger",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0355",
+    "title": "Separate Ways (Worlds Apart)",
+    "artist": "Journey",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0356",
+    "title": "Faithfully",
+    "artist": "Journey",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0357",
+    "title": "Another One Bites the Dust",
+    "artist": "Queen",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0358",
+    "title": "Crazy on You",
+    "artist": "Heart",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0359",
+    "title": "Bohemian Rhapsody",
+    "artist": "Queen",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Classic Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0360",
+    "title": "Let's Groove",
+    "artist": "Earth, Wind & Fire",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "R&B / Soul",
+    "style": "Funk"
+  },
+  {
+    "id": "BT-0361",
+    "title": "Easy",
+    "artist": "Commodores",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "R&B / Soul",
+    "style": "Funk"
+  },
+  {
+    "id": "BT-0362",
+    "title": "Sweet Child O' Mine",
+    "artist": "Guns N' Roses",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Hard Rock"
+  },
+  {
+    "id": "BT-0363",
+    "title": "Livin' on a Prayer",
+    "artist": "Bon Jovi",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Hair Metal"
+  },
+  {
+    "id": "BT-0364",
+    "title": "You Give Love a Bad Name",
+    "artist": "Bon Jovi",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Hair Metal"
+  },
+  {
+    "id": "BT-0365",
+    "title": "Wanted Dead or Alive",
+    "artist": "Bon Jovi",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Hair Metal"
+  },
+  {
+    "id": "BT-0366",
+    "title": "Pour Some Sugar on Me",
+    "artist": "Def Leppard",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Hair Metal"
+  },
+  {
+    "id": "BT-0367",
+    "title": "Photograph",
+    "artist": "Def Leppard",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Hair Metal"
+  },
+  {
+    "id": "BT-0368",
+    "title": "Every Breath You Take",
+    "artist": "The Police",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0369",
+    "title": "Message in a Bottle",
+    "artist": "The Police",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0370",
+    "title": "Roxanne",
+    "artist": "The Police",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0371",
+    "title": "With or Without You",
+    "artist": "U2",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0372",
+    "title": "Where the Streets Have No Name",
+    "artist": "U2",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0373",
+    "title": "Pride (In the Name of Love)",
+    "artist": "U2",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0374",
+    "title": "Centerfold",
+    "artist": "J. Geils Band",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Power Pop"
+  },
+  {
+    "id": "BT-0375",
+    "title": "Jack & Diane",
+    "artist": "John Mellencamp",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Heartland Rock"
+  },
+  {
+    "id": "BT-0376",
+    "title": "Summer of '69",
+    "artist": "Bryan Adams",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0377",
+    "title": "Heaven",
+    "artist": "Bryan Adams",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Adult Contemporary",
+    "style": "Power Ballad"
+  },
+  {
+    "id": "BT-0378",
+    "title": "Total Eclipse of the Heart",
+    "artist": "Bonnie Tyler",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Adult Contemporary",
+    "style": "Power Ballad"
+  },
+  {
+    "id": "BT-0379",
+    "title": "Born in the U.S.A.",
+    "artist": "Bruce Springsteen",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Heartland Rock"
+  },
+  {
+    "id": "BT-0380",
+    "title": "Dancing in the Dark",
+    "artist": "Bruce Springsteen",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Heartland Rock"
+  },
+  {
+    "id": "BT-0381",
+    "title": "You Shook Me All Night Long",
+    "artist": "AC/DC",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Hard Rock"
+  },
+  {
+    "id": "BT-0382",
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Hard Rock"
+  },
+  {
+    "id": "BT-0383",
+    "title": "The Power of Love",
+    "artist": "Huey Lewis and the News",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  },
+  {
+    "id": "BT-0384",
+    "title": "St. Elmo's Fire (Man in Motion)",
+    "artist": "John Parr",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  },
+  {
+    "id": "BT-0385",
+    "title": "Footloose",
+    "artist": "Kenny Loggins",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  },
+  {
+    "id": "BT-0386",
+    "title": "Maneater",
+    "artist": "Hall & Oates",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "R&B / Soul",
+    "style": "Blue-Eyed Soul"
+  },
+  {
+    "id": "BT-0387",
+    "title": "Like a Prayer",
+    "artist": "Madonna",
+    "year": 1989,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Dance Pop"
+  },
+  {
+    "id": "BT-0388",
+    "title": "Everybody Wants to Rule the World",
+    "artist": "Tears for Fears",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "New Wave",
+    "style": "New Romantic"
+  },
+  {
+    "id": "BT-0389",
+    "title": "Shout",
+    "artist": "Tears for Fears",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "New Wave",
+    "style": "New Romantic"
+  },
+  {
+    "id": "BT-0390",
+    "title": "Everybody Have Fun Tonight",
+    "artist": "Wang Chung",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "New Wave",
+    "style": "Dance Rock"
+  },
+  {
+    "id": "BT-0391",
+    "title": "Walk Like an Egyptian",
+    "artist": "The Bangles",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Dance Pop"
+  },
+  {
+    "id": "BT-0392",
+    "title": "Eye of the Tiger",
+    "artist": "Survivor",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  },
+  {
+    "id": "BT-0393",
+    "title": "Walk This Way",
+    "artist": "Aerosmith",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Hard Rock"
+  },
+  {
+    "id": "BT-0394",
+    "title": "Give a Little Bit",
+    "artist": "Supertramp",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Progressive Rock"
+  },
+  {
+    "id": "BT-0395",
+    "title": "Hold On Loosely",
+    "artist": "38 Special",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Southern Rock"
+  },
+  {
+    "id": "BT-0396",
+    "title": "Caught Up in You",
+    "artist": "38 Special",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Southern Rock"
+  },
+  {
+    "id": "BT-0397",
+    "title": "Sharp Dressed Man",
+    "artist": "ZZ Top",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Blues Rock"
+  },
+  {
+    "id": "BT-0398",
+    "title": "Legs",
+    "artist": "ZZ Top",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Blues Rock"
+  },
+  {
+    "id": "BT-0399",
+    "title": "Come On Eileen",
+    "artist": "Dexys Midnight Runners",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "New Wave",
+    "style": "Celtic Pop"
+  },
+  {
+    "id": "BT-0400",
+    "title": "We Built This City",
+    "artist": "Starship",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0401",
+    "title": "Nothing's Gonna Stop Us Now",
+    "artist": "Starship",
+    "year": 1987,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0402",
+    "title": "The Bitch Is Back",
+    "artist": "Elton John",
+    "year": 1974,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0403",
+    "title": "Burning Love",
+    "artist": "Elvis Presley",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Rock and Roll"
+  },
+  {
+    "id": "BT-0404",
+    "title": "Weekend in New England",
+    "artist": "Barry Manilow",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0405",
+    "title": "Hello",
+    "artist": "Lionel Richie",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0406",
+    "title": "All Night Long",
+    "artist": "Lionel Richie",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "R&B / Soul",
+    "style": "Dance"
+  },
+  {
+    "id": "BT-0407",
+    "title": "Stuck on You",
+    "artist": "Lionel Richie",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0408",
+    "title": "Say You, Say Me",
+    "artist": "Lionel Richie",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0409",
+    "title": "Dancing on the Ceiling",
+    "artist": "Lionel Richie",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0410",
+    "title": "Oh Sherrie",
+    "artist": "Steve Perry",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0411",
+    "title": "Three Times a Lady",
+    "artist": "Commodores",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "R&B / Soul",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0412",
+    "title": "Brick House",
+    "artist": "Commodores",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Funk",
+    "style": "Funk"
+  },
+  {
+    "id": "BT-0413",
+    "title": "Celebration",
+    "artist": "Kool & the Gang",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Funk",
+    "style": "Funk"
+  },
+  {
+    "id": "BT-0414",
+    "title": "Ladies Night",
+    "artist": "Kool & the Gang",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Funk",
+    "style": "Funk"
+  },
+  {
+    "id": "BT-0415",
+    "title": "Get Down On It",
+    "artist": "Kool & the Gang",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Funk",
+    "style": "Funk"
+  },
+  {
+    "id": "BT-0416",
+    "title": "I Love Rock 'n Roll",
+    "artist": "Joan Jett & the Blackhearts",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Rock and Roll"
+  },
+  {
+    "id": "BT-0417",
+    "title": "Let's Hear It for the Boy",
+    "artist": "Deniece Williams",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "R&B / Soul",
+    "style": "Dance"
+  },
+  {
+    "id": "BT-0418",
+    "title": "Lady",
+    "artist": "Kenny Rogers",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Country Crossover",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0419",
+    "title": "Islands in the Stream",
+    "artist": "Kenny Rogers & Dolly Parton",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Country Crossover",
+    "style": "Duet"
+  },
+  {
+    "id": "BT-0420",
+    "title": "The Gambler",
+    "artist": "Kenny Rogers",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Country Crossover",
+    "style": "Story Song"
+  },
+  {
+    "id": "BT-0421",
+    "title": "9 to 5",
+    "artist": "Dolly Parton",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Country Crossover",
+    "style": "Mainstream"
+  },
+  {
+    "id": "BT-0422",
+    "title": "Here You Come Again",
+    "artist": "Dolly Parton",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Country Crossover",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0423",
+    "title": "Holding Out for a Hero",
+    "artist": "Bonnie Tyler",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Power Ballad"
+  },
+  {
+    "id": "BT-0424",
+    "title": "Sunglasses at Night",
+    "artist": "Corey Hart",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0425",
+    "title": "Never Surrender",
+    "artist": "Corey Hart",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0426",
+    "title": "The Best",
+    "artist": "Tina Turner",
+    "year": 1989,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0427",
+    "title": "What's Love Got to Do with It",
+    "artist": "Tina Turner",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0428",
+    "title": "You're the Inspiration",
+    "artist": "Chicago",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0429",
+    "title": "Hard to Say I'm Sorry",
+    "artist": "Chicago",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0430",
+    "title": "Saturday in the Park",
+    "artist": "Chicago",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0431",
+    "title": "25 or 6 to 4",
+    "artist": "Chicago",
+    "year": 1970,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0432",
+    "title": "Dance the Night Away",
+    "artist": "Van Halen",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0433",
+    "title": "Panama",
+    "artist": "Van Halen",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Hair Metal"
+  },
+  {
+    "id": "BT-0434",
+    "title": "Jump",
+    "artist": "Van Halen",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Hair Metal"
+  },
+  {
+    "id": "BT-0435",
+    "title": "The Winner Takes It All",
+    "artist": "ABBA",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0436",
+    "title": "The Name of the Game",
+    "artist": "ABBA",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0437",
+    "title": "SOS",
+    "artist": "ABBA",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0438",
+    "title": "Almost Paradise",
+    "artist": "Mike Reno & Ann Wilson",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  },
+  {
+    "id": "BT-0439",
+    "title": "Sweet Caroline",
+    "artist": "Neil Diamond",
+    "year": 1971,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0440",
+    "title": "Cracklin' Rosie",
+    "artist": "Neil Diamond",
+    "year": 1970,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0441",
+    "title": "American Pie",
+    "artist": "Don McLean",
+    "year": 1971,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Soft Rock",
+    "style": "Folk Rock"
+  },
+  {
+    "id": "BT-0442",
+    "title": "Smoke on the Water",
+    "artist": "Deep Purple",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0443",
+    "title": "Caribbean Queen",
+    "artist": "Billy Ocean",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0444",
+    "title": "Get Outta My Dreams, Get into My Car",
+    "artist": "Billy Ocean",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0445",
+    "title": "Suddenly",
+    "artist": "Billy Ocean",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0446",
+    "title": "Magic",
+    "artist": "The Cars",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0447",
+    "title": "Drive",
+    "artist": "The Cars",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0448",
+    "title": "Let's Go",
+    "artist": "The Cars",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0449",
+    "title": "Keep the Fire Burnin'",
+    "artist": "REO Speedwagon",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0450",
+    "title": "Roll with the Changes",
+    "artist": "REO Speedwagon",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0451",
+    "title": "Babe",
+    "artist": "Styx",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Power Ballad"
+  },
+  {
+    "id": "BT-0452",
+    "title": "Tonight I'm Yours",
+    "artist": "Rod Stewart",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0453",
+    "title": "Livin' Thing",
+    "artist": "Electric Light Orchestra",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0454",
+    "title": "Fooling Yourself (The Angry Young Man)",
+    "artist": "Styx",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0455",
+    "title": "White Wedding",
+    "artist": "Billy Idol",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0456",
+    "title": "Rebel Yell",
+    "artist": "Billy Idol",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0457",
+    "title": "Higher Love",
+    "artist": "Steve Winwood",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0458",
+    "title": "Valerie",
+    "artist": "Steve Winwood",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0459",
+    "title": "Back in the High Life Again",
+    "artist": "Steve Winwood",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0460",
+    "title": "Pressure",
+    "artist": "Billy Joel",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0461",
+    "title": "Allentown",
+    "artist": "Billy Joel",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0462",
+    "title": "Da Ya Think I'm Sexy?",
+    "artist": "Rod Stewart",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0463",
+    "title": "Pink Houses",
+    "artist": "John Cougar Mellencamp",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Heartland Rock"
+  },
+  {
+    "id": "BT-0464",
+    "title": "Small Town",
+    "artist": "John Cougar Mellencamp",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Heartland Rock"
+  },
+  {
+    "id": "BT-0465",
+    "title": "Fire and Ice",
+    "artist": "Pat Benatar",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0466",
+    "title": "My Best Friend's Girl",
+    "artist": "The Cars",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0467",
+    "title": "Since You're Gone",
+    "artist": "The Cars",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0468",
+    "title": "Roll With It",
+    "artist": "Steve Winwood",
+    "year": 1988,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0469",
+    "title": "Cuts Like a Knife",
+    "artist": "Bryan Adams",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0470",
+    "title": "It's Only Love",
+    "artist": "Bryan Adams",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0471",
+    "title": "Barracuda",
+    "artist": "Heart",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0472",
+    "title": "These Dreams",
+    "artist": "Heart",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Power Ballad"
+  },
+  {
+    "id": "BT-0473",
+    "title": "The Voice",
+    "artist": "The Moody Blues",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0474",
+    "title": "Your Wildest Dreams",
+    "artist": "The Moody Blues",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0475",
+    "title": "I Want You to Want Me",
+    "artist": "Cheap Trick",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0476",
+    "title": "Come Dancing",
+    "artist": "The Kinks",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0477",
+    "title": "Burning Down the House",
+    "artist": "Talking Heads",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0478",
+    "title": "Life in the Fast Lane",
+    "artist": "Joe Walsh",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0479",
+    "title": "The Other Guy",
+    "artist": "Little River Band",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0480",
+    "title": "Look What You've Done to Me",
+    "artist": "Boz Scaggs",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0481",
+    "title": "50 Ways to Leave Your Lover",
+    "artist": "Paul Simon",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Folk Rock",
+    "style": "Singer-Songwriter"
+  },
+  {
+    "id": "BT-0482",
+    "title": "Fly Like an Eagle",
+    "artist": "Steve Miller Band",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0483",
+    "title": "Rock'n Me",
+    "artist": "Steve Miller Band",
+    "year": 1976,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0484",
+    "title": "You're the Only Woman",
+    "artist": "Ambrosia",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Soft Rock",
+    "style": "Yacht Rock"
+  },
+  {
+    "id": "BT-0485",
+    "title": "Lost in Love",
+    "artist": "Air Supply",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0486",
+    "title": "Dreamin'",
+    "artist": "Cliff Richard",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Hard",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0487",
+    "title": "Bette Davis Eyes",
+    "artist": "Kim Carnes",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0488",
+    "title": "Harden My Heart",
+    "artist": "Quarterflash",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0489",
+    "title": "Think I'm in Love",
+    "artist": "Eddie Money",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0490",
+    "title": "Take Me Home Tonight",
+    "artist": "Eddie Money",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0491",
+    "title": "Refugee",
+    "artist": "Tom Petty",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Heartland Rock"
+  },
+  {
+    "id": "BT-0492",
+    "title": "I Won't Back Down",
+    "artist": "Tom Petty",
+    "year": 1989,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Heartland Rock"
+  },
+  {
+    "id": "BT-0493",
+    "title": "Overkill",
+    "artist": "Men at Work",
+    "year": 1983,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0494",
+    "title": "Crazy Love",
+    "artist": "Poco",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Country Crossover",
+    "style": "Country Rock"
+  },
+  {
+    "id": "BT-0495",
+    "title": "Would I Lie to You?",
+    "artist": "Eurythmics",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Synth Pop",
+    "style": "Synth Pop"
+  },
+  {
+    "id": "BT-0496",
+    "title": "Space Age Love Song",
+    "artist": "A Flock of Seagulls",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0497",
+    "title": "Rock 'n' Roll Fantasy",
+    "artist": "Bad Company",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0498",
+    "title": "Wishing (If I Had a Photograph of You)",
+    "artist": "A Flock of Seagulls",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "New Wave",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0499",
+    "title": "Bad Case of Loving You",
+    "artist": "Robert Palmer",
+    "year": 1979,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Rock"
+  },
+  {
+    "id": "BT-0500",
+    "title": "Don't Look Back",
+    "artist": "Boston",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0501",
+    "title": "Amanda",
+    "artist": "Boston",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0502",
+    "title": "Romeo and Juliet",
+    "artist": "Dire Straits",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0503",
+    "title": "Money for Nothing",
+    "artist": "Dire Straits",
+    "year": 1985,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0504",
+    "title": "If This Is It",
+    "artist": "Huey Lewis & the News",
+    "year": 1984,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Arena Rock"
+  },
+  {
+    "id": "BT-0505",
+    "title": "Reelin' in the Years",
+    "artist": "Steely Dan",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Jazz Rock"
+  },
+  {
+    "id": "BT-0506",
+    "title": "Peg",
+    "artist": "Steely Dan",
+    "year": 1977,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "Jazz Rock"
+  },
+  {
+    "id": "BT-0507",
+    "title": "Do It Again",
+    "artist": "Steely Dan",
+    "year": 1972,
+    "decade": "70s",
+    "difficulty": "Hard",
+    "genre": "Rock",
+    "style": "Jazz Rock"
+  },
+  {
+    "id": "BT-0508",
+    "title": "The Joker",
+    "artist": "Steve Miller Band",
+    "year": 1973,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "Classic Rock"
+  },
+  {
+    "id": "BT-0509",
+    "title": "Don't Stand So Close to Me",
+    "artist": "The Police",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Rock",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0510",
+    "title": "Spirits in the Material World",
+    "artist": "The Police",
+    "year": 1981,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Rock",
+    "style": "New Wave"
+  },
+  {
+    "id": "BT-0511",
+    "title": "You Can Call Me Al",
+    "artist": "Paul Simon",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Easy",
+    "genre": "Folk Rock",
+    "style": "Singer-Songwriter"
+  },
+  {
+    "id": "BT-0512",
+    "title": "Graceland",
+    "artist": "Paul Simon",
+    "year": 1986,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Folk Rock",
+    "style": "Singer-Songwriter"
+  },
+  {
+    "id": "BT-0513",
+    "title": "If You Love Me (Let Me Know)",
+    "artist": "Olivia Newton-John",
+    "year": 1974,
+    "decade": "70s",
+    "difficulty": "Medium",
+    "genre": "Country Crossover",
+    "style": "Country Pop"
+  },
+  {
+    "id": "BT-0514",
+    "title": "Have You Never Been Mellow",
+    "artist": "Olivia Newton-John",
+    "year": 1975,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Adult Contemporary",
+    "style": "Ballad"
+  },
+  {
+    "id": "BT-0515",
+    "title": "Hopelessly Devoted to You",
+    "artist": "Olivia Newton-John",
+    "year": 1978,
+    "decade": "70s",
+    "difficulty": "Easy",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0516",
+    "title": "Heart Attack",
+    "artist": "Olivia Newton-John",
+    "year": 1982,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Pop",
+    "style": "Mainstream Pop"
+  },
+  {
+    "id": "BT-0517",
+    "title": "Xanadu",
+    "artist": "Olivia Newton-John",
+    "year": 1980,
+    "decade": "80s",
+    "difficulty": "Medium",
+    "genre": "Soundtrack",
+    "style": "Movie Soundtrack"
+  }
+]

@@ -117,6 +117,22 @@ function showScreen(screenID) {
         .classList
         .add("hidden");
 
+    document
+        .getElementById("gameOverScreen")
+        .classList
+        .add("hidden");
+
+            const scoreboard = document.getElementById("scoreboard");
+
+            if (screenID === "setupScreen" || screenID === "gameOverScreen") {
+
+            scoreboard.classList.add("hidden");
+
+        }   else {
+
+            scoreboard.classList.remove("hidden");
+
+}
 
     document
         .getElementById(screenID)
@@ -349,6 +365,55 @@ function updateScoreboard() {
         "Round " + currentRound + " of " + totalRounds;
 
 }
+
+
+// Show the game over screen
+
+function showGameOver() {
+
+    let highestScore = Math.max(...teams.map(team => team.score));
+
+    let winners = teams.filter(team => team.score === highestScore);
+
+    if (winners.length === 1) {
+
+        document
+            .getElementById("winnerDisplay")
+            .textContent =
+            winners[0].name + " WINS!";
+
+    }
+    else {
+
+        document
+            .getElementById("winnerDisplay")
+            .textContent =
+            "IT'S A TIE!";
+
+    }
+
+    let html = "";
+
+    teams.forEach(team => {
+
+        html += `
+            <p>
+                <strong>${team.name}</strong>
+                — ${team.score} points
+            </p>
+        `;
+
+    });
+
+    document
+        .getElementById("finalScores")
+        .innerHTML = html;
+
+    showScreen("gameOverScreen");
+
+}
+
+
 
 // Show team screen
 
@@ -599,11 +664,23 @@ updateScoreboard();
 
 if (currentRound > totalRounds) {
 
-    // (Eventually this will call showGameOver())
-    alert("Game Over!");
+    // call showGameOver())
+    showGameOver();
     return;
 
 }
+
+//================================================
+// PLAY AGAIN BUTTON
+//================================================
+
+document
+    .getElementById("playAgainButton")
+    .addEventListener("click", function () {
+
+        showScreen("setupScreen");
+
+    });
 
 showCurrentTeam();
 
