@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKTRACK</title>
+    <link rel="stylesheet" href="style.css">
+    <audio id="buzzerSound" src="buzzer.mp3"></audio>
+</head>
+
+<body>
+
+<div class="game-container">
+
+  <div id="titleArea">
+
+    <h1>BACKTRACK</h1>
+    <h2>Ultimate Party Edition</h2>
+    <p class="instructions">
+    Sing the melody—but <strong>NOT</strong> the words!<br>
+    See if your teammates can identify the title, artist, and year.
+    </p>
+
+  </div>
+
+
+ <!-- SETUP SCREEN -->
+<div id="setupScreen" class="panel">
+
+    <h3>GAME SETUP</h3>
+
+    <div id="gameSettings">
+
+        <h4>HOW ARE YOU PLAYING?</h4>
+
+        <div id="gameModeOptions">
+
+            <button type="button" id="teams2Button" class="setup-option selected">
+                2 TEAMS
+            </button>
+
+            <button type="button" id="teams3Button" class="setup-option">
+                3 TEAMS
+            </button>
+
+            <button type="button" id="teams4Button" class="setup-option">
+                4 TEAMS
+            </button>
+
+            <button type="button" id="partyModeButton" class="setup-option">
+                PARTY MODE
+            </button>
+
+        </div>
+
+
+        <h4>NUMBER OF ROUNDS</h4>
+
+        <div id="roundOptions">
+
+            <button type="button" id="round5Button" class="setup-option">
+                5
+            </button>
+
+            <button type="button" id="round10Button" class="setup-option selected">
+                10
+            </button>
+
+            <button type="button" id="round20Button" class="setup-option">
+                20
+            </button>
+
+        </div>
+
+
+        <br>
+
+        <button type="button" id="nextSetupButton">
+            NEXT
+        </button>
+
+    </div>
+
+
+    <!-- TEAM DECK BUILDER -->
+    <div id="deckBuilder" class="hidden">
+
+        <!-- setup.js will generate the team matrix here -->
+
+    </div>
+
+</div>
+    
+    <div id="scoreboard" class="scoreboard">
+
+        <h3>🏆 SCOREBOARD</h3>
+
+        <div id="scores"></div>
+
+        <div id="roundDisplay"></div>
+
+    </div>
+
+    <!-- TURN SCREEN -->
+    <div id="turnScreen" class="panel hidden">
+
+        <h3 id="teamTurn"></h3>
+
+        <p>
+            Pass the device to the clue giver.
+        </p>
+
+        <button id="revealButton">
+            REVEAL SONG
+        </button>
+
+
+    </div>
+
+
+    <!-- SONG SCREEN -->
+    <div id="songScreen" class="panel hidden">
+
+        <h3>YOUR SONG</h3>
+
+        <h2 id="songTitle"></h2>
+
+        <div id="songDetails">
+
+        <p id="artistDetail">
+            Artist:
+            <span id="artist"></span>
+        </p>
+
+         <p id="yearDetail">
+            Year:
+            <span id="year"></span>
+        </p>
+
+        <p id="difficultyDetail">
+            Difficulty:
+            <span id="difficulty"></span>
+        </p>
+
+</div>
+
+        <p>
+            Time:
+            <span id="timerDisplay">30</span>
+        </p>
+
+        <button id="passButton">
+         PASS (<span id="passesRemaining">0</span>)
+        </button>
+
+        <button id="scoreButton">
+        SCORE THIS SONG
+        </button>
+
+    </div>
+
+
+<!-- SCORING SCREEN -->
+
+<div id="scoringScreen" class="panel hidden">
+
+    <h3>HOW DID THEY DO?</h3>
+
+    <div id="scoringDetails">
+
+        <p id="titleScoreRow">
+            Song Title:
+            <button id="titleCorrect">YES</button>
+            <button id="titleWrong">NO</button>
+        </p>
+
+        <p id="artistScoreRow">
+            Artist:
+            <button id="artistCorrect">YES</button>
+            <button id="artistWrong">NO</button>
+        </p>
+
+        <p id="thirdScoreRow">
+            Year:
+            <button id="thirdCorrect">YES</button>
+            <button id="thirdWrong">NO</button>
+        </p>
+
+    </div>
+
+
+    <h3>
+        Score:
+        <span id="roundScore">0</span>
+    </h3>
+
+
+    <button id="nextButton">
+        NEXT TEAM
+    </button>
+
+</div>
+
+
+
+<!-- GAME OVER SCREEN -->
+
+<div id="gameOverScreen" class="panel hidden">
+
+    <h2>🏆 FINAL RESULTS 🏆</h2>
+
+    <h3 id="winnerDisplay"></h3>
+
+    <div id="finalScores"></div>
+
+    <br>
+
+    <button id="playAgainButton">
+        PLAY AGAIN
+    </button>
+
+
+</div>
+
+
+</div>
+
+<script src="setup.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>

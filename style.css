@@ -1,0 +1,380 @@
+body {
+    background-color: #08001a;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.game-container {
+    width: 700px;
+}
+
+
+h1 {
+    font-size: 52px;
+    color: #ff00ff;
+    text-shadow:
+        0 0 10px #ff00ff,
+        0 0 25px #ff00ff;
+    margin-bottom: 0;
+}
+
+
+h2 {
+    color: #00ffff;
+    text-shadow:
+        0 0 10px #00ffff;
+}
+
+
+.panel {
+    background-color: #12002b;
+    border: 3px solid #00ffff;
+    border-radius: 20px;
+    padding: 22px;
+    margin-top: 6px;
+    margin bottom: 12px;
+
+    box-shadow:
+        0 0 20px #00ffff;
+}
+
+
+.instructions {
+
+    margin-top: 12px;
+
+    font-size: 16px;
+
+    color: #dddddd;
+
+    font-style: italic;
+
+    line-height: 1.4;
+
+}
+
+
+h3 {
+    font-size: 30px;
+    color: #ffff00;
+    margin-top: 0;
+    margin-bottom: 12px;
+    text-shadow:
+        0 0 10px #ffff00;
+}
+
+
+label {
+    font-size: 22px;
+}
+
+
+select {
+    font-size: 18px;
+    padding: 8px;
+    margin-left: 10px;
+    border-radius: 8px;
+}
+
+
+button {
+
+    background-color: #ff00ff;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 36px;
+
+    font-size: 20px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    margin-top: 16px;
+
+    box-shadow:
+        0 0 15px #ff00ff;
+}
+
+
+button:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+#songTitle {
+
+    font-size: 42px;
+
+    color: #ffff00;
+
+    text-shadow:
+        0 0 15px #ffff00;
+
+}
+
+
+p {
+
+    font-size: 22px;
+    margin: 10px 0;
+
+}
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+.pass-disabled {
+
+    opacity: 0.35;
+
+    cursor: default;
+
+    box-shadow: none;
+
+}
+
+.pass-disabled:hover {
+
+    transform: none;
+
+}
+
+
+#setupScreen:not(.hidden) ~ #scoreboard {
+    display: none;
+}
+
+/* Setup screen selection buttons */
+
+.setup-option {
+    margin: 5px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.setup-option.selected {
+    background-color: #00ffff;
+    color: #08001a;
+    border: 3px solid #ffff00;
+    font-weight: bold;
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 12px #00ffff,
+        0 0 25px #00ffff;
+
+}
+
+/* =================================================
+   DECK BUILDER MATRIX
+================================================= */
+
+.deck-matrix {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.matrix-header,
+.matrix-row {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.matrix-header {
+    color: #00ffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.matrix-row {
+    margin-bottom: 12px;
+}
+
+
+.category-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffff00;
+    text-align: left;
+}
+
+.category-name {
+    cursor: pointer;
+    padding: 10px 12px;
+    border: 2px solid #ff00ff;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.15s;
+}
+
+.category-name:hover {
+    background-color: #ff00ff;
+    color: white;
+    transform: scale(1.03);
+}
+
+.matrix-row.selected .category-name {
+    background-color: #00ffff;
+    color: #08001a;
+    border-color: #ffff00;
+    box-shadow:
+        0 0 12px #00ffff;
+}
+
+
+.difficulty-option,
+.category-option {
+
+    margin: 0;
+    padding: 10px 8px;
+
+    font-size: 14px;
+
+    background-color: #12002b;
+
+    border: 2px solid #ff00ff;
+
+    box-shadow: none;
+
+}
+
+
+.difficulty-option:hover:not(:disabled),
+.category-option:hover {
+
+    transform: scale(1.04);
+
+}
+
+
+/* Selected matrix buttons */
+
+.difficulty-option.selected,
+.category-option.selected {
+
+    background-color: #00ffff;
+
+    color: #08001a;
+
+    border-color: #ffff00;
+
+    box-shadow:
+        0 0 12px #00ffff;
+
+    font-weight: bold;
+
+}
+
+.classic-row,
+.songbook-row,
+.broadway-row {
+
+    grid-template-columns: 1fr;
+
+}
+
+.classic-row .category-option,
+.songbook-row .category-option,
+.broadway-row .category-option {
+
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+
+}
+
+/* Disabled difficulty buttons */
+
+.difficulty-option:disabled {
+
+    opacity: 0.25;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+
+    transform: none;
+
+}
+
+/*================================================
+  SCOREBOARD
+================================================*/
+
+.scoreboard {
+
+    background-color: #12002b;
+
+    border: 2px solid #ff00ff;
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+}
+
+
+.scoreboard h3 {
+
+    margin-top: 0;
+
+}
+
+
+#scores {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.score-item {
+
+    padding: 10px;
+
+    font-size: 18px;
+
+    color: #00ffff;
+
+}
+
+#roundDisplay {
+
+    margin-top: 15px;
+
+    font-size: 18px;
+
+}
