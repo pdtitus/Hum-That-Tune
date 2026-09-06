@@ -3,6 +3,12 @@ const crypto = require("node:crypto");
 const { WebSocketServer } = require("ws");
 
 const port = Number(process.env.PORT || 3000);
+const allowedOrigins = new Set(
+    (process.env.ALLOWED_ORIGINS || "https://project-f993fbd8-b0ef-4f03-a6b.web.app,http://localhost:5500,http://localhost:3000")
+        .split(",")
+        .map(origin => origin.trim())
+        .filter(Boolean)
+);
 const sessions = new Map();
 const clientSessions = new Map();
 
@@ -28,6 +34,19 @@ function json(response, statusCode, body) {
         "content-length": Buffer.byteLength(content)
     });
     response.end(content);
+}
+
+function setCorsHeaders(request, response) {
+    const origin = request.headers.origin;
+
+    if (origin && allowedOrigins.has(origin)) {
+        response.setHeader("access-control-allow-origin", origin);
+        response.setHeader("vary", "Origin");
+    }
+
+    response.setHeader("access-control-allow-methods", "GET,POST,OPTIONS");
+    response.setHeader("access-control-allow-headers", "content-type");
+    response.setHeader("access-control-max-age", "86400");
 }
 
 function readJson(request) {
@@ -239,6 +258,14 @@ function handleJoinSession(identifier, request, response) {
 const httpServer = http.createServer((request, response) => {
     const url = new URL(request.url, `http://${request.headers.host || "localhost"}`);
     const sessionMatch = url.pathname.match(/^\/api\/sessions\/([^/]+)$/);
+
+    setCorsHeaders(request, response);
+
+    if (request.method === "OPTIONS") {
+        response.writeHead(204);
+        response.end();
+        return;
+    }
 
     if (request.method === "GET" && url.pathname === "/health") {
         json(response, 200, { status: "ok", sessions: sessions.size });

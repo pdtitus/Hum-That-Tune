@@ -77,6 +77,263 @@ let teams = [];
 let currentTeamIndex = 0;
 
 //================================================
+// MULTIPLAYER CONNECTION
+//================================================
+
+const BACKEND_URL = window.location.hostname === "localhost"
+    ? "http://localhost:3000"
+    : "https://backtrack-session-host-5uxukeuzmq-ue.a.run.app";
+
+let sessionSocket = null;
+let sessionToken = null;
+let sessionJoinCode = null;
+let isSessionHost = false;
+let pendingHostState = null;
+
+function setConnectionStatus(message) {
+
+    document
+        .getElementById("connectionStatus")
+        .textContent = message;
+
+}
+
+function setRoomDisplay(message) {
+
+    document
+        .getElementById("roomDisplay")
+        .textContent = message;
+
+    const roomCode = message.match(/[A-Z0-9]{6}$/);
+
+    if (roomCode) {
+        document
+            .getElementById("roomBannerCode")
+            .textContent = roomCode[0];
+
+        document
+            .getElementById("roomBanner")
+            .classList
+            .remove("hidden");
+    }
+
+}
+
+function getSocketUrl(path) {
+
+    const url = new URL(path, BACKEND_URL);
+
+    url.protocol = url.protocol === "https:" ? "wss:" : "ws:";
+
+    return url.toString();
+
+}
+
+function sendHostState(status = "playing") {
+
+    if (!isSessionHost || !sessionSocket) {
+        return;
+    }
+
+    pendingHostState = {
+        status,
+        teams,
+        currentRound,
+        currentTeamIndex,
+        totalRounds
+    };
+
+    if (sessionSocket.readyState !== WebSocket.OPEN) {
+        return;
+    }
+
+    sessionSocket.send(JSON.stringify({
+        type: "state.replace",
+        state: pendingHostState
+    }));
+
+    pendingHostState = null;
+
+}
+
+function updatePlayerView(state) {
+
+    if (!state || !Array.isArray(state.teams)) {
+        return;
+    }
+
+    const scoreHTML = state.teams.map(team => `
+        <div class="score-item">
+            ${team.name}<br>
+            ${team.score} pts
+        </div>
+    `).join("");
+
+    document
+        .getElementById("playerScores")
+        .innerHTML = scoreHTML;
+
+    document
+        .getElementById("playerRoundDisplay")
+        .textContent = `Round ${state.currentRound} of ${state.totalRounds}`;
+
+    document
+        .getElementById("playerGameStatus")
+        .textContent = state.status === "complete"
+            ? "Game complete."
+            : `Team ${state.currentTeamIndex + 1} is playing.`;
+
+}
+
+function handleSessionMessage(message) {
+
+    if (message.type === "connected") {
+
+        setConnectionStatus(`Connected. Room ${sessionJoinCode || ""}`);
+        setRoomDisplay(`Room code: ${sessionJoinCode || "connected"}`);
+
+        if (!isSessionHost) {
+            updatePlayerView(message.state);
+            showScreen("playerScreen");
+        }
+
+        return;
+
+    }
+
+    if (message.type === "state" && !isSessionHost) {
+
+        updatePlayerView(message.state);
+
+        return;
+
+    }
+
+    if (message.type === "error") {
+
+        setConnectionStatus(`Connection error: ${message.error}`);
+
+    }
+
+}
+
+function connectToSession(token, wsPath, hostSession) {
+
+    sessionToken = token;
+    isSessionHost = hostSession;
+    sessionSocket = new WebSocket(`${getSocketUrl(wsPath)}?token=${encodeURIComponent(token)}`);
+
+    sessionSocket.addEventListener("open", function () {
+
+        const name = document.getElementById("playerName").value.trim() || "Player";
+
+        sessionSocket.send(JSON.stringify({
+            type: "identify",
+            name,
+            role: hostSession ? "host" : "player"
+        }));
+
+        if (hostSession && pendingHostState) {
+            sendHostState(pendingHostState.status);
+        }
+
+        setConnectionStatus(`Connected. Room ${sessionJoinCode || ""}`);
+        setRoomDisplay(`Room code: ${sessionJoinCode || "connected"}`);
+
+    });
+
+    sessionSocket.addEventListener("message", function (event) {
+
+        handleSessionMessage(JSON.parse(event.data));
+
+    });
+
+    sessionSocket.addEventListener("close", function () {
+
+        setConnectionStatus("Disconnected from game server.");
+
+    });
+
+    sessionSocket.addEventListener("error", function () {
+
+        setConnectionStatus("Unable to connect to game server.");
+
+    });
+
+}
+
+async function createHostedSession() {
+
+    const response = await fetch(`${BACKEND_URL}/api/sessions`, {
+        method: "POST",
+        headers: {
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            manifest: {
+                name: "backtrack",
+                version: "1",
+                channels: [
+                    { name: "public-events", audience: "public" },
+                    { name: "private-player", audience: "player" }
+                ]
+            },
+            state: {
+                status: "lobby"
+            }
+        })
+    });
+
+    if (!response.ok) {
+        throw new Error("The game server rejected the session.");
+    }
+
+    const session = await response.json();
+
+    sessionJoinCode = session.joinCode;
+
+    connectToSession(session.hostToken, session.wsUrl, true);
+
+    setConnectionStatus(`Host room created: ${session.joinCode}`);
+    setRoomDisplay(`Room code: ${session.joinCode}`);
+
+}
+
+async function joinHostedSession() {
+
+    const joinCode = document.getElementById("joinCode").value.trim().toUpperCase();
+    const name = document.getElementById("playerName").value.trim() || "Player";
+
+    if (!joinCode) {
+        setConnectionStatus("Enter a join code first.");
+        return;
+    }
+
+    const response = await fetch(`${BACKEND_URL}/api/sessions/${encodeURIComponent(joinCode)}/participants`, {
+        method: "POST",
+        headers: {
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            name,
+            role: "player"
+        })
+    });
+
+    if (!response.ok) {
+        throw new Error("That join code was not found.");
+    }
+
+    const participant = await response.json();
+
+    sessionJoinCode = joinCode;
+
+    connectToSession(participant.token, participant.wsUrl, false);
+    setRoomDisplay(`Joined room: ${joinCode}`);
+
+}
+
+//================================================
 // INITIALIZATION
 //================================================
 
@@ -135,9 +392,14 @@ function showScreen(screenID) {
         .classList
         .add("hidden");
 
+    document
+        .getElementById("playerScreen")
+        .classList
+        .add("hidden");
+
             const scoreboard = document.getElementById("scoreboard");
 
-            if (screenID === "setupScreen" || screenID === "gameOverScreen") {
+            if (screenID === "setupScreen" || screenID === "gameOverScreen" || screenID === "playerScreen") {
 
             scoreboard.classList.add("hidden");
 
@@ -470,7 +732,13 @@ function showCurrentTeam() {
 
 document
     .getElementById("startButton")
-    .addEventListener("click", function () {
+    .addEventListener("click", async function () {
+
+        try {
+
+        if (!isSessionHost) {
+            await createHostedSession();
+        }
 
 
         numberOfTeams =
@@ -496,8 +764,28 @@ totalRounds =
 
         currentTeamIndex = 0;
 
+        sendHostState("playing");
+
         showCurrentTeam();
 
+        }
+        catch (error) {
+            setConnectionStatus(error.message);
+        }
+
+
+    });
+
+document
+    .getElementById("joinButton")
+    .addEventListener("click", async function () {
+
+        try {
+            await joinHostedSession();
+        }
+        catch (error) {
+            setConnectionStatus(error.message);
+        }
 
     });
 
@@ -543,6 +831,8 @@ totalRounds =
             passButton.classList.remove("pass-disabled");
 
         }
+
+        sendHostState("playing");
 
         revealNextSong();
 
@@ -678,9 +968,12 @@ updateScoreboard();
 if (currentRound > totalRounds) {
 
     // call showGameOver())
+    sendHostState("complete");
     showGameOver();
     return;
 
+
+sendHostState("playing");
 }
 
 //================================================

@@ -24,11 +24,42 @@
 
   </div>
 
+    <div id="roomBanner" class="room-banner hidden">
+        ROOM CODE: <strong id="roomBannerCode"></strong>
+    </div>
+
 
     <!-- SETUP SCREEN -->
     <div id="setupScreen" class="panel">
 
         <h3>GAME SETUP</h3>
+
+        <p>
+            Host: enter your name and click START GAME to create a room.<br>
+            Player: enter your name and a room code, then click JOIN GAME.
+        </p>
+
+        <label>
+            Your Name:
+            <input id="playerName" type="text" maxlength="40" placeholder="Player">
+        </label>
+
+        <p id="connectionStatus">Offline</p>
+
+        <p id="roomDisplay">Room code: waiting for host</p>
+
+        <label>
+            Join Code:
+            <input id="joinCode" type="text" maxlength="6" placeholder="ABC123">
+        </label>
+
+        <br>
+
+        <button id="joinButton" type="button">
+            JOIN GAME
+        </button>
+
+        <hr>
 
         <label>
             Teams:
@@ -87,8 +118,20 @@
 
 
         <button id="startButton">
-            START GAME
+            CREATE ROOM AND START GAME
         </button>
+
+    </div>
+
+    <div id="playerScreen" class="panel hidden">
+
+        <h3>GAME CONNECTED</h3>
+
+        <p id="playerGameStatus">Waiting for the host to start the game.</p>
+
+        <div id="playerScores"></div>
+
+        <p id="playerRoundDisplay"></p>
 
     </div>
 
