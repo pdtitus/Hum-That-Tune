@@ -1,0 +1,89 @@
+BackTrack / Hum-That-Tune session notes
+========================================
+
+Date: 2026-09-06
+Branch: ntitus/testing_branching
+Latest pushed commit before this session: b035658 (Document and configure cloud deployment)
+
+Project and hosting
+-------------------
+- Google/Firebase project ID: project-f993fbd8-b0ef-4f03-a6b
+- Google account used: nathantitus01@gmail.com
+- Firestore database: titus-game-server-storage-1, us-east1, STANDARD, Firestore Native
+- Firebase Hosting URL: https://project-f993fbd8-b0ef-4f03-a6b.web.app
+- Cloud Run service: backtrack-session-host
+- Cloud Run URL used by the frontend: https://backtrack-session-host-5uxukeuzmq-ue.a.run.app
+- Cloud Run region: us-east1, min instances 0, max instances 1
+- Current ready revision after CORS fix: backtrack-session-host-00002-cwc
+- The Firebase project has no registered Firebase web app. This has not blocked static Hosting or backend tests.
+
+Architecture
+------------
+- server.js is intentionally game-agnostic. It hosts sessions, participant tokens, opaque state, and WebSocket event routing.
+- The browser frontend owns BackTrack game semantics.
+- Current backend sessions are in memory only. A Cloud Run restart loses active games.
+- Firestore exists but is not yet used by server.js as a persistence adapter.
+- The existing server protocol is documented in SERVER_PROTOCOL.md.
+
+What was implemented
+--------------------
+- Added generic Node/WebSocket session host with:
+  - POST /api/sessions
+  - POST /api/sessions/:id-or-code/participants
+  - GET /api/sessions/:id-or-code
+  - GET /health
+  - WebSocket /ws/:id-or-code?token=TOKEN
+- Added Dockerfile, .dockerignore, firebase.json, and CLOUD_DEPLOYMENT_SETUP.md.
+- Added BackTrack frontend integration in app.js:
+  - host creates a Cloud Run session when starting a game
+  - player joins using a room code and name
+  - WebSocket connects to the Cloud Run service
+  - public team/round/score state is sent with host-only state.replace
+  - current song details remain local to the host browser
+  - read-only player screen shows synchronized public state
+- Added multiplayer fields and room-code UI to index.html and style.css.
+- Added persistent room banner outside the setup panel because the setup panel is hidden after the host starts the game.
+- Added CORS handling in server.js for:
+  - https://project-f993fbd8-b0ef-4f03-a6b.web.app
+  - http://localhost:5500
+  - http://localhost:3000
+  - configurable ALLOWED_ORIGINS environment variable
+- CORS preflight and browser-origin POST session creation were tested against Cloud Run.
+
+Deployment history and fixes
+----------------------------
+- Firebase CLI was authenticated through npx.
+- Google Cloud CLI was installed at $HOME/.local/google-cloud-sdk because system installation was unavailable.
+- Billing was initially linked but the billing account was closed. It was opened before deployment could complete.
+- Cloud Run source deployment initially failed because the Compute Engine service account could not read the temporary source bucket. roles/storage.objectViewer was granted on the source bucket.
+- The Compute service account also received roles/artifactregistry.writer, roles/logging.logWriter, and roles/serviceusage.serviceUsageConsumer.
+- Cloud Run deployment then succeeded.
+- Firebase Hosting was deployed repeatedly as frontend changes were made.
+- The frontend originally failed to create sessions with browser error "Failed to fetch". Root cause was missing CORS/preflight handling, now fixed and redeployed.
+- A prior room-code bug occurred because the code was displayed inside setupScreen, which disappears after starting. A persistent room banner now fixes this.
+
+Latest known user test result
+-----------------------------
+- User confirmed that host and player could connect the games.
+- User then reported that the room code was not visible after the host started. The persistent room banner was added and deployed.
+- User is pausing because there are still plenty of issues. Do not assume the full game flow is correct yet.
+
+Likely next debugging session
+-----------------------------
+1. Test two real browser windows from the current Hosting URL after a hard refresh.
+2. Confirm host sees the room banner after CREATE ROOM AND START GAME.
+3. Confirm player can join with the displayed code.
+4. Test whether round changes, pass usage, scores, and game-over state stay synchronized.
+5. Check reconnect behavior and stale/duplicate sessions.
+6. Decide whether the host-only local game model is sufficient or whether server events must own more game transitions.
+7. Add Firestore persistence only after the multiplayer protocol and state ownership are stable.
+8. Review security: participant roles are currently client-identified, sessions are public by token/code, and state is memory-only.
+
+Important implementation details
+--------------------------------
+- app.js uses BACKEND_URL. For localhost it uses http://localhost:3000; otherwise it uses the deployed Cloud Run URL above.
+- Host sends sanitized state with: status, teams, currentRound, currentTeamIndex, totalRounds.
+- currentSong is intentionally not included in public state.
+- The frontend is deployed, but the current working tree has frontend and backend changes that must be committed.
+- Do not stage project.txt unless explicitly requested; it is an untracked project-ID attachment and has intentionally remained outside commits.
+- Current expected uncommitted application files: app.js, index.html, server.js, style.css, plus this ai_notes.txt.
