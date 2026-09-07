@@ -179,7 +179,7 @@ function revealNextSong() {
 
         titleAwarded = false;
         artistAwarded = false;
-        yearAwarded = false;
+        thirdAwarded = false;
 
         document
             .getElementById("roundScore")
