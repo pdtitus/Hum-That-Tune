@@ -36,6 +36,7 @@ const CONFIG = {
 let songs = [];
 
 let teamDecks = [];
+let usedSongs = new Set();
 
 let currentSong = null;
 
@@ -172,8 +173,33 @@ function revealNextSong() {
     }
 
 
+    // Find the next song that has not been used this game
+
+    while (
+        currentDeck.length > 0 &&
+        usedSongs.has(currentDeck[currentDeck.length - 1])
+    ) {
+
+        currentDeck.pop();
+
+    }
+
+    if (currentDeck.length === 0) {
+
+    alert(
+        "No unused songs left for " +
+        teams[currentTeamIndex].name +
+        "!"
+    );
+
+    return;
+
+    }
+
     currentSong =
         currentDeck.pop();
+
+    usedSongs.add(currentSong);
 
         roundScore = 0;
 
@@ -966,9 +992,37 @@ function updateNextButtonLabel() {
         document.getElementById("nextButton");
 
 
-    // Final round always ends the game
+    // Party Mode: every song is a turn.
+    // The final song ends the game.
 
-    if (currentRound >= totalRounds) {
+    if (SETUP.gameMode === "party") {
+
+        if (currentRound >= totalRounds) {
+
+            nextButton.textContent =
+                "END GAME";
+
+        }
+        else {
+
+            nextButton.textContent =
+                "NEXT SONG";
+
+        }
+
+        return;
+
+    }
+
+
+    // Normal team games:
+    // Only the final team's turn in the final round
+    // should show END GAME.
+
+    if (
+        currentRound >= totalRounds &&
+        currentTeamIndex >= teams.length - 1
+    ) {
 
         nextButton.textContent =
             "END GAME";
@@ -978,19 +1032,7 @@ function updateNextButtonLabel() {
     }
 
 
-    // Party Mode advances to another song
-
-    if (SETUP.gameMode === "party") {
-
-        nextButton.textContent =
-            "NEXT SONG";
-
-        return;
-
-    }
-
-
-    // Normal team games
+    // Otherwise, move to the next team.
 
     nextButton.textContent =
         "NEXT TEAM";
@@ -998,35 +1040,43 @@ function updateNextButtonLabel() {
 }
 
 
-    // Next team button
+//================================================
+// NEXT TEAM / NEXT SONG BUTTON
+//================================================
 
 document
     .getElementById("nextButton")
     .addEventListener("click", function () {
 
-// Award points to the team that just played
-teams[currentTeamIndex].score += roundScore;
+        // Award points to the team that just played
+        teams[currentTeamIndex].score += roundScore;
 
-// Now move to the next team
-currentTeamIndex++;
+        // Move to the next team
+        currentTeamIndex++;
 
-if (currentTeamIndex >= teams.length) {
+        // If all teams have played, move to the next round
+        if (currentTeamIndex >= teams.length) {
 
-    currentTeamIndex = 0;
-    currentRound++;
+            currentTeamIndex = 0;
+            currentRound++;
 
-}
+        }
 
-// NOW update the scoreboard
-updateScoreboard();
+        // Update the scoreboard
+        updateScoreboard();
 
-if (currentRound > totalRounds) {
+        // If all rounds are complete, end the game
+        if (currentRound > totalRounds) {
 
-    // call showGameOver())
-    showGameOver();
-    return;
+            showGameOver();
+            return;
 
-}
+        }
+
+        // Otherwise show the next team's turn
+        showCurrentTeam();
+
+    });
 
 
 //================================================
@@ -1094,20 +1144,14 @@ document
 
 
         // Return to the beginning of setup
-        
+
         document
-        .getElementById("titleArea")
-        .classList.remove("hidden");
+            .getElementById("titleArea")
+            .classList.remove("hidden");
 
         showScreen("setupScreen");
 
     });
-
-showCurrentTeam();
-
-
-    });
-
 //================================================
 // SETUP COMPLETION
 //================================================
@@ -1135,6 +1179,8 @@ document.addEventListener(
         currentRound = 1;
 
         currentTeamIndex = 0;
+
+        usedSongs = new Set();  
 
 
         // Create the teams
