@@ -105,7 +105,7 @@ function setRoomDisplay(message) {
         .getElementById("roomDisplay")
         .textContent = message;
 
-    const roomCode = message.match(/[A-Z]{5}$/);
+    const roomCode = message.match(/[A-Z0-9]{5,6}$/);
 
     if (roomCode) {
         document
@@ -196,12 +196,18 @@ const TEAM_OPTIONS = [
     "Broadway"
 ];
 
+const TEAM_DIFFICULTIES = ["Easy", "Medium", "Hard"];
+
 function getCurrentPlayerName() {
     return document.getElementById("playerName")?.value.trim() || "Player";
 }
 
 function getDefaultTeamOptions() {
-    return TEAM_OPTIONS.slice();
+    return [];
+}
+
+function formatSongOption(category, difficulty) {
+    return `${category}:${difficulty}`;
 }
 
 function normalizeTeamOptions(options) {
@@ -209,7 +215,55 @@ function normalizeTeamOptions(options) {
         return getDefaultTeamOptions();
     }
 
-    return [...new Set(options.filter(option => TEAM_OPTIONS.includes(option)))];
+    return [...new Set(options
+        .filter(option => typeof option === "string" && option.includes(":"))
+        .map(option => option.trim()))];
+}
+
+function getSelectedSongOptionsFromUI() {
+    const state = {};
+
+    document.querySelectorAll(".difficulty-option.selected").forEach(button => {
+        const category = button.dataset.category;
+        const difficulty = button.dataset.difficulty;
+
+        if (!category || !difficulty) {
+            return;
+        }
+
+        if (!state[category]) {
+            state[category] = [];
+        }
+
+        state[category].push(difficulty);
+    });
+
+    return state;
+}
+
+function setSelectedSongOptionsInUI(options) {
+    const selectedMap = {};
+
+    normalizeTeamOptions(options).forEach(option => {
+        const [category, difficulty] = option.split(":");
+        if (category && difficulty) {
+            selectedMap[category] = selectedMap[category] || [];
+            selectedMap[category].push(difficulty);
+        }
+    });
+
+    document.querySelectorAll(".difficulty-option").forEach(button => {
+        const category = button.dataset.category;
+        const difficulty = button.dataset.difficulty;
+        const selected = selectedMap[category] && selectedMap[category].includes(difficulty);
+        button.classList.toggle("selected", selected);
+    });
+
+    document.querySelectorAll(".category-option").forEach(button => {
+        const category = button.dataset.category;
+        const selected = selectedMap[category] && selectedMap[category].length > 0;
+        button.classList.toggle("selected", selected);
+    });
 }
 
 function getLobbyTeamsFromState(state) {
@@ -223,17 +277,6 @@ function getLobbyTeamsFromState(state) {
         members: Array.isArray(team.members) ? team.members.filter(member => typeof member === "string") : [],
         songOptions: normalizeTeamOptions(team.songOptions)
     }));
-}
-
-function getSelectedSongOptionsFromUI() {
-    return [...document.querySelectorAll('input[name="teamSongOption"]:checked')].map(input => input.value);
-}
-
-function setSelectedSongOptionsInUI(options) {
-    const selected = new Set(options || []);
-    document.querySelectorAll('input[name="teamSongOption"]').forEach(input => {
-        input.checked = selected.has(input.value);
-    });
 }
 
 function renderTeamList(message) {
@@ -270,6 +313,7 @@ function renderTeamList(message) {
                     ${!isOwner ? `<button type="button" data-team-action="join" data-team-name="${team.name}">${isMember ? "Joined" : "Join Team"}</button>` : ""}
                     ${isMember ? `<button type="button" data-team-action="leave" data-team-name="${team.name}">Leave Team</button>` : ""}
                     ${isOwner ? `<button type="button" data-team-action="edit" data-team-name="${team.name}">Edit Team</button>` : ""}
+                    ${isOwner ? `<button type="button" data-team-action="delete" data-team-name="${team.name}">Delete Team</button>` : ""}
                 </div>
             </div>
         `;
@@ -454,7 +498,7 @@ async function getSessionByCode(joinCode) {
 
 async function joinHostedSession() {
 
-    const joinCode = document.getElementById("joinCode").value.trim().toUpperCase().replace(/[^A-Z]/g, "");
+    const joinCode = document.getElementById("joinCode").value.trim().toUpperCase();
     const name = document.getElementById("playerName").value.trim() || "Player";
 
     if (!joinCode) {
@@ -575,7 +619,10 @@ function createHostTeam() {
 
     const teamNameInput = document.getElementById("teamNameInput");
     const teamName = teamNameInput ? teamNameInput.value.trim() : "";
-    const songOptions = normalizeTeamOptions(getSelectedSongOptionsFromUI());
+    const selectionState = getSelectedSongOptionsFromUI();
+    const songOptions = Object.entries(selectionState).flatMap(([category, difficulties]) =>
+        difficulties.map(difficulty => formatSongOption(category, difficulty))
+    );
 
     if (!teamName) {
         setConnectionStatus("Enter a team name before creating a team.");
@@ -627,13 +674,14 @@ function createHostTeam() {
         teamNameInput.value = "";
     }
     setSelectedSongOptionsInUI([]);
-    editingTeamName = null;
     const button = document.getElementById("createTeamButton");
     if (button) {
         button.textContent = "CREATE TEAM";
     }
+    const wasEditing = editingTeamName;
+    editingTeamName = null;
 
-    setConnectionStatus(editingTeamName ? "Team updated." : "Team created.");
+    setConnectionStatus(wasEditing ? "Team updated." : "Team created.");
 }
 
 function modifyCurrentTeamMembership(teamName, action) {
@@ -655,17 +703,24 @@ function modifyCurrentTeamMembership(teamName, action) {
         return;
     }
 
-    const nextTeams = teams.map(team => ({ ...team, members: Array.isArray(team.members) ? team.members.slice() : [] }));
+    const nextTeams = teams.map(team => ({
+        ...team,
+        members: Array.isArray(team.members) ? team.members.slice() : []
+    }));
     const target = nextTeams[targetIndex];
 
-action === "join" ? target.members.push(currentPlayer) : target.members = target.members.filter(member => member !== currentPlayer);
-
-    if (action === "leave" && target.owner === currentPlayer && target.members.length === 0) {
-        nextTeams.splice(targetIndex, 1);
+    if (action === "join") {
+        if (!target.members.includes(currentPlayer)) {
+            target.members.push(currentPlayer);
+        }
     }
 
-    if (action === "join" && !target.members.includes(currentPlayer)) {
-        target.members.push(currentPlayer);
+    if (action === "leave") {
+        target.members = target.members.filter(member => member !== currentPlayer);
+    }
+
+    if (action === "delete") {
+        nextTeams.splice(targetIndex, 1);
     }
 
     const nextState = {
@@ -701,6 +756,30 @@ function prepareTeamEdit(teamName) {
     if (button) {
         button.textContent = "SAVE TEAM";
     }
+}
+
+function deleteTeam(teamName) {
+    if (!sessionSocket || !sessionSocket.lastState) {
+        return;
+    }
+
+    const currentState = sessionSocket.lastState;
+    if (currentState.status !== "lobby") {
+        setConnectionStatus("The lobby is closed.");
+        return;
+    }
+
+    const nextState = {
+        ...currentState,
+        teams: (Array.isArray(currentState.teams) ? currentState.teams : []).filter(team => team.name !== teamName)
+    };
+
+    sessionSocket.lastState = nextState;
+    sessionSocket.send(JSON.stringify({
+        type: "state.replace",
+        scope: "team",
+        state: nextState
+    }));
 }
 
 function startGameFromLobby() {
@@ -1331,6 +1410,10 @@ document.getElementById("teamList").addEventListener("click", function (event) {
     if (action === "edit") {
         prepareTeamEdit(teamName);
     }
+
+    if (action === "delete") {
+        deleteTeam(teamName);
+    }
 });
 
 document
@@ -1338,6 +1421,37 @@ document
     .addEventListener("click", function () {
         startGameFromLobby();
     });
+
+function bindTeamMatrixControls() {
+    document.querySelectorAll(".difficulty-option").forEach(button => {
+        button.addEventListener("click", function () {
+            const category = button.dataset.category;
+            button.classList.toggle("selected");
+
+            const categoryButton = document.querySelector(`.category-option[data-category="${category}"]`);
+            if (categoryButton) {
+                const rowButtons = document.querySelectorAll(`.difficulty-option[data-category="${category}"]`);
+                const isSelected = Array.from(rowButtons).some(item => item.classList.contains("selected"));
+                categoryButton.classList.toggle("selected", isSelected);
+            }
+        });
+    });
+
+    document.querySelectorAll(".category-option").forEach(button => {
+        button.addEventListener("click", function () {
+            const category = button.dataset.category;
+            const rowButtons = document.querySelectorAll(`.difficulty-option[data-category="${category}"]`);
+            const shouldSelect = !button.classList.contains("selected");
+
+            rowButtons.forEach(item => {
+                item.classList.toggle("selected", shouldSelect);
+            });
+            button.classList.toggle("selected", shouldSelect);
+        });
+    });
+}
+
+bindTeamMatrixControls();
 
 // Reveal song
 

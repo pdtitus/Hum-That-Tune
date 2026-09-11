@@ -84,6 +84,8 @@ No one except the host can trigger the game start.
 - Add a host-only Start button
 - Disable start actions for non-host players
 - Prevent players from entering gameplay screens before the host starts the match
+- Make the ready/start action a room-closing action: once the host confirms the lobby, no other players can join and no more teams can be created
+- Starting the game enters round 1 immediately and transitions the room into the active game state
 
 ### Testing to confirm completion
 
@@ -91,6 +93,8 @@ No one except the host can trigger the game start.
 2. The host sees the start control and other players do not.
 3. The lobby view persists until the host begins the match.
 4. Start action transitions the room into gameplay state.
+5. Once the host starts, the room rejects additional join requests and denies team creation.
+6. The first active game state begins at round 1.
 
 ### Files involved
 

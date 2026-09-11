@@ -190,19 +190,63 @@ p {
     border-top: 1px solid #00ffff;
 }
 
-.song-option-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 8px;
+.team-editor-matrix {
     margin-top: 12px;
-    text-align: left;
-    font-size: 16px;
+    margin-bottom: 16px;
 }
 
-.song-option-grid label {
-    display: flex;
+.matrix-header,
+.matrix-row {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 10px;
     align-items: center;
-    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.matrix-header {
+    color: #00ffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.category-name {
+    font-size: 18px;
+    color: #ffff00;
+    text-align: left;
+}
+
+.difficulty-option,
+.category-option {
+    margin: 0;
+    padding: 10px 8px;
+    font-size: 14px;
+    background-color: #12002b;
+    border: 2px solid #ff00ff;
+    box-shadow: none;
+}
+
+.difficulty-option.selected,
+.category-option.selected {
+    background-color: #00ffff;
+    color: #08001a;
+    border-color: #ffff00;
+    box-shadow: 0 0 12px #00ffff;
+    font-weight: bold;
+}
+
+.classic-row,
+.songbook-row,
+.broadway-row {
+    grid-template-columns: 1fr;
+}
+
+.classic-row .category-option,
+.songbook-row .category-option,
+.broadway-row .category-option {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
 }
 
 .team-list {

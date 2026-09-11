@@ -21,7 +21,7 @@ function createJoinCode() {
     let code;
 
     do {
-        code = Array.from({ length: 5 }, () => alphabet[Math.floor(Math.random() * alphabet.length)]).join("");
+        code = Array.from({ length: 6 }, () => alphabet[Math.floor(Math.random() * alphabet.length)]).join("");
     } while ([...sessions.values()].some(session => session.joinCode === code));
 
     return code;

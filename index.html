@@ -47,7 +47,7 @@
         <div id="joinCodeRow" class="hidden">
             <label>
                 Join Code:
-                <input id="joinCode" type="text" maxlength="5" placeholder="ABCDE">
+                <input id="joinCode" type="text" maxlength="6" placeholder="ABCDEF">
             </label>
             <button id="joinButton" type="button">JOIN ROOM</button>
         </div>
@@ -64,14 +64,53 @@
                 <input id="teamNameInput" type="text" maxlength="40" placeholder="Team Name">
             </label>
 
-            <div class="song-option-grid">
-                <label><input type="checkbox" name="teamSongOption" value="70s"> 70s</label>
-                <label><input type="checkbox" name="teamSongOption" value="80s"> 80s</label>
-                <label><input type="checkbox" name="teamSongOption" value="90s"> 90s</label>
-                <label><input type="checkbox" name="teamSongOption" value="2000-2015"> 2000-2015</label>
-                <label><input type="checkbox" name="teamSongOption" value="50's and 60's Classics"> 50s/60s Classics</label>
-                <label><input type="checkbox" name="teamSongOption" value="Great American Songbook"> Great American Songbook</label>
-                <label><input type="checkbox" name="teamSongOption" value="Broadway"> Broadway</label>
+            <div class="team-editor-matrix">
+                <div class="matrix-header">
+                    <div></div>
+                    <div>EASY</div>
+                    <div>MEDIUM</div>
+                    <div>HARD</div>
+                </div>
+
+                <div class="matrix-row" data-category="70s">
+                    <div class="category-name">70s</div>
+                    <button type="button" class="difficulty-option" data-category="70s" data-difficulty="Easy">EASY</button>
+                    <button type="button" class="difficulty-option" data-category="70s" data-difficulty="Medium">MEDIUM</button>
+                    <button type="button" class="difficulty-option" data-category="70s" data-difficulty="Hard">HARD</button>
+                </div>
+
+                <div class="matrix-row" data-category="80s">
+                    <div class="category-name">80s</div>
+                    <button type="button" class="difficulty-option" data-category="80s" data-difficulty="Easy">EASY</button>
+                    <button type="button" class="difficulty-option" data-category="80s" data-difficulty="Medium">MEDIUM</button>
+                    <button type="button" class="difficulty-option" data-category="80s" data-difficulty="Hard">HARD</button>
+                </div>
+
+                <div class="matrix-row" data-category="90s">
+                    <div class="category-name">90s</div>
+                    <button type="button" class="difficulty-option" data-category="90s" data-difficulty="Easy">EASY</button>
+                    <button type="button" class="difficulty-option" data-category="90s" data-difficulty="Medium">MEDIUM</button>
+                    <button type="button" class="difficulty-option" data-category="90s" data-difficulty="Hard">HARD</button>
+                </div>
+
+                <div class="matrix-row" data-category="2000-2015">
+                    <div class="category-name">2000-2015</div>
+                    <button type="button" class="difficulty-option" data-category="2000-2015" data-difficulty="Easy">EASY</button>
+                    <button type="button" class="difficulty-option" data-category="2000-2015" data-difficulty="Medium">MEDIUM</button>
+                    <button type="button" class="difficulty-option" data-category="2000-2015" data-difficulty="Hard">HARD</button>
+                </div>
+
+                <div class="matrix-row classic-row">
+                    <button type="button" class="category-option" data-category="50's and 60's Classics">50's and 60's Classics</button>
+                </div>
+
+                <div class="matrix-row songbook-row">
+                    <button type="button" class="category-option" data-category="Great American Songbook">Great American Songbook</button>
+                </div>
+
+                <div class="matrix-row broadway-row">
+                    <button type="button" class="category-option" data-category="Broadway">Broadway</button>
+                </div>
             </div>
 
             <button id="createTeamButton" type="button">CREATE TEAM</button>

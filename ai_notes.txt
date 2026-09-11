@@ -87,3 +87,64 @@ Important implementation details
 - The frontend is deployed, but the current working tree has frontend and backend changes that must be committed.
 - Do not stage project.txt unless explicitly requested; it is an untracked project-ID attachment and has intentionally remained outside commits.
 - Current expected uncommitted application files: app.js, index.html, server.js, style.css, plus this ai_notes.txt.
+
+Current unresolved issues and next-session context
+------------------------------------------------
+Date: 2026-09-11
+Branch: ntitus/testing_branching
+
+1) Host team join/rejoin bug
+- In the lobby team list, the host is currently treated as owner-only and does not get a visible "Join Team" button for teams he is not already in.
+- This means if the host leaves a team, he has no way to rejoin it from the UI.
+- Relevant code: app.js -> renderTeamList(), modifyCurrentTeamMembership(), prepareTeamEdit(), createHostTeam().
+- Expected behavior: the host should be able to join a visible team in the lobby, even if he is not the owner, and should not be blocked from rejoining after leaving.
+
+2) Non-host players cannot create teams
+- The lobby currently hides the team builder for non-host players in renderLobbyState():
+  - "teamBuilder.classList.toggle('hidden', !isSessionHost);"
+- That prevents regular players from creating teams even though they should be allowed to participate in team formation.
+- Relevant code: app.js -> renderLobbyState(), teamBuilder UI in index.html.
+- Expected behavior: all players should be able to create and manage their own teams in the lobby; only the host should be allowed to press the start button and transition the room into the active game state.
+
+3) Team matrix reset bug
+- When a team is created, the song/genre difficulty matrix toggles every button, but the UI should reset to all-off before the next team creation/edit flow.
+- Current symptom: the selected state persists in a way that appears to toggle all options unexpectedly rather than resetting to default empty.
+- Relevant code: app.js -> getSelectedSongOptionsFromUI(), setSelectedSongOptionsInUI(), bindTeamMatrixControls(), createHostTeam().
+- Expected behavior: after a team is created or saved, the matrix should return to a clean default state with all category/difficulty buttons unselected until the next interaction.
+
+4) Non-host players remain in lobby after host starts
+- The current app allows the host to start the game, but non-host participants remain in the lobby state instead of being transitioned with the room into the gameplay state.
+- This looks like a deferred issue tied to the later round-turn implementation, not something to solve in the current lobby patch.
+- Relevant code: app.js -> startGameFromLobby(), handleSessionMessage(), session state handling in server.js.
+- Expected behavior: once the host starts the game, all remaining participants should be included in the active game state model as the game enters round 1; this will likely be handled when the round/turn engine is implemented.
+
+Quick reference for the next coding pass
+--------------------------------------
+- Frontend state and UI: app.js
+  - renderLobbyState()
+  - renderTeamList()
+  - createHostTeam()
+  - modifyCurrentTeamMembership()
+  - prepareTeamEdit()
+  - deleteTeam()
+  - bindTeamMatrixControls()
+  - startGameFromLobby()
+- UI shell: index.html
+  - #teamBuilder
+  - #teamList
+  - #startButton
+  - #joinCode and room display
+- Backend state rules: server.js
+  - state.replace handling for team scope
+  - session.status transitions
+  - room lock / lobby vs playing behavior
+
+Suggested next implementation plan for next session
+---------------------------------------------------
+1. Re-enable team creation for non-host players while keeping host-only game start.
+2. Fix the team-list action model so Join / Leave / Rejoin works consistently for the host and all participants.
+3. Reset the team matrix to empty defaults after each create/update action.
+4. Implement the real game-state transition so players are moved out of the lobby when the host starts.
+5. Only after that, add the round-turn engine and the host-assigned gameplay sequence.
+
+This note intentionally records the current blocker states so the next AI session can resume without re-deriving the core issue set.
