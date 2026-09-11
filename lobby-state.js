@@ -96,11 +96,28 @@ function isActivePlayerView(state, playerName) {
   return state.activePlayerName.trim() === playerName.trim();
 }
 
+function getPlayerGameView(state, playerName) {
+  if (!state || state.status === 'lobby') {
+    return 'spectator';
+  }
+
+  if (!state.activePlayerName || typeof playerName !== 'string') {
+    return 'spectator';
+  }
+
+  if (state.activePlayerName.trim() !== playerName.trim()) {
+    return 'spectator';
+  }
+
+  return state.currentSong ? 'song' : 'turn';
+}
+
 module.exports = {
   normalizeLobbyTeams,
   getTeamActionState,
   applyTeamMembershipChange,
   getRoomPhase,
   isGameInProgress,
-  isActivePlayerView
+  isActivePlayerView,
+  getPlayerGameView
 };

@@ -456,8 +456,13 @@ function handleSessionMessage(message) {
 
         if (phase === "game") {
             const localName = getCurrentPlayerName();
-            const isActivePlayer = !!state.activePlayerName && localName.trim() === state.activePlayerName.trim();
-            if (isActivePlayer) {
+            const view = state && typeof state.activePlayerName === "string" && localName.trim() === state.activePlayerName.trim()
+                ? (state.currentSong ? "song" : "turn")
+                : "spectator";
+
+            if (view === "turn") {
+                showCurrentTeam();
+            } else if (view === "song") {
                 showScreen("songScreen");
             } else {
                 showScreen("playerScreen");
@@ -481,8 +486,13 @@ function handleSessionMessage(message) {
 
         if (phase === "game") {
             const localName = getCurrentPlayerName();
-            const isActivePlayer = !!state.activePlayerName && localName.trim() === state.activePlayerName.trim();
-            if (isActivePlayer) {
+            const view = state && typeof state.activePlayerName === "string" && localName.trim() === state.activePlayerName.trim()
+                ? (state.currentSong ? "song" : "turn")
+                : "spectator";
+
+            if (view === "turn") {
+                showCurrentTeam();
+            } else if (view === "song") {
                 showScreen("songScreen");
             } else {
                 showScreen("playerScreen");
