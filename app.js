@@ -185,6 +185,9 @@ function updatePlayerView(state) {
     const localName = getCurrentPlayerName();
     const activePlayerName = state.activePlayerName || getActiveTurn().playerName || null;
     const isActivePlayer = !!activePlayerName && localName.trim() === activePlayerName.trim();
+    const currentTeamName = Array.isArray(state.teams) && state.teams[state.currentTeamIndex]
+        ? state.teams[state.currentTeamIndex].name
+        : "Current team";
 
     if (state.status === "complete") {
         document.getElementById("playerGameStatus").textContent = "Game complete.";
@@ -207,7 +210,7 @@ function updatePlayerView(state) {
 
     document
         .getElementById("playerGameStatus")
-        .textContent = `Team ${state.currentTeamIndex + 1} is playing. ${activePlayerName ? `${activePlayerName} is active.` : "Waiting for the next turn."}`;
+        .textContent = `${currentTeamName} is playing. ${activePlayerName ? `${activePlayerName} is active.` : "Waiting for the next turn."}`;
 
 }
 
@@ -790,8 +793,9 @@ function createHostTeam() {
     if (teamNameInput) {
         teamNameInput.value = "";
     }
-    resetTeamMatrixSelection();
-    setSelectedSongOptionsInUI([]);
+    document.querySelectorAll(".difficulty-option, .category-option").forEach(button => {
+        button.classList.remove("selected");
+    });
     const button = document.getElementById("createTeamButton");
     if (button) {
         button.textContent = "CREATE TEAM";
@@ -931,14 +935,28 @@ function startGameFromLobby() {
         passesRemaining: Number.isFinite(team.passesRemaining) ? team.passesRemaining : 2
     }));
 
+    currentRound = 1;
+    currentTeamIndex = 0;
+    currentTurnSequence = buildTurnSequenceForTeams(cleanedTeams, currentRound);
+    currentTurnIndex = 0;
+    activePlayerName = currentTurnSequence[0]?.playerName || null;
+
+    const activeTurn = getActiveTurn();
+    if (activeTurn && activeTurn.teamName) {
+        const nextTeamIndex = cleanedTeams.findIndex(team => team.name === activeTurn.teamName);
+        if (nextTeamIndex >= 0) {
+            currentTeamIndex = nextTeamIndex;
+        }
+    }
+
     const nextState = {
         ...currentState,
         status: "playing",
         currentRound: 1,
-        currentTeamIndex: 0,
+        currentTeamIndex,
         totalRounds: currentState.totalRounds || 10,
         teams: cleanedTeams,
-        activePlayerName: currentTurnSequence[0]?.playerName || null
+        activePlayerName: activePlayerName || null
     };
 
     sessionSocket.lastState = nextState;
@@ -947,11 +965,6 @@ function startGameFromLobby() {
         state: nextState
     }));
 
-    currentRound = 1;
-    currentTeamIndex = 0;
-    currentTurnSequence = buildTurnSequenceForTeams(cleanedTeams, currentRound);
-    currentTurnIndex = 0;
-    activePlayerName = currentTurnSequence[0]?.playerName || null;
     showActivePlayerStartScreen();
     setConnectionStatus("Game started. Round 1.");
 }
