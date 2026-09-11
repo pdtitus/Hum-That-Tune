@@ -17,10 +17,11 @@ function createId(bytes = 12) {
 }
 
 function createJoinCode() {
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let code;
 
     do {
-        code = crypto.randomBytes(3).toString("hex").toUpperCase();
+        code = Array.from({ length: 5 }, () => alphabet[Math.floor(Math.random() * alphabet.length)]).join("");
     } while ([...sessions.values()].some(session => session.joinCode === code));
 
     return code;

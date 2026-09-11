@@ -104,7 +104,7 @@ function setRoomDisplay(message) {
         .getElementById("roomDisplay")
         .textContent = message;
 
-    const roomCode = message.match(/[A-Z0-9]{6}$/);
+    const roomCode = message.match(/[A-Z]{5}$/);
 
     if (roomCode) {
         document
@@ -185,10 +185,40 @@ function updatePlayerView(state) {
 
 }
 
+function getLobbyTeamsFromState(state) {
+    if (!state || !Array.isArray(state.teams)) {
+        return [];
+    }
+
+    return state.teams;
+}
+
+function renderTeamList(message) {
+    const teamList = document.getElementById("teamList");
+    if (!teamList) {
+        return;
+    }
+
+    const teams = getLobbyTeamsFromState(message && message.state ? message.state : { teams: [] });
+
+    if (!teams.length) {
+        teamList.innerHTML = "<div class=\"team-item\">No teams yet.</div>";
+        return;
+    }
+
+    teamList.innerHTML = teams.map(team => `
+        <div class="team-item">
+            <strong>${team.name}</strong>
+            ${team.owner ? ` — ${team.owner}` : ""}
+        </div>
+    `).join("");
+}
+
 function renderLobbyState(message) {
     const roomName = sessionJoinCode || "this room";
     const participants = Array.isArray(message.participants) ? message.participants : [];
     const lobbyContents = document.getElementById("lobbyContents");
+    const teams = getLobbyTeamsFromState(message && message.state ? message.state : { teams: [] });
 
     if (!lobbyContents) {
         return;
@@ -199,17 +229,23 @@ function renderLobbyState(message) {
         : "No players yet.";
 
     lobbyContents.innerHTML = `<p><strong>Room:</strong> ${roomName}</p><div>${lobbyText}</div>`;
+    renderTeamList(message);
 
     const lobbyStatus = document.getElementById("lobbyStatus");
     if (lobbyStatus) {
         lobbyStatus.textContent = isSessionHost
-            ? "You are hosting. Create the first team to begin."
+            ? (teams.length ? "Lobby ready. The host can start once the room is set." : "Create the first team to begin.")
             : "Waiting for the host to start the game.";
+    }
+
+    const teamBuilder = document.getElementById("teamBuilder");
+    if (teamBuilder) {
+        teamBuilder.classList.toggle("hidden", !isSessionHost);
     }
 
     const startButton = document.getElementById("startButton");
     if (startButton) {
-        startButton.classList.toggle("hidden", !isSessionHost);
+        startButton.classList.toggle("hidden", !isSessionHost || teams.length === 0);
     }
 }
 
@@ -312,7 +348,8 @@ async function createHostedSession() {
                 ]
             },
             state: {
-                status: "lobby"
+                status: "lobby",
+                teams: []
             }
         })
     });
@@ -344,7 +381,7 @@ async function getSessionByCode(joinCode) {
 
 async function joinHostedSession() {
 
-    const joinCode = document.getElementById("joinCode").value.trim().toUpperCase();
+    const joinCode = document.getElementById("joinCode").value.trim().toUpperCase().replace(/[^A-Z]/g, "");
     const name = document.getElementById("playerName").value.trim() || "Player";
 
     if (!joinCode) {
@@ -448,6 +485,57 @@ function toggleJoinMode() {
     if (joinCodeRow) {
         joinCodeRow.classList.toggle("hidden");
     }
+}
+
+function createHostTeam() {
+    if (!isSessionHost || !sessionSocket) {
+        setConnectionStatus("Only the host can create a team.");
+        return;
+    }
+
+    const teamNameInput = document.getElementById("teamNameInput");
+    const teamName = teamNameInput ? teamNameInput.value.trim() : "";
+
+    if (!teamName) {
+        setConnectionStatus("Enter a team name before creating a team.");
+        return;
+    }
+
+    const currentState = sessionSocket.readyState === WebSocket.OPEN
+        ? (sessionSocket.lastState || { status: "lobby", teams: [] })
+        : { status: "lobby", teams: [] };
+
+    const teams = Array.isArray(currentState.teams) ? currentState.teams : [];
+    const normalizedName = teamName.slice(0, 40);
+
+    if (teams.some(team => team.name.toLowerCase() === normalizedName.toLowerCase())) {
+        setConnectionStatus("That team name is already in use.");
+        return;
+    }
+
+    const nextState = {
+        ...currentState,
+        status: "lobby",
+        teams: [
+            ...teams,
+            {
+                name: normalizedName,
+                owner: document.getElementById("playerName")?.value.trim() || "Host"
+            }
+        ]
+    };
+
+    sessionSocket.lastState = nextState;
+    sessionSocket.send(JSON.stringify({
+        type: "state.replace",
+        state: nextState
+    }));
+
+    if (teamNameInput) {
+        teamNameInput.value = "";
+    }
+
+    setConnectionStatus("Team created.");
 }
 
 function revealNextSong() {
@@ -1011,6 +1099,10 @@ document
             setConnectionStatus(error.message);
         }
     });
+
+document
+    .getElementById("createTeamButton")
+    .addEventListener("click", createHostTeam);
 
 document
     .getElementById("startButton")

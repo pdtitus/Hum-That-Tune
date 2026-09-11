@@ -47,7 +47,7 @@
         <div id="joinCodeRow" class="hidden">
             <label>
                 Join Code:
-                <input id="joinCode" type="text" maxlength="6" placeholder="ABC123">
+                <input id="joinCode" type="text" maxlength="5" placeholder="ABCDE">
             </label>
             <button id="joinButton" type="button">JOIN ROOM</button>
         </div>
@@ -57,7 +57,17 @@
         <h3>LOBBY</h3>
         <p id="lobbyStatus">Waiting for the host.</p>
         <div id="lobbyContents"></div>
-        <button id="startButton" class="hidden">START GAME</button>
+
+        <div id="teamBuilder" class="hidden">
+            <label>
+                Team Name:
+                <input id="teamNameInput" type="text" maxlength="40" placeholder="Team Name">
+            </label>
+            <button id="createTeamButton" type="button">CREATE TEAM</button>
+        </div>
+
+        <div id="teamList" class="team-list"></div>
+        <button id="startButton" class="hidden">ALL TEAMS AND PLAYERS READY</button>
     </div>
 
     <div id="teamSetupScreen" class="panel hidden">
