@@ -280,6 +280,50 @@ function getDefaultTeamOptions() {
     return [];
 }
 
+function buildDeckForTeam(team) {
+    const teamOptions = Array.isArray(team?.songOptions) ? team.songOptions : [];
+
+    if (!teamOptions.length) {
+        return [...songs];
+    }
+
+    const deck = songs.filter(song => {
+        for (const option of teamOptions) {
+            if (typeof option !== "string") {
+                continue;
+            }
+
+            const [category, difficulty] = option.split(":");
+            const normalizedCategory = category && category.trim();
+            const normalizedDifficulty = difficulty && difficulty.trim();
+
+            if (!normalizedCategory) {
+                continue;
+            }
+
+            if (normalizedDifficulty) {
+                if (song.decade === normalizedCategory && song.difficulty === normalizedDifficulty) {
+                    return true;
+                }
+                continue;
+            }
+
+            if (song.category === normalizedCategory) {
+                return true;
+            }
+
+            if (song.decade === normalizedCategory) {
+                return true;
+            }
+        }
+
+        return false;
+    });
+
+    shuffle(deck);
+    return deck;
+}
+
 function formatSongOption(category, difficulty) {
     return `${category}:${difficulty}`;
 }
@@ -935,6 +979,8 @@ function startGameFromLobby() {
         passesRemaining: Number.isFinite(team.passesRemaining) ? team.passesRemaining : 2
     }));
 
+    teamDecks = cleanedTeams.map(team => buildDeckForTeam(team));
+
     currentRound = 1;
     currentTeamIndex = 0;
     currentTurnSequence = buildTurnSequenceForTeams(cleanedTeams, currentRound);
@@ -1482,6 +1528,11 @@ function showActivePlayerStartScreen() {
         activePlayerName = activeTurn.playerName;
     }
 
+    const activeTurnTeam = teams.find(team => team.name === (activeTurn && activeTurn.teamName)) || teams[currentTeamIndex];
+    if (activeTurnTeam) {
+        currentTeamIndex = teams.indexOf(activeTurnTeam);
+    }
+
     const startTurnButton = document.getElementById("startTurnButton");
     if (startTurnButton) {
         startTurnButton.classList.remove("hidden");
@@ -1500,6 +1551,22 @@ function showActivePlayerStartScreen() {
 }
 
 function startActiveTurn() {
+    const activeTurn = getActiveTurn();
+    if (activeTurn && activeTurn.teamName) {
+        const nextTeamIndex = teams.findIndex(team => team.name === activeTurn.teamName);
+        if (nextTeamIndex >= 0) {
+            currentTeamIndex = nextTeamIndex;
+        }
+    }
+
+    if (!Array.isArray(teamDecks[currentTeamIndex]) || teamDecks[currentTeamIndex].length === 0) {
+        teamDecks[currentTeamIndex] = buildDeckForTeam(teams[currentTeamIndex]);
+    }
+
+    clearInterval(timerInterval);
+    timeRemaining = selectedTimer;
+    document.getElementById("timerDisplay").textContent = String(timeRemaining);
+    showScreen("songScreen");
     revealNextSong();
 }
 
