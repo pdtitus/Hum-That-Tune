@@ -61,7 +61,7 @@ let totalRounds = 5;
 
 let currentRound = 1;
 
-let selectedTimer = 45;
+let selectedTimer = 30;
 
 let timerInterval = null;
 
@@ -193,7 +193,16 @@ function updatePlayerView(state) {
 
     if (isActivePlayer) {
         document.getElementById("playerGameStatus").textContent = `It is your turn. Keep the song private.`;
+        const startTurnButton = document.getElementById("startTurnButton");
+        if (startTurnButton) {
+            startTurnButton.classList.remove("hidden");
+        }
         return;
+    }
+
+    const startTurnButton = document.getElementById("startTurnButton");
+    if (startTurnButton) {
+        startTurnButton.classList.add("hidden");
     }
 
     document
@@ -450,23 +459,23 @@ function handleSessionMessage(message) {
     const phase = state ? (state.status === "playing" || state.status === "complete" ? "game" : "lobby") : "lobby";
 
     if (message.type === "connected") {
-
         setConnectionStatus(`Connected. Room ${sessionJoinCode || ""}`);
         setRoomDisplay(`Room code: ${sessionJoinCode || "connected"}`);
 
         if (phase === "game") {
             const localName = getCurrentPlayerName();
-            const view = state && typeof state.activePlayerName === "string" && localName.trim() === state.activePlayerName.trim()
-                ? (state.currentSong ? "song" : "turn")
-                : "spectator";
+            const isActive = state && typeof state.activePlayerName === "string" && localName.trim() === state.activePlayerName.trim();
 
-            if (view === "turn") {
-                showCurrentTeam();
-            } else if (view === "song") {
-                showScreen("songScreen");
+            if (isActive) {
+                if (state.currentSong) {
+                    showScreen("songScreen");
+                } else {
+                    showActivePlayerStartScreen();
+                }
             } else {
                 showScreen("playerScreen");
             }
+
             updatePlayerView(state);
             return;
         }
@@ -477,46 +486,38 @@ function handleSessionMessage(message) {
         if (!isSessionHost) {
             updatePlayerView(state);
         }
-
         return;
-
     }
 
     if (message.type === "state") {
-
         if (phase === "game") {
             const localName = getCurrentPlayerName();
-            const view = state && typeof state.activePlayerName === "string" && localName.trim() === state.activePlayerName.trim()
-                ? (state.currentSong ? "song" : "turn")
-                : "spectator";
+            const isActive = state && typeof state.activePlayerName === "string" && localName.trim() === state.activePlayerName.trim();
 
-            if (view === "turn") {
-                showCurrentTeam();
-            } else if (view === "song") {
-                showScreen("songScreen");
+            if (isActive) {
+                if (state.currentSong) {
+                    showScreen("songScreen");
+                } else {
+                    showActivePlayerStartScreen();
+                }
             } else {
                 showScreen("playerScreen");
             }
+
             updatePlayerView(state);
             return;
         }
 
         renderLobbyState(message);
-
         if (!isSessionHost) {
             updatePlayerView(state);
         }
-
         return;
-
     }
 
     if (message.type === "error") {
-
         setConnectionStatus(`Connection error: ${message.error}`);
-
     }
-
 }
 
 function connectToSession(token, wsPath, hostSession) {
@@ -951,7 +952,7 @@ function startGameFromLobby() {
     currentTurnSequence = buildTurnSequenceForTeams(cleanedTeams, currentRound);
     currentTurnIndex = 0;
     activePlayerName = currentTurnSequence[0]?.playerName || null;
-    showScreen("playerScreen");
+    showActivePlayerStartScreen();
     setConnectionStatus("Game started. Round 1.");
 }
 
@@ -1128,6 +1129,13 @@ else {
 
     };
 
+    function goToScoringScreen() {
+        clearInterval(timerInterval);
+        setupScoringScreen();
+        updateNextButtonLabel();
+        showScreen("scoringScreen");
+    }
+
     function startTimer() {
 
     // Stop any previous timer
@@ -1163,8 +1171,7 @@ if (timeRemaining <= 0) {
         .getElementById("buzzerSound")
         .play();
 
-    // Stay on the song screen.
-    // Wait for the clue giver to press SCORE THIS SONG.
+    goToScoringScreen();
     return;
 
 }
@@ -1456,6 +1463,33 @@ function showCurrentTeam() {
     showScreen("turnScreen");
 }
 
+function showActivePlayerStartScreen() {
+    const activeTurn = getActiveTurn();
+    if (activeTurn && activeTurn.playerName) {
+        activePlayerName = activeTurn.playerName;
+    }
+
+    const startTurnButton = document.getElementById("startTurnButton");
+    if (startTurnButton) {
+        startTurnButton.classList.remove("hidden");
+    }
+
+    updatePlayerView({
+        status: "playing",
+        teams,
+        currentRound,
+        totalRounds,
+        currentTeamIndex,
+        activePlayerName
+    });
+
+    showScreen("playerScreen");
+}
+
+function startActiveTurn() {
+    revealNextSong();
+}
+
 
 //================================================
 // EVENT LISTENERS
@@ -1575,75 +1609,42 @@ function bindTeamMatrixControls() {
 
 bindTeamMatrixControls();
 
-// Reveal song
-
-        document
-        .getElementById("revealButton")
-        .addEventListener("click", function () {
-
-        revealNextSong();
-
+document
+    .getElementById("startTurnButton")
+    .addEventListener("click", function () {
+        startActiveTurn();
     });
 
-        // reduce passes...
 
-       document
+document
     .getElementById("passButton")
     .addEventListener("click", function () {
+        const team = teams[currentTeamIndex];
 
-        let team = teams[currentTeamIndex];
-
-        if (team.passesRemaining <= 0) {
-
+        if (!team || (team.passesRemaining ?? 0) <= 0) {
             return;
-
         }
 
-        team.passesRemaining--;
+        team.passesRemaining -= 1;
 
-        document
-            .getElementById("passesRemaining")
-            .textContent =
-            team.passesRemaining;
+        document.getElementById("passesRemaining").textContent = team.passesRemaining;
 
-            const passButton = document.getElementById("passButton");
-
-        if (team.passesRemaining === 0) {
-
+        const passButton = document.getElementById("passButton");
+        if ((team.passesRemaining ?? 0) === 0) {
             passButton.classList.add("pass-disabled");
-
         } else {
-
             passButton.classList.remove("pass-disabled");
-
         }
 
         sendHostState("playing");
-
         revealNextSong();
-
     });
 
-
-
-
-    ;
-
-// Next round
-
-// Score button
 
 document
     .getElementById("scoreButton")
     .addEventListener("click", function () {
-
-        clearInterval(timerInterval);
-
-        setupScoringScreen();
-        updateNextButtonLabel();
-
-        showScreen("scoringScreen");
-
+        goToScoringScreen();
     });
 
 function setupScoringScreen() {
@@ -1986,7 +1987,7 @@ document
 
         activePlayerName = getActiveTurn().playerName || activePlayerName;
         sendHostState("playing");
-        showCurrentTeam();
+        showActivePlayerStartScreen();
 
     });
 

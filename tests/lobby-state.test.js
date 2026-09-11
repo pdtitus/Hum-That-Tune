@@ -119,7 +119,7 @@ test('only the active player sees the private song state while everyone else sta
   assert.equal(isActivePlayerView(state, 'Alice'), true);
   assert.equal(isActivePlayerView(state, 'Bob'), false);
   assert.equal(isActivePlayerView({ status: 'lobby' }, 'Bob'), false);
-  assert.equal(getPlayerGameView(state, 'Alice'), 'turn');
+  assert.equal(getPlayerGameView(state, 'Alice'), 'player');
   assert.equal(getPlayerGameView({ ...state, currentSong: { title: 'Song A' } }, 'Alice'), 'song');
   assert.equal(getPlayerGameView(state, 'Bob'), 'spectator');
 });

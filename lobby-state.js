@@ -109,7 +109,7 @@ function getPlayerGameView(state, playerName) {
     return 'spectator';
   }
 
-  return state.currentSong ? 'song' : 'turn';
+  return state.currentSong ? 'song' : 'player';
 }
 
 module.exports = {
