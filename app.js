@@ -218,7 +218,8 @@ function renderLobbyState(message) {
     const roomName = sessionJoinCode || "this room";
     const participants = Array.isArray(message.participants) ? message.participants : [];
     const lobbyContents = document.getElementById("lobbyContents");
-    const teams = getLobbyTeamsFromState(message && message.state ? message.state : { teams: [] });
+    const state = message && message.state ? message.state : { status: "lobby", teams: [] };
+    const teams = getLobbyTeamsFromState(state);
 
     if (!lobbyContents) {
         return;
@@ -233,9 +234,15 @@ function renderLobbyState(message) {
 
     const lobbyStatus = document.getElementById("lobbyStatus");
     if (lobbyStatus) {
-        lobbyStatus.textContent = isSessionHost
-            ? (teams.length ? "Lobby ready. The host can start once the room is set." : "Create the first team to begin.")
-            : "Waiting for the host to start the game.";
+        if (isSessionHost) {
+            lobbyStatus.textContent = state.status === "ready"
+                ? "All teams and players are ready."
+                : (teams.length ? "Lobby ready. The host can start once the room is set." : "Create the first team to begin.");
+        } else {
+            lobbyStatus.textContent = state.status === "ready"
+                ? "Waiting for the host to begin the match."
+                : "Waiting for the host to start the game.";
+        }
     }
 
     const teamBuilder = document.getElementById("teamBuilder");
@@ -250,6 +257,10 @@ function renderLobbyState(message) {
 }
 
 function handleSessionMessage(message) {
+
+    if (sessionSocket && message && message.state) {
+        sessionSocket.lastState = message.state;
+    }
 
     if (message.type === "connected") {
 
@@ -536,6 +547,35 @@ function createHostTeam() {
     }
 
     setConnectionStatus("Team created.");
+}
+
+function readyLobbyForGame() {
+    if (!isSessionHost || !sessionSocket) {
+        setConnectionStatus("Only the host can mark the lobby ready.");
+        return;
+    }
+
+    const currentState = sessionSocket.lastState || { status: "lobby", teams: [] };
+    const teams = Array.isArray(currentState.teams) ? currentState.teams : [];
+
+    if (!teams.length) {
+        setConnectionStatus("Create at least one team before the lobby is ready.");
+        return;
+    }
+
+    const nextState = {
+        ...currentState,
+        status: "ready",
+        teams
+    };
+
+    sessionSocket.lastState = nextState;
+    sessionSocket.send(JSON.stringify({
+        type: "state.replace",
+        state: nextState
+    }));
+
+    setConnectionStatus("Lobby ready.");
 }
 
 function revealNextSong() {
@@ -1107,7 +1147,7 @@ document
 document
     .getElementById("startButton")
     .addEventListener("click", function () {
-        setConnectionStatus("The host can start the game once lobby rules are implemented.");
+        readyLobbyForGame();
     });
 
 // Reveal song

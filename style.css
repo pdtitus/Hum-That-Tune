@@ -184,6 +184,26 @@ p {
     margin: 18px 0;
 }
 
+#teamBuilder {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid #00ffff;
+}
+
+.team-list {
+    margin-top: 16px;
+    display: grid;
+    gap: 10px;
+}
+
+.team-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid #00ffff;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 18px;
+}
+
 .hidden {
 
     display: none;
