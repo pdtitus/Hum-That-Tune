@@ -271,6 +271,27 @@ function getActiveTurn() {
     };
 }
 
+function syncActiveTurnState() {
+    const activeTurn = getActiveTurn();
+
+    if (activeTurn && activeTurn.teamName) {
+        const matchingTeamIndex = teams.findIndex(team => team.name === activeTurn.teamName);
+        if (matchingTeamIndex >= 0) {
+            currentTeamIndex = matchingTeamIndex;
+        }
+    }
+
+    if (activeTurn && typeof activeTurn.playerName === "string") {
+        activePlayerName = activeTurn.playerName;
+    }
+}
+
+function resetRoundPasses() {
+    teams.forEach(team => {
+        team.passesRemaining = 2;
+    });
+}
+
 function getDefaultTeamOptions() {
     return [];
 }
@@ -1018,7 +1039,7 @@ function startGameFromLobby() {
     const cleanedTeams = teams.filter(team => Array.isArray(team.members) && team.members.length > 0).map(team => ({
         ...team,
         score: Number.isFinite(team.score) ? team.score : 0,
-        passesRemaining: Number.isFinite(team.passesRemaining) ? team.passesRemaining : 2
+        passesRemaining: 2
     }));
 
     teamDecks = cleanedTeams.map(team => buildDeckForTeam(team));
@@ -1028,6 +1049,7 @@ function startGameFromLobby() {
     currentTurnSequence = buildTurnSequenceForTeams(cleanedTeams, currentRound);
     currentTurnIndex = 0;
     activePlayerName = currentTurnSequence[0]?.playerName || null;
+    resetRoundPasses();
 
     const activeTurn = getActiveTurn();
     if (activeTurn && activeTurn.teamName) {
@@ -1416,9 +1438,6 @@ function createTeams() {
 
     teams = [];
 
-    let passes = totalRounds / 5;
-
-
     for (let i = 1; i <= numberOfTeams; i++) {
 
         teams.push({
@@ -1427,7 +1446,7 @@ function createTeams() {
 
             score: 0,
 
-            passesRemaining: passes
+            passesRemaining: 2
 
         });
 
@@ -1565,15 +1584,7 @@ function showCurrentTeam() {
 }
 
 function showActivePlayerStartScreen() {
-    const activeTurn = getActiveTurn();
-    if (activeTurn && activeTurn.playerName) {
-        activePlayerName = activeTurn.playerName;
-    }
-
-    const activeTurnTeam = teams.find(team => team.name === (activeTurn && activeTurn.teamName)) || teams[currentTeamIndex];
-    if (activeTurnTeam) {
-        currentTeamIndex = teams.indexOf(activeTurnTeam);
-    }
+    syncActiveTurnState();
 
     const startTurnButton = document.getElementById("startTurnButton");
     if (startTurnButton) {
@@ -2079,25 +2090,25 @@ document
             currentTeam.score = (Number(currentTeam.score) || 0) + (Number(roundScore) || 0);
         }
 
-        currentTurnIndex += 1;
-        if (currentTurnIndex >= currentTurnSequence.length) {
-            currentTurnIndex = 0;
-            currentRound += 1;
+        if (!currentTurnSequence.length) {
             currentTurnSequence = buildTurnSequenceForTeams(teams, currentRound);
+        }
+
+        const nextTurnIndex = currentTurnIndex + 1;
+        if (nextTurnIndex >= currentTurnSequence.length) {
+            currentRound += 1;
+            currentTurnIndex = 0;
+            currentTurnSequence = buildTurnSequenceForTeams(teams, currentRound);
+            resetRoundPasses();
+        } else {
+            currentTurnIndex = nextTurnIndex;
         }
 
         if (!currentTurnSequence.length) {
             currentTurnSequence = buildTurnSequenceForTeams(teams, currentRound);
         }
 
-        const activeTurn = getActiveTurn();
-        if (activeTurn && activeTurn.teamName) {
-            const nextTeamIndex = teams.findIndex(team => team.name === activeTurn.teamName);
-            if (nextTeamIndex >= 0) {
-                currentTeamIndex = nextTeamIndex;
-            }
-        }
-
+        syncActiveTurnState();
         updateScoreboard();
 
         if (currentRound > totalRounds) {
