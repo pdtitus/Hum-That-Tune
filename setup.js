@@ -125,27 +125,21 @@ function selectRoundCount(rounds) {
    BUTTON EVENTS -- TEAMS AND ROUNDS
    ========================================================= */
 
-document.getElementById("teams2Button")
-    .addEventListener("click", () => selectGameMode(2));
+const teams2Button = document.getElementById("teams2Button");
+const teams3Button = document.getElementById("teams3Button");
+const teams4Button = document.getElementById("teams4Button");
+const partyModeButton = document.getElementById("partyModeButton");
+const round5Button = document.getElementById("round5Button");
+const round10Button = document.getElementById("round10Button");
+const round20Button = document.getElementById("round20Button");
 
-document.getElementById("teams3Button")
-    .addEventListener("click", () => selectGameMode(3));
-
-document.getElementById("teams4Button")
-    .addEventListener("click", () => selectGameMode(4));
-
-document.getElementById("partyModeButton")
-    .addEventListener("click", () => selectGameMode("party"));
-
-
-document.getElementById("round5Button")
-    .addEventListener("click", () => selectRoundCount(5));
-
-document.getElementById("round10Button")
-    .addEventListener("click", () => selectRoundCount(10));
-
-document.getElementById("round20Button")
-    .addEventListener("click", () => selectRoundCount(20));
+if (teams2Button) teams2Button.addEventListener("click", () => selectGameMode(2));
+if (teams3Button) teams3Button.addEventListener("click", () => selectGameMode(3));
+if (teams4Button) teams4Button.addEventListener("click", () => selectGameMode(4));
+if (partyModeButton) partyModeButton.addEventListener("click", () => selectGameMode("party"));
+if (round5Button) round5Button.addEventListener("click", () => selectRoundCount(5));
+if (round10Button) round10Button.addEventListener("click", () => selectRoundCount(10));
+if (round20Button) round20Button.addEventListener("click", () => selectRoundCount(20));
 
 function collectGameSettings() {
 
@@ -172,26 +166,32 @@ function collectGameSettings() {
     BEGIN DECK BUILDER
    ========================================================= */
 
-document.getElementById("nextSetupButton")
-    .addEventListener("click", () => {
+const nextSetupButton = document.getElementById("nextSetupButton");
+
+if (nextSetupButton) {
+    nextSetupButton.addEventListener("click", () => {
 
         console.log("Game setup:", SETUP);
 
-        document.getElementById("gameSettings")
-            .classList.add("hidden");
+        const gameSettings = document.getElementById("gameSettings");
+        if (gameSettings) {
+            gameSettings.classList.add("hidden");
+        }
 
-        const deckBuilder =
-            document.getElementById("deckBuilder");
+        const deckBuilder = document.getElementById("deckBuilder");
+        if (deckBuilder) {
+            deckBuilder.classList.remove("hidden");
+        }
 
-        deckBuilder.classList.remove("hidden");
-
-        document
-        .getElementById("titleArea")
-        .classList.add("hidden");
+        const titleArea = document.getElementById("titleArea");
+        if (titleArea) {
+            titleArea.classList.add("hidden");
+        }
 
         startTeamDeckSetup();
 
     });
+}
 
 function startTeamDeckSetup() {
 

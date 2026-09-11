@@ -28,148 +28,54 @@
         ROOM CODE: <strong id="roomBannerCode"></strong>
     </div>
 
-
- <!-- SETUP SCREEN -->
-<div id="setupScreen" class="panel">
-
-    <h3>GAME SETUP</h3>
-
-    <p>
-        Host: enter your name and click START GAME to create a room.<br>
-        Player: enter your name and a room code, then click JOIN GAME.
-    </p>
-
-    <label>
-        Your Name:
-        <input id="playerName" type="text" maxlength="40" placeholder="Player">
-    </label>
-
-    <p id="connectionStatus">Offline</p>
-
-    <p id="roomDisplay">Room code: waiting for host</p>
-
-    <label>
-        Join Code:
-        <input id="joinCode" type="text" maxlength="6" placeholder="ABC123">
-    </label>
-
-    <br>
-
-    <button id="joinButton" type="button">
-        JOIN GAME
-    </button>
-
-    <hr>
-
-    <label>
-        Teams:
-        <select id="teamSelect">
-            <option value="2">2 Teams</option>
-            <option value="3">3 Teams</option>
-            <option value="4">4 Teams</option>
-        </select>
-    </label>
-
-    <div id="gameSettings">
-
-        <h4>HOW ARE YOU PLAYING?</h4>
-
-        <div id="gameModeOptions">
-
-            <button type="button" id="teams2Button" class="setup-option selected">
-                2 TEAMS
-            </button>
-
-            <button type="button" id="teams3Button" class="setup-option">
-                3 TEAMS
-            </button>
-
-            <button type="button" id="teams4Button" class="setup-option">
-                4 TEAMS
-            </button>
-
-            <button type="button" id="partyModeButton" class="setup-option">
-                PARTY MODE
-            </button>
-
-        </div>
-
-        <h4>NUMBER OF ROUNDS</h4>
-
-        <div id="roundOptions">
-
-            <button type="button" id="round5Button" class="setup-option">
-                5
-            </button>
-
-            <button type="button" id="round10Button" class="setup-option selected">
-                10
-            </button>
-
-            <button type="button" id="round20Button" class="setup-option">
-                20
-            </button>
-
-        </div>
-
-        <br>
-
-        <button type="button" id="nextSetupButton">
-            NEXT
-        </button>
-
-        <br><br>
+    <div id="entryScreen" class="panel">
+        <h3>PLAY</h3>
 
         <label>
-            Difficulty:
-            <select id="difficultySelect">
-                <option value="Mixed">Mixed</option>
-                <option value="Easy">Easy</option>
-                <option value="Medium">Medium</option>
-                <option value="Hard">Hard</option>
-            </select>
+            Your Name:
+            <input id="playerName" type="text" maxlength="40" placeholder="Player">
         </label>
 
-        <br><br>
+        <p id="connectionStatus">Offline</p>
+        <p id="roomDisplay">Room code: waiting for host</p>
 
-        <label>
-            Game Length:
+        <div class="entry-actions">
+            <button id="hostButton" type="button">HOST GAME</button>
+            <button id="joinModeButton" type="button" class="secondary-button">JOIN GAME</button>
+        </div>
 
-            <select id="roundSelect">
-                <option value="5">5 Rounds</option>
-                <option value="10">10 Rounds</option>
-                <option value="20">20 Rounds</option>
-            </select>
-        </label>
-
-        <br><br>
-
-        <button id="startButton">
-            CREATE ROOM AND START GAME
-        </button>
-
+        <div id="joinCodeRow" class="hidden">
+            <label>
+                Join Code:
+                <input id="joinCode" type="text" maxlength="6" placeholder="ABC123">
+            </label>
+            <button id="joinButton" type="button">JOIN ROOM</button>
+        </div>
     </div>
 
-    <!-- TEAM DECK BUILDER -->
-    <div id="deckBuilder" class="hidden">
-
-        <!-- setup.js will generate the team matrix here -->
-
+    <div id="lobbyScreen" class="panel hidden">
+        <h3>LOBBY</h3>
+        <p id="lobbyStatus">Waiting for the host.</p>
+        <div id="lobbyContents"></div>
+        <button id="startButton" class="hidden">START GAME</button>
     </div>
 
-</div>
+    <div id="teamSetupScreen" class="panel hidden">
+        <h3>TEAM SETUP</h3>
+        <p>This is the first team setup step.</p>
+    </div>
 
-<div id="playerScreen" class="panel hidden">
+    <div id="playerScreen" class="panel hidden">
 
-    <h3>GAME CONNECTED</h3>
+        <h3>GAME CONNECTED</h3>
 
-    <p id="playerGameStatus">Waiting for the host to start the game.</p>
+        <p id="playerGameStatus">Waiting for the host to start the game.</p>
 
-    <div id="playerScores"></div>
+        <div id="playerScores"></div>
 
-    <p id="playerRoundDisplay"></p>
+        <p id="playerRoundDisplay"></p>
 
-</div>
+    </div>
     
     <div id="scoreboard" class="scoreboard">
 

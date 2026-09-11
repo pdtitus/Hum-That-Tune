@@ -158,6 +158,31 @@ p {
 
 }
 
+.entry-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.secondary-button {
+    background-color: #00ffff;
+    color: #08001a;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+#joinCodeRow {
+    margin-top: 18px;
+}
+
+#lobbyScreen {
+    text-align: left;
+}
+
+#lobbyContents {
+    margin: 18px 0;
+}
 
 .hidden {
 

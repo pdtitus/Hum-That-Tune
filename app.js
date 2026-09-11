@@ -185,25 +185,58 @@ function updatePlayerView(state) {
 
 }
 
+function renderLobbyState(message) {
+    const roomName = sessionJoinCode || "this room";
+    const participants = Array.isArray(message.participants) ? message.participants : [];
+    const lobbyContents = document.getElementById("lobbyContents");
+
+    if (!lobbyContents) {
+        return;
+    }
+
+    const lobbyText = participants.length
+        ? participants.map(participant => `- ${participant.name}${participant.isHost ? " (host)" : ""}`).join("<br>")
+        : "No players yet.";
+
+    lobbyContents.innerHTML = `<p><strong>Room:</strong> ${roomName}</p><div>${lobbyText}</div>`;
+
+    const lobbyStatus = document.getElementById("lobbyStatus");
+    if (lobbyStatus) {
+        lobbyStatus.textContent = isSessionHost
+            ? "You are hosting. Create the first team to begin."
+            : "Waiting for the host to start the game.";
+    }
+
+    const startButton = document.getElementById("startButton");
+    if (startButton) {
+        startButton.classList.toggle("hidden", !isSessionHost);
+    }
+}
+
 function handleSessionMessage(message) {
 
     if (message.type === "connected") {
 
         setConnectionStatus(`Connected. Room ${sessionJoinCode || ""}`);
         setRoomDisplay(`Room code: ${sessionJoinCode || "connected"}`);
+        renderLobbyState(message);
+        showScreen("lobbyScreen");
 
         if (!isSessionHost) {
             updatePlayerView(message.state);
-            showScreen("playerScreen");
         }
 
         return;
 
     }
 
-    if (message.type === "state" && !isSessionHost) {
+    if (message.type === "state") {
 
-        updatePlayerView(message.state);
+        renderLobbyState(message);
+
+        if (!isSessionHost) {
+            updatePlayerView(message.state);
+        }
 
         return;
 
@@ -299,6 +332,16 @@ async function createHostedSession() {
 
 }
 
+async function getSessionByCode(joinCode) {
+    const response = await fetch(`${BACKEND_URL}/api/sessions/${encodeURIComponent(joinCode)}`);
+
+    if (!response.ok) {
+        throw new Error("That join code was not found.");
+    }
+
+    return response.json();
+}
+
 async function joinHostedSession() {
 
     const joinCode = document.getElementById("joinCode").value.trim().toUpperCase();
@@ -306,6 +349,19 @@ async function joinHostedSession() {
 
     if (!joinCode) {
         setConnectionStatus("Enter a join code first.");
+        return;
+    }
+
+    if (!name || name.trim().length < 1) {
+        setConnectionStatus("Enter a name before joining a room.");
+        return;
+    }
+
+    const session = await getSessionByCode(joinCode);
+    const existingNames = new Set((session.participants || []).map(participant => participant.name.toLowerCase()));
+
+    if (existingNames.has(name.trim().toLowerCase())) {
+        setConnectionStatus("That name is already in use in this room.");
         return;
     }
 
@@ -348,7 +404,7 @@ fetch("songs.json")
 
     });
 
-
+showScreen("entryScreen");
 
 // Screen controls
 
@@ -356,64 +412,42 @@ function showScreen(screenID) {
 
     const titleArea = document.getElementById("titleArea");
 
-    if (screenID === "setupScreen") {
-
-    titleArea.classList.remove("hidden");
-
+    if (screenID === "entryScreen") {
+        titleArea.classList.remove("hidden");
+    } else {
+        titleArea.classList.add("hidden");
     }
-    else {
-        
-    titleArea.classList.add("hidden");
-    } 
-   
-   
-    document
-        .getElementById("setupScreen")
-        .classList
-        .add("hidden");
 
-    document
-        .getElementById("turnScreen")
-        .classList
-        .add("hidden");
+    [
+        "entryScreen",
+        "lobbyScreen",
+        "teamSetupScreen",
+        "setupScreen",
+        "turnScreen",
+        "songScreen",
+        "scoringScreen",
+        "gameOverScreen",
+        "playerScreen"
+    ].forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.classList.toggle("hidden", id !== screenID);
+        }
+    });
 
-    document
-        .getElementById("songScreen")
-        .classList
-        .add("hidden");
-
-    document
-        .getElementById("scoringScreen")
-        .classList
-        .add("hidden");
-
-    document
-        .getElementById("gameOverScreen")
-        .classList
-        .add("hidden");
-
-    document
-        .getElementById("playerScreen")
-        .classList
-        .add("hidden");
-
-            const scoreboard = document.getElementById("scoreboard");
-
-            if (screenID === "setupScreen" || screenID === "gameOverScreen" || screenID === "playerScreen") {
-
-            scoreboard.classList.add("hidden");
-
-        }   else {
-
-            scoreboard.classList.remove("hidden");
+    const scoreboard = document.getElementById("scoreboard");
+    if (scoreboard) {
+        const shouldShowScoreboard = ["turnScreen", "songScreen", "scoringScreen"].includes(screenID);
+        scoreboard.classList.toggle("hidden", !shouldShowScoreboard);
+    }
 
 }
 
-    document
-        .getElementById(screenID)
-        .classList
-        .remove("hidden");
-
+function toggleJoinMode() {
+    const joinCodeRow = document.getElementById("joinCodeRow");
+    if (joinCodeRow) {
+        joinCodeRow.classList.toggle("hidden");
+    }
 }
 
 function revealNextSong() {
@@ -934,36 +968,41 @@ function showCurrentTeam() {
 //================================================
 
 document
-    .getElementById("startButton")
+    .getElementById("hostButton")
     .addEventListener("click", async function () {
 
+        const name = document.getElementById("playerName").value.trim();
+
+        if (!name) {
+            setConnectionStatus("Enter a name before hosting a game.");
+            return;
+        }
+
         try {
-
-            if (!isSessionHost) {
-                await createHostedSession();
-            }
-
-            numberOfTeams = Number(document.getElementById("teamSelect").value);
-            totalRounds = Number(document.getElementById("roundSelect").value);
-            selectedDecade = document.getElementById("decadeSelect").value;
-            selectedDifficulty = document.getElementById("difficultySelect").value;
-
-            buildDeck();
-            createTeams();
-            currentRound = 1;
-            currentTeamIndex = 0;
-
-            sendHostState("playing");
-            showCurrentTeam();
-
-        } catch (error) {
+            await createHostedSession();
+            showScreen("lobbyScreen");
+        }
+        catch (error) {
             setConnectionStatus(error.message);
         }
     });
 
 document
+    .getElementById("joinModeButton")
+    .addEventListener("click", function () {
+        toggleJoinMode();
+    });
+
+document
     .getElementById("joinButton")
     .addEventListener("click", async function () {
+
+        const name = document.getElementById("playerName").value.trim();
+
+        if (!name) {
+            setConnectionStatus("Enter a name before joining a game.");
+            return;
+        }
 
         try {
             await joinHostedSession();
@@ -971,7 +1010,12 @@ document
         catch (error) {
             setConnectionStatus(error.message);
         }
+    });
 
+document
+    .getElementById("startButton")
+    .addEventListener("click", function () {
+        setConnectionStatus("The host can start the game once lobby rules are implemented.");
     });
 
 // Reveal song
