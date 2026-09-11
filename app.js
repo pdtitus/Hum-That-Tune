@@ -75,6 +75,9 @@ let timeRemaining = 0;
 let teams = [];
 
 let currentTeamIndex = 0;
+let currentTurnSequence = [];
+let currentTurnIndex = 0;
+let activePlayerName = null;
 
 //================================================
 // MULTIPLAYER CONNECTION
@@ -82,7 +85,7 @@ let currentTeamIndex = 0;
 
 const BACKEND_URL = window.location.hostname === "localhost"
     ? "http://localhost:3000"
-    : "https://backtrack-session-host-5uxukeuzmq-ue.a.run.app";
+    : "https://backtrack-session-host-811982598457.us-east1.run.app";
 
 let sessionSocket = null;
 let sessionToken = null;
@@ -202,6 +205,52 @@ function getCurrentPlayerName() {
     return document.getElementById("playerName")?.value.trim() || "Player";
 }
 
+function buildTurnSequenceForTeams(teamList, roundNumber = currentRound || 1) {
+    const eligibleTeams = Array.isArray(teamList)
+        ? teamList.filter(team => Array.isArray(team.members) && team.members.length > 0)
+        : [];
+
+    if (!eligibleTeams.length) {
+        return [];
+    }
+
+    const teamOrder = eligibleTeams.map(team => ({
+        teamName: team.name,
+        members: Array.isArray(team.members) ? team.members.filter(member => typeof member === "string" && member.trim()) : []
+    }));
+
+    const sequence = [];
+    for (const team of teamOrder) {
+        for (let playerIndex = 0; playerIndex < team.members.length; playerIndex++) {
+            const member = team.members[playerIndex];
+            if (!member) {
+                continue;
+            }
+
+            sequence.push({
+                roundNumber,
+                teamName: team.teamName,
+                playerName: member,
+                turnIndex: sequence.length
+            });
+        }
+    }
+
+    return sequence;
+}
+
+function getActiveTurn() {
+    if (Array.isArray(currentTurnSequence) && currentTurnSequence.length > 0) {
+        return currentTurnSequence[currentTurnIndex % currentTurnSequence.length] || currentTurnSequence[0];
+    }
+
+    return {
+        teamName: teams[currentTeamIndex]?.name || "Team",
+        playerName: activePlayerName || null,
+        roundNumber: currentRound
+    };
+}
+
 function getDefaultTeamOptions() {
     return [];
 }
@@ -239,6 +288,16 @@ function getSelectedSongOptionsFromUI() {
     });
 
     return state;
+}
+
+function resetTeamMatrixSelection() {
+    document.querySelectorAll(".difficulty-option").forEach(button => {
+        button.classList.remove("selected");
+    });
+
+    document.querySelectorAll(".category-option").forEach(button => {
+        button.classList.remove("selected");
+    });
 }
 
 function setSelectedSongOptionsInUI(options) {
@@ -299,6 +358,12 @@ function renderTeamList(message) {
         const members = Array.isArray(team.members) ? team.members : [];
         const isOwner = team.owner === currentPlayer;
         const isMember = members.includes(currentPlayer);
+        const alreadyOnAnotherTeam = teams.some(candidate => candidate !== team && Array.isArray(candidate.members) && candidate.members.includes(currentPlayer));
+        const canJoin = true;
+        const canLeave = isMember;
+        const canEdit = isOwner;
+        const canDelete = isOwner;
+        const joinLabel = isMember ? (alreadyOnAnotherTeam ? "Join Team" : "Joined") : "Join Team";
         const optionsText = (team.songOptions && team.songOptions.length)
             ? team.songOptions.join(", ")
             : "No song selections";
@@ -310,10 +375,10 @@ function renderTeamList(message) {
                 <div>Members: ${members.length ? members.join(", ") : "No players yet"}</div>
                 <div>Song options: ${optionsText}</div>
                 <div class="team-item-actions">
-                    ${!isOwner ? `<button type="button" data-team-action="join" data-team-name="${team.name}">${isMember ? "Joined" : "Join Team"}</button>` : ""}
-                    ${isMember ? `<button type="button" data-team-action="leave" data-team-name="${team.name}">Leave Team</button>` : ""}
-                    ${isOwner ? `<button type="button" data-team-action="edit" data-team-name="${team.name}">Edit Team</button>` : ""}
-                    ${isOwner ? `<button type="button" data-team-action="delete" data-team-name="${team.name}">Delete Team</button>` : ""}
+                    ${canJoin ? `<button type="button" data-team-action="join" data-team-name="${team.name}">${joinLabel}</button>` : ""}
+                    ${canLeave ? `<button type="button" data-team-action="leave" data-team-name="${team.name}">Leave Team</button>` : ""}
+                    ${canEdit ? `<button type="button" data-team-action="edit" data-team-name="${team.name}">Edit Team</button>` : ""}
+                    ${canDelete ? `<button type="button" data-team-action="delete" data-team-name="${team.name}">Delete Team</button>` : ""}
                 </div>
             </div>
         `;
@@ -353,7 +418,7 @@ function renderLobbyState(message) {
 
     const teamBuilder = document.getElementById("teamBuilder");
     if (teamBuilder) {
-        teamBuilder.classList.toggle("hidden", !isSessionHost);
+        teamBuilder.classList.toggle("hidden", false);
     }
 
     const startButton = document.getElementById("startButton");
@@ -605,8 +670,8 @@ function toggleJoinMode() {
 }
 
 function createHostTeam() {
-    if (!isSessionHost || !sessionSocket) {
-        setConnectionStatus("Only the host can create a team.");
+    if (!sessionSocket) {
+        setConnectionStatus("Connect to the room before creating a team.");
         return;
     }
 
@@ -673,6 +738,7 @@ function createHostTeam() {
     if (teamNameInput) {
         teamNameInput.value = "";
     }
+    resetTeamMatrixSelection();
     setSelectedSongOptionsInUI([]);
     const button = document.getElementById("createTeamButton");
     if (button) {
@@ -710,6 +776,11 @@ function modifyCurrentTeamMembership(teamName, action) {
     const target = nextTeams[targetIndex];
 
     if (action === "join") {
+        const alreadyOnAnyTeam = nextTeams.some(team => team.name !== teamName && team.members.includes(currentPlayer));
+        if (alreadyOnAnyTeam) {
+            setConnectionStatus("Warning: you are already on another team. Joining this team is allowed, but you may want to leave the other team first.");
+        }
+
         if (!target.members.includes(currentPlayer)) {
             target.members.push(currentPlayer);
         }
@@ -750,6 +821,7 @@ function prepareTeamEdit(teamName) {
     if (teamNameInput) {
         teamNameInput.value = teamName;
     }
+    resetTeamMatrixSelection();
     setSelectedSongOptionsInUI(team.songOptions || []);
 
     const button = document.getElementById("createTeamButton");
@@ -801,7 +873,11 @@ function startGameFromLobby() {
         return;
     }
 
-    const cleanedTeams = teams.filter(team => Array.isArray(team.members) && team.members.length > 0);
+    const cleanedTeams = teams.filter(team => Array.isArray(team.members) && team.members.length > 0).map(team => ({
+        ...team,
+        score: Number.isFinite(team.score) ? team.score : 0,
+        passesRemaining: Number.isFinite(team.passesRemaining) ? team.passesRemaining : 2
+    }));
 
     const nextState = {
         ...currentState,
@@ -820,6 +896,9 @@ function startGameFromLobby() {
 
     currentRound = 1;
     currentTeamIndex = 0;
+    currentTurnSequence = buildTurnSequenceForTeams(cleanedTeams, currentRound);
+    currentTurnIndex = 0;
+    activePlayerName = currentTurnSequence[0]?.playerName || null;
     showScreen("playerScreen");
     setConnectionStatus("Game started. Round 1.");
 }
@@ -1294,46 +1373,35 @@ else {
 // Show team screen
 
 function showCurrentTeam() {
-
-    let team = teams[currentTeamIndex];
-
-
-        if (SETUP.gameMode === "party") {
-
-        document
-            .getElementById("teamTurn")
-            .textContent =
-            "PARTY MODE";
-
-        }
-        else {
-
-        document
-            .getElementById("teamTurn")
-            .textContent =
-            team.name + "'S TURN";
-
-        }
-
-    document
-        .getElementById("passesRemaining")
-        .textContent =
-        teams[currentTeamIndex].passesRemaining;
-
-        const passButton = document.getElementById("passButton");
-
-    if (team.passesRemaining === 0) {
-
-        passButton.classList.add("pass-disabled");
-
-    } else {
-
-        passButton.classList.remove("pass-disabled");
-
+    const activeTurn = getActiveTurn();
+    const teamIndex = teams.findIndex(team => team.name === activeTurn.teamName);
+    if (teamIndex >= 0) {
+        currentTeamIndex = teamIndex;
     }
 
-    showScreen("turnScreen");
+    const team = teams[currentTeamIndex];
+    if (!team) {
+        return;
+    }
 
+    if (SETUP && SETUP.gameMode === "party") {
+        document.getElementById("teamTurn").textContent = "PARTY MODE";
+    } else {
+        const displayName = activeTurn.playerName ? `${team.name} — ${activeTurn.playerName}'s turn` : `${team.name}'S TURN`;
+        document.getElementById("teamTurn").textContent = displayName;
+    }
+
+    document.getElementById("passesRemaining").textContent = team.passesRemaining ?? 0;
+
+    const passButton = document.getElementById("passButton");
+    if ((team.passesRemaining ?? 0) === 0) {
+        passButton.classList.add("pass-disabled");
+    } else {
+        passButton.classList.remove("pass-disabled");
+    }
+
+    activePlayerName = activeTurn.playerName || activePlayerName;
+    showScreen("turnScreen");
 }
 
 
@@ -1449,6 +1517,8 @@ function bindTeamMatrixControls() {
             button.classList.toggle("selected", shouldSelect);
         });
     });
+
+    resetTeamMatrixSelection();
 }
 
 bindTeamMatrixControls();
@@ -1829,31 +1899,39 @@ function updateNextButtonLabel() {
 document
     .getElementById("nextButton")
     .addEventListener("click", function () {
-
-        // Award points to the team that just played
-        teams[currentTeamIndex].score += roundScore;
-
-        // Move to the next team
-        currentTeamIndex++;
-
-        // If all teams have played, move to the next round
-        if (currentTeamIndex >= teams.length) {
-
-            currentTeamIndex = 0;
-            currentRound++;
-
+        const currentTeam = teams[currentTeamIndex];
+        if (currentTeam) {
+            currentTeam.score = (Number(currentTeam.score) || 0) + (Number(roundScore) || 0);
         }
 
-        // Update the scoreboard
+        currentTurnIndex += 1;
+        if (currentTurnIndex >= currentTurnSequence.length) {
+            currentTurnIndex = 0;
+            currentRound += 1;
+            currentTurnSequence = buildTurnSequenceForTeams(teams, currentRound);
+        }
+
+        if (!currentTurnSequence.length) {
+            currentTurnSequence = buildTurnSequenceForTeams(teams, currentRound);
+        }
+
+        const activeTurn = getActiveTurn();
+        if (activeTurn && activeTurn.teamName) {
+            const nextTeamIndex = teams.findIndex(team => team.name === activeTurn.teamName);
+            if (nextTeamIndex >= 0) {
+                currentTeamIndex = nextTeamIndex;
+            }
+        }
+
         updateScoreboard();
 
-        // If all rounds are complete, end the game
         if (currentRound > totalRounds) {
             sendHostState("complete");
             showGameOver();
             return;
         }
 
+        activePlayerName = getActiveTurn().playerName || activePlayerName;
         sendHostState("playing");
         showCurrentTeam();
 
