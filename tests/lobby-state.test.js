@@ -4,7 +4,9 @@ const assert = require('node:assert/strict');
 const {
   normalizeLobbyTeams,
   getTeamActionState,
-  applyTeamMembershipChange
+  applyTeamMembershipChange,
+  getRoomPhase,
+  isActivePlayerView
 } = require('../lobby-state.js');
 const { buildRoundTurnSequence } = require('../turn-engine.js');
 
@@ -97,4 +99,23 @@ test('round rotation gives each player at least one turn before the round ends',
   assert.equal(sequence[0].teamName, 'Team A');
   assert.equal(sequence[1].playerName, 'Bob');
   assert.equal(sequence[3].teamName, 'Team B');
+});
+
+test('playing state moves clients out of the lobby and into active gameplay', () => {
+  assert.equal(getRoomPhase({ status: 'lobby' }), 'lobby');
+  assert.equal(getRoomPhase({ status: 'playing' }), 'game');
+  assert.equal(getRoomPhase({ status: 'complete' }), 'game');
+});
+
+test('only the active player sees the private song state while everyone else stays in shared view', () => {
+  const state = {
+    status: 'playing',
+    activePlayerName: 'Alice',
+    currentRound: 1,
+    teams: [{ name: 'Team A', members: ['Alice', 'Bob'], score: 0 }]
+  };
+
+  assert.equal(isActivePlayerView(state, 'Alice'), true);
+  assert.equal(isActivePlayerView(state, 'Bob'), false);
+  assert.equal(isActivePlayerView({ status: 'lobby' }, 'Bob'), false);
 });

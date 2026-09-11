@@ -68,8 +68,39 @@ function applyTeamMembershipChange(state, teamName, playerName, action) {
   };
 }
 
+function getRoomPhase(state) {
+  if (!state || typeof state !== 'object') {
+    return 'lobby';
+  }
+
+  if (state.status === 'playing' || state.status === 'complete') {
+    return 'game';
+  }
+
+  return 'lobby';
+}
+
+function isGameInProgress(state) {
+  return getRoomPhase(state) === 'game';
+}
+
+function isActivePlayerView(state, playerName) {
+  if (!state || !state.status || state.status === 'lobby') {
+    return false;
+  }
+
+  if (!state.activePlayerName || typeof playerName !== 'string') {
+    return false;
+  }
+
+  return state.activePlayerName.trim() === playerName.trim();
+}
+
 module.exports = {
   normalizeLobbyTeams,
   getTeamActionState,
-  applyTeamMembershipChange
+  applyTeamMembershipChange,
+  getRoomPhase,
+  isGameInProgress,
+  isActivePlayerView
 };

@@ -144,7 +144,8 @@ function sendHostState(status = "playing") {
         teams,
         currentRound,
         currentTeamIndex,
-        totalRounds
+        totalRounds,
+        activePlayerName: activePlayerName || getActiveTurn().playerName || null
     };
 
     if (sessionSocket.readyState !== WebSocket.OPEN) {
@@ -181,11 +182,23 @@ function updatePlayerView(state) {
         .getElementById("playerRoundDisplay")
         .textContent = `Round ${state.currentRound} of ${state.totalRounds}`;
 
+    const localName = getCurrentPlayerName();
+    const activePlayerName = state.activePlayerName || getActiveTurn().playerName || null;
+    const isActivePlayer = !!activePlayerName && localName.trim() === activePlayerName.trim();
+
+    if (state.status === "complete") {
+        document.getElementById("playerGameStatus").textContent = "Game complete.";
+        return;
+    }
+
+    if (isActivePlayer) {
+        document.getElementById("playerGameStatus").textContent = `It is your turn. Keep the song private.`;
+        return;
+    }
+
     document
         .getElementById("playerGameStatus")
-        .textContent = state.status === "complete"
-            ? "Game complete."
-            : `Team ${state.currentTeamIndex + 1} is playing.`;
+        .textContent = `Team ${state.currentTeamIndex + 1} is playing. ${activePlayerName ? `${activePlayerName} is active.` : "Waiting for the next turn."}`;
 
 }
 
@@ -433,15 +446,31 @@ function handleSessionMessage(message) {
         sessionSocket.lastState = message.state;
     }
 
+    const state = message && message.state ? message.state : null;
+    const phase = state ? (state.status === "playing" || state.status === "complete" ? "game" : "lobby") : "lobby";
+
     if (message.type === "connected") {
 
         setConnectionStatus(`Connected. Room ${sessionJoinCode || ""}`);
         setRoomDisplay(`Room code: ${sessionJoinCode || "connected"}`);
+
+        if (phase === "game") {
+            const localName = getCurrentPlayerName();
+            const isActivePlayer = !!state.activePlayerName && localName.trim() === state.activePlayerName.trim();
+            if (isActivePlayer) {
+                showScreen("songScreen");
+            } else {
+                showScreen("playerScreen");
+            }
+            updatePlayerView(state);
+            return;
+        }
+
         renderLobbyState(message);
         showScreen("lobbyScreen");
 
         if (!isSessionHost) {
-            updatePlayerView(message.state);
+            updatePlayerView(state);
         }
 
         return;
@@ -450,10 +479,22 @@ function handleSessionMessage(message) {
 
     if (message.type === "state") {
 
+        if (phase === "game") {
+            const localName = getCurrentPlayerName();
+            const isActivePlayer = !!state.activePlayerName && localName.trim() === state.activePlayerName.trim();
+            if (isActivePlayer) {
+                showScreen("songScreen");
+            } else {
+                showScreen("playerScreen");
+            }
+            updatePlayerView(state);
+            return;
+        }
+
         renderLobbyState(message);
 
         if (!isSessionHost) {
-            updatePlayerView(message.state);
+            updatePlayerView(state);
         }
 
         return;
@@ -885,7 +926,8 @@ function startGameFromLobby() {
         currentRound: 1,
         currentTeamIndex: 0,
         totalRounds: currentState.totalRounds || 10,
-        teams: cleanedTeams
+        teams: cleanedTeams,
+        activePlayerName: currentTurnSequence[0]?.playerName || null
     };
 
     sessionSocket.lastState = nextState;
@@ -1926,6 +1968,7 @@ document
         updateScoreboard();
 
         if (currentRound > totalRounds) {
+            activePlayerName = null;
             sendHostState("complete");
             showGameOver();
             return;
