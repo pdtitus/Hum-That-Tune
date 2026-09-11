@@ -234,6 +234,11 @@ function handleJoinSession(identifier, request, response) {
         return;
     }
 
+    if (session.state && ["ready", "playing", "complete"].includes(session.state.status)) {
+        json(response, 403, { error: "This room is no longer accepting new players." });
+        return;
+    }
+
     readJson(request)
         .then(payload => {
             const token = createId(24);
@@ -374,12 +379,41 @@ webSocketServer.on("connection", socket => {
         }
 
         if (message.type === "state.replace") {
+            const nextState = message.state === undefined ? {} : message.state;
+
+            if (message.scope === "team") {
+                if (!nextState || !Array.isArray(nextState.teams)) {
+                    send(socket, { type: "error", error: "Team updates require a teams array." });
+                    return;
+                }
+
+                const sanitizedTeams = nextState.teams.map(team => ({
+                    name: typeof team.name === "string" ? team.name.slice(0, 40) : "Team",
+                    owner: typeof team.owner === "string" ? team.owner.slice(0, 80) : "Host",
+                    members: Array.isArray(team.members) ? team.members.filter(member => typeof member === "string").slice(0, 12) : [],
+                    songOptions: Array.isArray(team.songOptions) ? team.songOptions.filter(option => typeof option === "string").slice(0, 24) : []
+                }));
+
+                session.state = {
+                    ...session.state,
+                    ...nextState,
+                    teams: sanitizedTeams
+                };
+
+                if (session.state.status === "playing") {
+                    session.state.teams = sanitizedTeams.filter(team => Array.isArray(team.members) && team.members.length > 0);
+                }
+
+                broadcastSnapshot(session);
+                return;
+            }
+
             if (!participant.isHost) {
                 send(socket, { type: "error", error: "Only the host may replace session state." });
                 return;
             }
 
-            session.state = message.state === undefined ? {} : message.state;
+            session.state = nextState;
             broadcastSnapshot(session);
             return;
         }

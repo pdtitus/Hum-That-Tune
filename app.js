@@ -89,6 +89,7 @@ let sessionToken = null;
 let sessionJoinCode = null;
 let isSessionHost = false;
 let pendingHostState = null;
+let editingTeamName = null;
 
 function setConnectionStatus(message) {
 
@@ -185,12 +186,54 @@ function updatePlayerView(state) {
 
 }
 
+const TEAM_OPTIONS = [
+    "70s",
+    "80s",
+    "90s",
+    "2000-2015",
+    "50's and 60's Classics",
+    "Great American Songbook",
+    "Broadway"
+];
+
+function getCurrentPlayerName() {
+    return document.getElementById("playerName")?.value.trim() || "Player";
+}
+
+function getDefaultTeamOptions() {
+    return TEAM_OPTIONS.slice();
+}
+
+function normalizeTeamOptions(options) {
+    if (!Array.isArray(options)) {
+        return getDefaultTeamOptions();
+    }
+
+    return [...new Set(options.filter(option => TEAM_OPTIONS.includes(option)))];
+}
+
 function getLobbyTeamsFromState(state) {
     if (!state || !Array.isArray(state.teams)) {
         return [];
     }
 
-    return state.teams;
+    return state.teams.map(team => ({
+        name: typeof team.name === "string" ? team.name : "Team",
+        owner: typeof team.owner === "string" ? team.owner : "Host",
+        members: Array.isArray(team.members) ? team.members.filter(member => typeof member === "string") : [],
+        songOptions: normalizeTeamOptions(team.songOptions)
+    }));
+}
+
+function getSelectedSongOptionsFromUI() {
+    return [...document.querySelectorAll('input[name="teamSongOption"]:checked')].map(input => input.value);
+}
+
+function setSelectedSongOptionsInUI(options) {
+    const selected = new Set(options || []);
+    document.querySelectorAll('input[name="teamSongOption"]').forEach(input => {
+        input.checked = selected.has(input.value);
+    });
 }
 
 function renderTeamList(message) {
@@ -199,19 +242,38 @@ function renderTeamList(message) {
         return;
     }
 
-    const teams = getLobbyTeamsFromState(message && message.state ? message.state : { teams: [] });
+    const state = message && message.state ? message.state : { teams: [] };
+    const teams = getLobbyTeamsFromState(state);
 
     if (!teams.length) {
         teamList.innerHTML = "<div class=\"team-item\">No teams yet.</div>";
         return;
     }
 
-    teamList.innerHTML = teams.map(team => `
-        <div class="team-item">
-            <strong>${team.name}</strong>
-            ${team.owner ? ` — ${team.owner}` : ""}
-        </div>
-    `).join("");
+    const currentPlayer = getCurrentPlayerName();
+
+    teamList.innerHTML = teams.map(team => {
+        const members = Array.isArray(team.members) ? team.members : [];
+        const isOwner = team.owner === currentPlayer;
+        const isMember = members.includes(currentPlayer);
+        const optionsText = (team.songOptions && team.songOptions.length)
+            ? team.songOptions.join(", ")
+            : "No song selections";
+
+        return `
+            <div class="team-item">
+                <strong>${team.name}</strong>
+                ${team.owner ? ` — ${team.owner}` : ""}
+                <div>Members: ${members.length ? members.join(", ") : "No players yet"}</div>
+                <div>Song options: ${optionsText}</div>
+                <div class="team-item-actions">
+                    ${!isOwner ? `<button type="button" data-team-action="join" data-team-name="${team.name}">${isMember ? "Joined" : "Join Team"}</button>` : ""}
+                    ${isMember ? `<button type="button" data-team-action="leave" data-team-name="${team.name}">Leave Team</button>` : ""}
+                    ${isOwner ? `<button type="button" data-team-action="edit" data-team-name="${team.name}">Edit Team</button>` : ""}
+                </div>
+            </div>
+        `;
+    }).join("");
 }
 
 function renderLobbyState(message) {
@@ -504,69 +566,171 @@ function createHostTeam() {
         return;
     }
 
+    const currentState = sessionSocket.lastState || { status: "lobby", teams: [] };
+
+    if (currentState.status !== "lobby") {
+        setConnectionStatus("The lobby is closed. The game has already started.");
+        return;
+    }
+
     const teamNameInput = document.getElementById("teamNameInput");
     const teamName = teamNameInput ? teamNameInput.value.trim() : "";
+    const songOptions = normalizeTeamOptions(getSelectedSongOptionsFromUI());
 
     if (!teamName) {
         setConnectionStatus("Enter a team name before creating a team.");
         return;
     }
 
-    const currentState = sessionSocket.readyState === WebSocket.OPEN
-        ? (sessionSocket.lastState || { status: "lobby", teams: [] })
-        : { status: "lobby", teams: [] };
-
     const teams = Array.isArray(currentState.teams) ? currentState.teams : [];
     const normalizedName = teamName.slice(0, 40);
 
-    if (teams.some(team => team.name.toLowerCase() === normalizedName.toLowerCase())) {
+    const existingIndex = teams.findIndex(team => team.name.toLowerCase() === normalizedName.toLowerCase());
+    if (existingIndex >= 0 && editingTeamName !== normalizedName) {
         setConnectionStatus("That team name is already in use.");
         return;
+    }
+
+    const updatedTeams = [...teams];
+    const ownerName = getCurrentPlayerName();
+
+    if (editingTeamName && existingIndex >= 0) {
+        updatedTeams[existingIndex] = {
+            ...updatedTeams[existingIndex],
+            name: normalizedName,
+            owner: ownerName,
+            songOptions
+        };
+    } else {
+        updatedTeams.push({
+            name: normalizedName,
+            owner: ownerName,
+            members: [ownerName],
+            songOptions
+        });
     }
 
     const nextState = {
         ...currentState,
         status: "lobby",
-        teams: [
-            ...teams,
-            {
-                name: normalizedName,
-                owner: document.getElementById("playerName")?.value.trim() || "Host"
-            }
-        ]
+        teams: updatedTeams
     };
 
     sessionSocket.lastState = nextState;
     sessionSocket.send(JSON.stringify({
         type: "state.replace",
+        scope: "team",
         state: nextState
     }));
 
     if (teamNameInput) {
         teamNameInput.value = "";
     }
+    setSelectedSongOptionsInUI([]);
+    editingTeamName = null;
+    const button = document.getElementById("createTeamButton");
+    if (button) {
+        button.textContent = "CREATE TEAM";
+    }
 
-    setConnectionStatus("Team created.");
+    setConnectionStatus(editingTeamName ? "Team updated." : "Team created.");
 }
 
-function readyLobbyForGame() {
+function modifyCurrentTeamMembership(teamName, action) {
+    if (!sessionSocket || !sessionSocket.lastState) {
+        return;
+    }
+
+    const currentState = sessionSocket.lastState;
+    if (currentState.status !== "lobby") {
+        setConnectionStatus("The lobby is closed.");
+        return;
+    }
+
+    const currentPlayer = getCurrentPlayerName();
+    const teams = getLobbyTeamsFromState(currentState);
+    const targetIndex = teams.findIndex(team => team.name === teamName);
+
+    if (targetIndex < 0) {
+        return;
+    }
+
+    const nextTeams = teams.map(team => ({ ...team, members: Array.isArray(team.members) ? team.members.slice() : [] }));
+    const target = nextTeams[targetIndex];
+
+action === "join" ? target.members.push(currentPlayer) : target.members = target.members.filter(member => member !== currentPlayer);
+
+    if (action === "leave" && target.owner === currentPlayer && target.members.length === 0) {
+        nextTeams.splice(targetIndex, 1);
+    }
+
+    if (action === "join" && !target.members.includes(currentPlayer)) {
+        target.members.push(currentPlayer);
+    }
+
+    const nextState = {
+        ...currentState,
+        teams: nextTeams
+    };
+
+    sessionSocket.lastState = nextState;
+    sessionSocket.send(JSON.stringify({
+        type: "state.replace",
+        scope: "team",
+        state: nextState
+    }));
+}
+
+function prepareTeamEdit(teamName) {
+    const currentState = sessionSocket?.lastState || { teams: [] };
+    const teams = getLobbyTeamsFromState(currentState);
+    const team = teams.find(item => item.name === teamName);
+
+    if (!team) {
+        return;
+    }
+
+    editingTeamName = teamName;
+    const teamNameInput = document.getElementById("teamNameInput");
+    if (teamNameInput) {
+        teamNameInput.value = teamName;
+    }
+    setSelectedSongOptionsInUI(team.songOptions || []);
+
+    const button = document.getElementById("createTeamButton");
+    if (button) {
+        button.textContent = "SAVE TEAM";
+    }
+}
+
+function startGameFromLobby() {
     if (!isSessionHost || !sessionSocket) {
-        setConnectionStatus("Only the host can mark the lobby ready.");
+        setConnectionStatus("Only the host can start the game.");
         return;
     }
 
     const currentState = sessionSocket.lastState || { status: "lobby", teams: [] };
     const teams = Array.isArray(currentState.teams) ? currentState.teams : [];
 
+    if (currentState.status !== "lobby") {
+        setConnectionStatus("The room is already in progress.");
+        return;
+    }
+
     if (!teams.length) {
         setConnectionStatus("Create at least one team before the lobby is ready.");
         return;
     }
 
+    const cleanedTeams = teams.filter(team => Array.isArray(team.members) && team.members.length > 0);
+
     const nextState = {
         ...currentState,
-        status: "ready",
-        teams
+        status: "playing",
+        currentRound: 1,
+        currentTeamIndex: 0,
+        totalRounds: currentState.totalRounds || 10,
+        teams: cleanedTeams
     };
 
     sessionSocket.lastState = nextState;
@@ -575,7 +739,10 @@ function readyLobbyForGame() {
         state: nextState
     }));
 
-    setConnectionStatus("Lobby ready.");
+    currentRound = 1;
+    currentTeamIndex = 0;
+    showScreen("playerScreen");
+    setConnectionStatus("Game started. Round 1.");
 }
 
 function revealNextSong() {
@@ -1144,10 +1311,32 @@ document
     .getElementById("createTeamButton")
     .addEventListener("click", createHostTeam);
 
+document.getElementById("teamList").addEventListener("click", function (event) {
+    const actionButton = event.target.closest("[data-team-action]");
+    if (!actionButton) {
+        return;
+    }
+
+    const action = actionButton.dataset.teamAction;
+    const teamName = actionButton.dataset.teamName;
+
+    if (action === "join") {
+        modifyCurrentTeamMembership(teamName, "join");
+    }
+
+    if (action === "leave") {
+        modifyCurrentTeamMembership(teamName, "leave");
+    }
+
+    if (action === "edit") {
+        prepareTeamEdit(teamName);
+    }
+});
+
 document
     .getElementById("startButton")
     .addEventListener("click", function () {
-        readyLobbyForGame();
+        startGameFromLobby();
     });
 
 // Reveal song
