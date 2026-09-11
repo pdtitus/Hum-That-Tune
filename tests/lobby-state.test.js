@@ -102,6 +102,27 @@ test('round rotation gives each player at least one turn before the round ends',
   assert.equal(sequence[3].teamName, 'Team B');
 });
 
+test('single-team round sequence includes both players before the round rotates', () => {
+  const teams = [
+    { name: 'Team A', members: ['Alice', 'Bob'] }
+  ];
+
+  const sequence = buildRoundTurnSequence(teams, 1);
+
+  assert.deepEqual(sequence.map(turn => `${turn.teamName}:${turn.playerName}`), ['Team A:Alice', 'Team A:Bob']);
+});
+
+test('two-team round sequence includes both players from team 2 in the same round', () => {
+  const teams = [
+    { name: 'Team A', members: ['Alice'] },
+    { name: 'Team B', members: ['Bob', 'Cara'] }
+  ];
+
+  const sequence = buildRoundTurnSequence(teams, 1);
+
+  assert.deepEqual(sequence.map(turn => `${turn.teamName}:${turn.playerName}`), ['Team A:Alice', 'Team B:Bob', 'Team B:Cara']);
+});
+
 test('playing state moves clients out of the lobby and into active gameplay', () => {
   assert.equal(getRoomPhase({ status: 'lobby' }), 'lobby');
   assert.equal(getRoomPhase({ status: 'playing' }), 'game');

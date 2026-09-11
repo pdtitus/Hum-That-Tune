@@ -239,23 +239,18 @@ function buildTurnSequenceForTeams(teamList, roundNumber = currentRound || 1) {
         return [];
     }
 
-    const teamOrder = eligibleTeams.map(team => ({
-        teamName: team.name,
-        members: Array.isArray(team.members) ? team.members.filter(member => typeof member === "string" && member.trim()) : []
-    }));
-
     const sequence = [];
-    for (const team of teamOrder) {
-        for (let playerIndex = 0; playerIndex < team.members.length; playerIndex++) {
-            const member = team.members[playerIndex];
-            if (!member) {
-                continue;
-            }
 
+    for (const team of eligibleTeams) {
+        const members = Array.isArray(team.members)
+            ? team.members.filter(member => typeof member === "string" && member.trim())
+            : [];
+
+        for (const member of members) {
             sequence.push({
                 roundNumber,
-                teamName: team.teamName,
-                playerName: member,
+                teamName: team.name,
+                playerName: member.trim(),
                 turnIndex: sequence.length
             });
         }
@@ -496,6 +491,49 @@ function renderLobbyState(message) {
     }
 }
 
+function applyIncomingGameState(state) {
+    if (!state || typeof state !== "object") {
+        return;
+    }
+
+    if (Array.isArray(state.teams)) {
+        teams = state.teams.map(team => ({
+            ...team,
+            name: typeof team.name === "string" ? team.name : "Team",
+            owner: typeof team.owner === "string" ? team.owner : "Host",
+            members: Array.isArray(team.members)
+                ? team.members.filter(member => typeof member === "string" && member.trim())
+                : [],
+            score: Number.isFinite(team.score) ? Number(team.score) : 0,
+            passesRemaining: Number.isFinite(team.passesRemaining) ? Number(team.passesRemaining) : 2,
+            songOptions: normalizeTeamOptions(team.songOptions)
+        }));
+
+        teamDecks = teams.map(team => buildDeckForTeam(team));
+        currentTurnSequence = buildTurnSequenceForTeams(teams, currentRound);
+    }
+
+    if (Number.isInteger(state.currentRound)) {
+        currentRound = state.currentRound;
+    }
+
+    if (Number.isInteger(state.totalRounds)) {
+        totalRounds = state.totalRounds;
+    }
+
+    if (Number.isInteger(state.currentTeamIndex)) {
+        currentTeamIndex = state.currentTeamIndex;
+    }
+
+    if (typeof state.activePlayerName === "string") {
+        activePlayerName = state.activePlayerName;
+    }
+
+    if (Array.isArray(teams) && teams.length) {
+        currentTurnSequence = buildTurnSequenceForTeams(teams, currentRound);
+    }
+}
+
 function handleSessionMessage(message) {
 
     if (sessionSocket && message && message.state) {
@@ -503,6 +541,10 @@ function handleSessionMessage(message) {
     }
 
     const state = message && message.state ? message.state : null;
+    if (state) {
+        applyIncomingGameState(state);
+    }
+
     const phase = state ? (state.status === "playing" || state.status === "complete" ? "game" : "lobby") : "lobby";
 
     if (message.type === "connected") {

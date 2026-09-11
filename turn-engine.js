@@ -7,34 +7,21 @@ function buildRoundTurnSequence(teams, roundNumber = 1) {
     return [];
   }
 
-  const teamOrder = eligibleTeams.map(team => ({
-    teamName: team.name,
-    members: team.members.filter(member => typeof member === 'string' && member.trim())
-  }));
-
   const sequence = [];
-  const maxMemberCount = Math.max(...teamOrder.map(team => team.members.length), 1);
 
-  for (const team of teamOrder) {
-    for (let playerIndex = 0; playerIndex < team.members.length; playerIndex++) {
-      const member = team.members[playerIndex];
+  for (const team of eligibleTeams) {
+    const members = Array.isArray(team.members)
+      ? team.members.filter(member => typeof member === 'string' && member.trim())
+      : [];
 
-      if (!member) {
-        continue;
-      }
-
+    for (const member of members) {
       sequence.push({
         roundNumber,
-        teamName: team.teamName,
-        playerName: member,
+        teamName: team.name,
+        playerName: member.trim(),
         turnIndex: sequence.length
       });
     }
-  }
-
-  const teamCount = teamOrder.length;
-  if (teamCount > 1 && sequence.length < maxMemberCount * teamCount) {
-    return buildRoundTurnSequence(teamOrder.map(team => ({ ...team, members: team.members.slice(0, maxMemberCount) })), roundNumber);
   }
 
   return sequence;
