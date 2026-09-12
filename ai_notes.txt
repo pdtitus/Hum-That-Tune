@@ -1,150 +1,101 @@
 BackTrack / Hum-That-Tune session notes
 ========================================
 
-Date: 2026-09-06
-Branch: ntitus/testing_branching
-Latest pushed commit before this session: b035658 (Document and configure cloud deployment)
+Date: 2026-09-11
+Branch: feature/ntitus/backending
+Current focus: round transitions, pass action UI, and team rotation logic fixes.
 
 Project and hosting
 -------------------
 - Google/Firebase project ID: project-f993fbd8-b0ef-4f03-a6b
 - Google account used: nathantitus01@gmail.com
-- Firestore database: titus-game-server-storage-1, us-east1, STANDARD, Firestore Native
 - Firebase Hosting URL: https://project-f993fbd8-b0ef-4f03-a6b.web.app
 - Cloud Run service: backtrack-session-host
-- Cloud Run URL used by the frontend: https://backtrack-session-host-5uxukeuzmq-ue.a.run.app
-- Cloud Run region: us-east1, min instances 0, max instances 1
-- Current ready revision after CORS fix: backtrack-session-host-00002-cwc
-- The Firebase project has no registered Firebase web app. This has not blocked static Hosting or backend tests.
+- Cloud Run URL used by the frontend: https://backtrack-session-host-811982598457.us-east1.run.app
+- Cloud Run region: us-east1
+- Current live deployment is up and reachable after the room/session and turn-flow fixes.
 
 Architecture
 ------------
-- server.js is intentionally game-agnostic. It hosts sessions, participant tokens, opaque state, and WebSocket event routing.
-- The browser frontend owns BackTrack game semantics.
-- Current backend sessions are in memory only. A Cloud Run restart loses active games.
-- Firestore exists but is not yet used by server.js as a persistence adapter.
-- The existing server protocol is documented in SERVER_PROTOCOL.md.
+- server.js is intentionally generic and session-oriented; it owns the room, participant tokens, WebSocket routing, and state snapshots.
+- app.js owns BackTrack rules and UI behavior, including team membership, active-turn sequencing, deck creation, song reveal, timer logic, scoring, and turn progression.
+- teamDecks are built from each team's selected song options and should remain team-specific.
+- currentTurnSequence is the authoritative order for the current round. It must follow the actual player list for each team and must not be regenerated mid-round in a way that advances players incorrectly.
+- activePlayerName and currentTeamIndex must stay synchronized with the current turn, or the game looks like it advanced while the UI remains on the wrong player/team.
+- currentSong is intentionally hidden from the public view except for the active player; the rest of the room stays in a shared spectator state.
 
-What was implemented
---------------------
-- Added generic Node/WebSocket session host with:
-  - POST /api/sessions
-  - POST /api/sessions/:id-or-code/participants
-  - GET /api/sessions/:id-or-code
-  - GET /health
-  - WebSocket /ws/:id-or-code?token=TOKEN
-- Added Dockerfile, .dockerignore, firebase.json, and CLOUD_DEPLOYMENT_SETUP.md.
-- Added BackTrack frontend integration in app.js:
-  - host creates a Cloud Run session when starting a game
-  - player joins using a room code and name
-  - WebSocket connects to the Cloud Run service
-  - public team/round/score state is sent with host-only state.replace
-  - current song details remain local to the host browser
-  - read-only player screen shows synchronized public state
-- Added multiplayer fields and room-code UI to index.html and style.css.
-- Added persistent room banner outside the setup panel because the setup panel is hidden after the host starts the game.
-- Added CORS handling in server.js for:
-  - https://project-f993fbd8-b0ef-4f03-a6b.web.app
-  - http://localhost:5500
-  - http://localhost:3000
-  - configurable ALLOWED_ORIGINS environment variable
-- CORS preflight and browser-origin POST session creation were tested against Cloud Run.
+State and flow currently known
+------------------------------
+- Lobby creation and room join are working.
+- Host and players can connect to the same room and the host can start a match.
+- The active-player start screen and song reveal screen are present.
+- Round progression, pass handling, and team rotation are still the primary unresolved gameplay issues.
+- The current app does not yet guarantee that the correct sequence is followed in all multi-player scenarios.
 
-Deployment history and fixes
-----------------------------
-- Firebase CLI was authenticated through npx.
-- Google Cloud CLI was installed at $HOME/.local/google-cloud-sdk because system installation was unavailable.
-- Billing was initially linked but the billing account was closed. It was opened before deployment could complete.
-- Cloud Run source deployment initially failed because the Compute Engine service account could not read the temporary source bucket. roles/storage.objectViewer was granted on the source bucket.
-- The Compute service account also received roles/artifactregistry.writer, roles/logging.logWriter, and roles/serviceusage.serviceUsageConsumer.
-- Cloud Run deployment then succeeded.
-- Firebase Hosting was deployed repeatedly as frontend changes were made.
-- The frontend originally failed to create sessions with browser error "Failed to fetch". Root cause was missing CORS/preflight handling, now fixed and redeployed.
-- A prior room-code bug occurred because the code was displayed inside setupScreen, which disappears after starting. A persistent room banner now fixes this.
+Known game-flow bugs (current priority)
+----------------------------------------
+1) Round transition / active-player handoff bug
+- In multi-player scenarios, the next turn is not always assigned to the correct player after a song is scored or passed.
+- There are reports that the host did not advance correctly into round 2 when the round reached its end.
+- There are reports that a second player played twice while the original active player never got a second turn in the same round.
+- Relevant code: app.js -> getActiveTurn(), syncActiveTurnState(), nextButton click handler, startGameFromLobby(), showActivePlayerStartScreen().
+- Expected behavior: every player in the current round should be assigned one turn before the round rotates. The next round should begin with the first player in the turn sequence again, not with a skipped or duplicated player.
 
-Latest known user test result
------------------------------
-- User confirmed that host and player could connect the games.
-- User then reported that the room code was not visible after the host started. The persistent room banner was added and deployed.
-- User is pausing because there are still plenty of issues. Do not assume the full game flow is correct yet.
+2) Team rotation logic bug
+- In a two-team / two-player scenario, the second team should begin after the first turn is completed and should not have both players play for both teams in the same round.
+- The current logic is allowing players from the second team to be treated as if they were playing for the first team or as if the sequence was being rebuilt incorrectly mid-round.
+- Relevant code: app.js -> buildTurnSequenceForTeams(), getActiveTurn(), currentTurnIndex behavior, nextButton click handler.
+- Expected behavior: sequence generation should follow a stable team/player ordering for the round; a player's team must remain tied to the same team until the round sequence moves past that team’s players.
 
-Likely next debugging session
------------------------------
-1. Test two real browser windows from the current Hosting URL after a hard refresh.
-2. Confirm host sees the room banner after CREATE ROOM AND START GAME.
-3. Confirm player can join with the displayed code.
-4. Test whether round changes, pass usage, scores, and game-over state stay synchronized.
-5. Check reconnect behavior and stale/duplicate sessions.
-6. Decide whether the host-only local game model is sufficient or whether server events must own more game transitions.
-7. Add Firestore persistence only after the multiplayer protocol and state ownership are stable.
-8. Review security: participant roles are currently client-identified, sessions are public by token/code, and state is memory-only.
+3) Pass action UI / state bug
+- Team passes are currently not behaving as a visible round resource and the UI does not clearly communicate the pass allowance to each team.
+- The game should give each team 2 passes per round.
+- The pass button should visibly show remaining passes and disable itself when the team is out of passes.
+- Relevant code: app.js -> showCurrentTeam(), passButton handler, team state initialization, resetRoundPasses().
+- Expected behavior: each team starts every round with 2 passes, the UI updates the pass count immediately, and the button disables at zero, with no ability to continue pass-spamming after depletion.
+
+4) Song-selection mismatch for non-host players
+- In the multiplayer tests, non-host players are sometimes shown songs that do not match the current team selection deck.
+- This likely means the deck is being rebuilt or re-synced from stale team data after the lobby/state update.
+- Relevant code: app.js -> buildDeckForTeam(), applyIncomingGameState(), teamDecks assignment, revealNextSong().
+- Expected behavior: each team's deck should be derived only from that team's selected options and remain stable for the duration of the turn until a new round or team assignment resets it.
+
+5) Current loss of round-state continuity
+- The app is still missing a clear and trustworthy round progression model that handles team rotation, pass resets, and next-player transitions in a single place.
+- The current implementation has too much logic spread across UI handlers and state recalculations.
+- Relevant code: app.js -> nextButton handler, startActiveTurn(), showActivePlayerStartScreen(), getActiveTurn(), updatePlayerView().
+- Expected behavior: all round transitions should use the same canonical turn sequence and the same round reset rules, regardless of which screen or client is preparing the next state.
 
 Important implementation details
 --------------------------------
-- app.js uses BACKEND_URL. For localhost it uses http://localhost:3000; otherwise it uses the deployed Cloud Run URL above.
-- Host sends sanitized state with: status, teams, currentRound, currentTeamIndex, totalRounds.
-- currentSong is intentionally not included in public state.
-- The frontend is deployed, but the current working tree has frontend and backend changes that must be committed.
-- Do not stage project.txt unless explicitly requested; it is an untracked project-ID attachment and has intentionally remained outside commits.
-- Current expected uncommitted application files: app.js, index.html, server.js, style.css, plus this ai_notes.txt.
+- app.js uses BACKEND_URL. For localhost it uses http://localhost:3000; otherwise it uses the deployed Cloud Run URL.
+- Host sends session state updates with status, teams, currentRound, currentTeamIndex, totalRounds, and activePlayerName.
+- The active player's song view is intentionally private; everyone else remains in a shared spectator view.
+- Team-specific song options are normalized with helper functions like normalizeTeamOptions() and buildDeckForTeam().
+- The pass rule is per team, not per player.
+- A team gets 2 passes each round; passes reset at the start of a new round.
 
-Current unresolved issues and next-session context
-------------------------------------------------
-Date: 2026-09-11
-Branch: ntitus/testing_branching
+Testing focus for next session
+-----------------------------
+1. Validate exact turn order for the one-team-two-player scenario.
+2. Validate exact turn order for the two-team-two-player scenario where Team 2 has both players.
+3. Confirm the host advances into round 2 correctly and that original player order is preserved across rounds.
+4. Verify that the pass button is visible and decrements properly per team, with the button disabling at zero.
+5. Confirm the deck shown to the active player matches the active team’s selected options rather than a stale or global deck.
+6. Confirm the active player view resets correctly when moving from one player to the next.
 
-1) Host team join/rejoin bug
-- In the lobby team list, the host is currently treated as owner-only and does not get a visible "Join Team" button for teams he is not already in.
-- This means if the host leaves a team, he has no way to rejoin it from the UI.
-- Relevant code: app.js -> renderTeamList(), modifyCurrentTeamMembership(), prepareTeamEdit(), createHostTeam().
-- Expected behavior: the host should be able to join a visible team in the lobby, even if he is not the owner, and should not be blocked from rejoining after leaving.
+Shutdown note
+-------------
+- The live app should be stopped when not actively being tested to avoid unnecessary billing on the Cloud Run service and other persistent cloud resources.
+- The shutdown script is the authoritative way to tear down costly live resources after active validation is complete.
+- This repository currently contains the deployment and runtime scripts needed to perform the shutdown and redeploy process.
 
-2) Non-host players cannot create teams
-- The lobby currently hides the team builder for non-host players in renderLobbyState():
-  - "teamBuilder.classList.toggle('hidden', !isSessionHost);"
-- That prevents regular players from creating teams even though they should be allowed to participate in team formation.
-- Relevant code: app.js -> renderLobbyState(), teamBuilder UI in index.html.
-- Expected behavior: all players should be able to create and manage their own teams in the lobby; only the host should be allowed to press the start button and transition the room into the active game state.
+Current next implementation plan
+------------------------------
+1. Fix the canonical turn-sequence model and ensure it is used by all progression handlers.
+2. Make pass count visible and enforced in the UI for the active team.
+3. Reconcile the team rotation logic so both same-team and cross-team multi-player cases behave correctly.
+4. Validate song decks against the active team's selections before and after the timer runs out.
+5. Re-test the full round progression again after each change.
 
-3) Team matrix reset bug
-- When a team is created, the song/genre difficulty matrix toggles every button, but the UI should reset to all-off before the next team creation/edit flow.
-- Current symptom: the selected state persists in a way that appears to toggle all options unexpectedly rather than resetting to default empty.
-- Relevant code: app.js -> getSelectedSongOptionsFromUI(), setSelectedSongOptionsInUI(), bindTeamMatrixControls(), createHostTeam().
-- Expected behavior: after a team is created or saved, the matrix should return to a clean default state with all category/difficulty buttons unselected until the next interaction.
-
-4) Non-host players remain in lobby after host starts
-- The current app allows the host to start the game, but non-host participants remain in the lobby state instead of being transitioned with the room into the gameplay state.
-- This looks like a deferred issue tied to the later round-turn implementation, not something to solve in the current lobby patch.
-- Relevant code: app.js -> startGameFromLobby(), handleSessionMessage(), session state handling in server.js.
-- Expected behavior: once the host starts the game, all remaining participants should be included in the active game state model as the game enters round 1; this will likely be handled when the round/turn engine is implemented.
-
-Quick reference for the next coding pass
---------------------------------------
-- Frontend state and UI: app.js
-  - renderLobbyState()
-  - renderTeamList()
-  - createHostTeam()
-  - modifyCurrentTeamMembership()
-  - prepareTeamEdit()
-  - deleteTeam()
-  - bindTeamMatrixControls()
-  - startGameFromLobby()
-- UI shell: index.html
-  - #teamBuilder
-  - #teamList
-  - #startButton
-  - #joinCode and room display
-- Backend state rules: server.js
-  - state.replace handling for team scope
-  - session.status transitions
-  - room lock / lobby vs playing behavior
-
-Suggested next implementation plan for next session
----------------------------------------------------
-1. Re-enable team creation for non-host players while keeping host-only game start.
-2. Fix the team-list action model so Join / Leave / Rejoin works consistently for the host and all participants.
-3. Reset the team matrix to empty defaults after each create/update action.
-4. Implement the real game-state transition so players are moved out of the lobby when the host starts.
-5. Only after that, add the round-turn engine and the host-assigned gameplay sequence.
-
-This note intentionally records the current blocker states so the next AI session can resume without re-deriving the core issue set.
+This note captures the current state after the deployment, turn-flow debugging, and pass/rotation fixes so the next session can resume without re-deriving the active issue list.
