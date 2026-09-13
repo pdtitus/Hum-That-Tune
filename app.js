@@ -23,7 +23,9 @@ const CONFIG = {
 
     timerOptions: [15, 30, 45, 60],
 
-    passesPerTenRounds: 2
+    passesPerRound: 20,
+
+    passesPerTurn: 2
 
 };
 
@@ -57,7 +59,7 @@ let selectedDecade = "mixed";
 
 let selectedDifficulty = "Mixed";
 
-let totalRounds = 5;
+let totalRounds = 3;
 
 let currentRound = 1;
 
@@ -190,7 +192,7 @@ function updatePlayerView(state) {
         : "Current team";
 
     if (state.status === "complete") {
-        document.getElementById("playerGameStatus").textContent = "Game complete.";
+        document.getElementById("playerGameStatus").textContent = "Game complete. Wooho";
         return;
     }
 
@@ -214,18 +216,6 @@ function updatePlayerView(state) {
 
 }
 
-const TEAM_OPTIONS = [
-    "70s",
-    "80s",
-    "90s",
-    "2000-2015",
-    "50's and 60's Classics",
-    "Great American Songbook",
-    "Broadway"
-];
-
-const TEAM_DIFFICULTIES = ["Easy", "Medium", "Hard"];
-
 function getCurrentPlayerName() {
     return document.getElementById("playerName")?.value.trim() || "Player";
 }
@@ -241,19 +231,30 @@ function buildTurnSequenceForTeams(teamList, roundNumber = currentRound || 1) {
 
     const sequence = [];
 
-    for (const team of eligibleTeams) {
-        const members = Array.isArray(team.members)
-            ? team.members.filter(member => typeof member === "string" && member.trim())
-            : [];
+    memberIndex = 0;
+    sequenceNotComplete = true;
 
-        for (const member of members) {
-            sequence.push({
-                roundNumber,
-                teamName: team.name,
-                playerName: member.trim(),
-                turnIndex: sequence.length
-            });
+    while (sequenceNotComplete) {
+        sequenceNotComplete = false;
+
+        for (const team of eligibleTeams) {
+            const members = Array.isArray(team.members)
+                ? team.members.filter(member => typeof member === "string" && member.trim())
+                : [];
+
+            if (members.length > memberIndex) {
+                sequenceNotComplete = true;
+
+                sequence.push({
+                    roundNumber,
+                    teamName: team.name,
+                    playerName: members[memberIndex].trim(),
+                    turnIndex: sequence.length
+                });
+            }
         }
+
+        memberIndex++;
     }
 
     return sequence;
@@ -582,6 +583,9 @@ function handleSessionMessage(message) {
                 } else {
                     showActivePlayerStartScreen();
                 }
+            } else if (state.status === "complete") {
+                showGameOver();
+                return;
             } else {
                 showScreen("playerScreen");
             }
@@ -604,7 +608,10 @@ function handleSessionMessage(message) {
             const localName = getCurrentPlayerName();
             const isActive = state && typeof state.activePlayerName === "string" && localName.trim() === state.activePlayerName.trim();
 
-            if (isActive) {
+            if (state.status === "complete") {
+                showGameOver();
+                return;
+            } else if (isActive) {
                 if (state.currentSong) {
                     showScreen("songScreen");
                 } else {
@@ -1064,7 +1071,7 @@ function startGameFromLobby() {
         status: "playing",
         currentRound: 1,
         currentTeamIndex,
-        totalRounds: currentState.totalRounds || 10,
+        totalRounds: currentState.totalRounds || totalRounds,
         teams: cleanedTeams,
         activePlayerName: activePlayerName || null
     };
@@ -1080,186 +1087,125 @@ function startGameFromLobby() {
 }
 
 function revealNextSong() {
-
-    const currentDeck =
-        teamDecks[currentTeamIndex];
-
-
+    // Load the song deck for the current team, check if songs left
+    const currentDeck = teamDecks[currentTeamIndex];
     if (!currentDeck || currentDeck.length === 0) {
-
         alert(
             "No songs left for " +
             teams[currentTeamIndex].name +
             "!"
         );
-
         return;
-
     }
 
-
     // Find the next song that has not been used this game
-
-    while (
-        currentDeck.length > 0 &&
-        usedSongs.has(currentDeck[currentDeck.length - 1])
-    ) {
-
+    while (currentDeck.length > 0 && usedSongs.has(currentDeck[currentDeck.length - 1])) {
         currentDeck.pop();
-
     }
 
     if (currentDeck.length === 0) {
-
-    alert(
-        "No unused songs left for " +
-        teams[currentTeamIndex].name +
-        "!"
-    );
-
-    return;
-
+        alert(
+            "No unused songs left for " +
+            teams[currentTeamIndex].name +
+            "!"
+        );
+        return;
     }
 
-    currentSong =
-        currentDeck.pop();
+    currentSong = currentDeck.pop();
 
     usedSongs.add(currentSong);
 
-        roundScore = 0;
+    roundScore = 0;
 
-        titleAwarded = false;
-        artistAwarded = false;
-        thirdAwarded = false;
+    titleAwarded = false;
+    artistAwarded = false;
+    thirdAwarded = false;
 
-        document
-            .getElementById("roundScore")
-            .textContent = roundScore;
+    document
+        .getElementById("roundScore")
+        .textContent = roundScore;
 
+    document
+        .getElementById("songTitle")
+        .textContent =
+        currentSong.title;
 
-        document
-            .getElementById("songTitle")
-            .textContent =
-            currentSong.title;
+    //================================================
+    // DYNAMIC SONG DETAILS
+    //================================================
+    const artistDetail = document.getElementById("artistDetail");
+    const yearDetail = document.getElementById("yearDetail");
+    const difficultyDetail = document.getElementById("difficultyDetail");
 
-
-        //================================================
-// DYNAMIC SONG DETAILS
-//================================================
-
-const artistDetail =
-    document.getElementById("artistDetail");
-
-const yearDetail =
-    document.getElementById("yearDetail");
-
-const difficultyDetail =
-    document.getElementById("difficultyDetail");
-
-
-// Reset the detail labels/values
-
-artistDetail.innerHTML = `
-    Artist:
-    <span id="artist"></span>
-`;
-
-yearDetail.innerHTML = `
-    Year:
-    <span id="year"></span>
-`;
-
-difficultyDetail.innerHTML = `
-    Difficulty:
-    <span id="difficulty"></span>
-`;
-
-
-// Regular songs and 50s/60s Classics
-
-if (
-    !currentSong.category ||
-    currentSong.category === "50's and 60's Classics"
-) {
-
-    document.getElementById("artist").textContent =
-        currentSong.artist;
-
-    document.getElementById("year").textContent =
-        currentSong.year;
-
-}
-
-
-// Great American Songbook
-
-else if (
-    currentSong.category === "Great American Songbook"
-) {
-
+    // Reset the detail labels/values
     artistDetail.innerHTML = `
-        Composer / Lyricist:
-        <span>
-            ${currentSong.composer || ""}
-        </span>
+        Artist:
+        <span id="artist"></span>
     `;
-
     yearDetail.innerHTML = `
-        Decade:
-        <span>
-            ${currentSong.date || ""}
-        </span>
+        Year:
+        <span id="year"></span>
+    `;
+    difficultyDetail.innerHTML = `
+        Difficulty:
+        <span id="difficulty"></span>
     `;
 
-}
-
-
-// Broadway
-
-else if (
-    currentSong.category === "Broadway"
-) {
-
-    artistDetail.innerHTML = `
-        Show:
-        <span>
-            ${currentSong.show || ""}
-        </span>
-    `;
-
-    yearDetail.innerHTML = "";
-
-}
-
-
-// Difficulty
-
-if (currentSong.decade === "Old Classics") {
-
-    difficultyDetail.innerHTML = "";
-
-}
-else {
-
-    document.getElementById("difficulty").textContent =
-        currentSong.difficulty;
-
-}
-
-        startTimer();
-        showScreen("songScreen");
-
-
-    };
-
-    function goToScoringScreen() {
-        clearInterval(timerInterval);
-        setupScoringScreen();
-        updateNextButtonLabel();
-        showScreen("scoringScreen");
+    // Regular songs and 50s/60s Classics
+    if (!currentSong.category || currentSong.category === "50's and 60's Classics") {
+        document.getElementById("artist").textContent =
+            currentSong.artist;
+        document.getElementById("year").textContent =
+            currentSong.year;
+    }
+    // Great American Songbook
+    else if (currentSong.category === "Great American Songbook") {
+        artistDetail.innerHTML = `
+            Composer / Lyricist:
+            <span>
+                ${currentSong.composer || ""}
+            </span>
+        `;
+        yearDetail.innerHTML = `
+            Decade:
+            <span>
+                ${currentSong.date || ""}
+            </span>
+        `;
+    }
+    // Broadway
+    else if (currentSong.category === "Broadway") {
+        artistDetail.innerHTML = `
+            Show:
+            <span>
+                ${currentSong.show || ""}
+            </span>
+        `;
+        yearDetail.innerHTML = "";
     }
 
-    function startTimer() {
+    // Difficulty
+    if (currentSong.decade === "Old Classics") {
+        difficultyDetail.innerHTML = "";
+    }
+    else {
+        document.getElementById("difficulty").textContent =
+            currentSong.difficulty;
+    }
+
+    startTimer();
+    //showScreen("songScreen");
+}
+
+function goToScoringScreen() {
+    clearInterval(timerInterval);
+    setupScoringScreen();
+    updateNextButtonLabel();
+    showScreen("scoringScreen");
+}
+
+function startTimer() {
 
     // Stop any previous timer
     clearInterval(timerInterval);
@@ -1280,30 +1226,27 @@ else {
             .textContent = timeRemaining;
 
 
-if (timeRemaining <= 0) {
+        if (timeRemaining <= 0) {
 
-    clearInterval(timerInterval);
+            clearInterval(timerInterval);
 
-    timeRemaining = 0;
+            timeRemaining = 0;
 
-    document
-        .getElementById("timerDisplay")
-        .textContent = "0";
+            document
+                .getElementById("timerDisplay")
+                .textContent = "0";
 
-    document
-        .getElementById("buzzerSound")
-        .play();
+            document
+                .getElementById("buzzerSound")
+                .play();
 
-    goToScoringScreen();
-    return;
+            goToScoringScreen();
+            return;
 
-}
-
+        }
     }, 1000);
 
 }
-
-
 
 //================================================
 // GAME FUNCTIONS
@@ -1407,7 +1350,6 @@ function buildAllTeamDecks() {
 
 
 // Shuffle function
-
 function shuffle(array) {
 
     for (
@@ -1508,23 +1450,23 @@ function showGameOver() {
         .textContent =
         "FINAL SCORE";
 
-}
-else if (winners.length === 1) {
+    }
+    else if (winners.length === 1) {
 
     document
         .getElementById("winnerDisplay")
         .textContent =
         winners[0].name + " WINS!";
 
-}
-else {
+    }
+    else {
 
     document
         .getElementById("winnerDisplay")
         .textContent =
         "IT'S A TIE!";
 
-}
+    }
 
     let html = "";
 
@@ -1547,10 +1489,7 @@ else {
 
 }
 
-
-
 // Show team screen
-
 function showCurrentTeam() {
     const activeTurn = getActiveTurn();
     const teamIndex = teams.findIndex(team => team.name === activeTurn.teamName);
@@ -1615,6 +1554,13 @@ function startActiveTurn() {
     if (!Array.isArray(teamDecks[currentTeamIndex]) || teamDecks[currentTeamIndex].length === 0) {
         teamDecks[currentTeamIndex] = buildDeckForTeam(teams[currentTeamIndex]);
     }
+
+    // Reset passes for the current team at the start of their turn
+    const team = teams[currentTeamIndex];
+    team.passesRemaining = CONFIG.passesPerTurn;
+    document.getElementById("passesRemaining").textContent = team.passesRemaining;
+    const passButton = document.getElementById("passButton");
+    passButton.classList.remove("pass-disabled");
 
     clearInterval(timerInterval);
     timeRemaining = selectedTimer;
@@ -1769,7 +1715,6 @@ document
             passButton.classList.remove("pass-disabled");
         }
 
-        sendHostState("playing");
         revealNextSong();
     });
 
