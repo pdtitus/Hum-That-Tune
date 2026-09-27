@@ -99,3 +99,12 @@ Current next implementation plan
 5. Re-test the full round progression again after each change.
 
 This note captures the current state after the deployment, turn-flow debugging, and pass/rotation fixes so the next session can resume without re-deriving the active issue list.
+
+Game ending prematurely maybe after 1 teams turns are up
+Non-private mode testing or cookies resetting
+rejoin game with same name after started
+oldies are failing
+toggle easy/med/hard
+shuffle libraries (maybe)
+scoring screen contain song information to help scoring
+sizing styling

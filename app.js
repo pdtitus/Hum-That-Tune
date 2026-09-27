@@ -137,7 +137,7 @@ function getSocketUrl(path) {
 
 function sendHostState(status = "playing") {
 
-    if (!isSessionHost || !sessionSocket) {
+    if (!sessionSocket) {
         return;
     }
 
@@ -146,6 +146,7 @@ function sendHostState(status = "playing") {
         teams,
         currentRound,
         currentTeamIndex,
+        currentTurnIndex,
         totalRounds,
         activePlayerName: activePlayerName || getActiveTurn().playerName || null
     };
@@ -262,7 +263,7 @@ function buildTurnSequenceForTeams(teamList, roundNumber = currentRound || 1) {
 
 function getActiveTurn() {
     if (Array.isArray(currentTurnSequence) && currentTurnSequence.length > 0) {
-        return currentTurnSequence[currentTurnIndex % currentTurnSequence.length] || currentTurnSequence[0];
+        return currentTurnSequence[currentTurnIndex];
     }
 
     return {
@@ -532,7 +533,6 @@ function applyIncomingGameState(state) {
         }));
 
         teamDecks = teams.map(team => buildDeckForTeam(team));
-        currentTurnSequence = buildTurnSequenceForTeams(teams, currentRound);
     }
 
     if (Number.isInteger(state.currentRound)) {
@@ -545,6 +545,10 @@ function applyIncomingGameState(state) {
 
     if (Number.isInteger(state.currentTeamIndex)) {
         currentTeamIndex = state.currentTeamIndex;
+    }
+
+    if (Number.isInteger(state.currentTurnIndex)) {
+        currentTurnIndex = state.currentTurnIndex;
     }
 
     if (typeof state.activePlayerName === "string") {
@@ -1071,6 +1075,7 @@ function startGameFromLobby() {
         status: "playing",
         currentRound: 1,
         currentTeamIndex,
+        currentTurnIndex,
         totalRounds: currentState.totalRounds || totalRounds,
         teams: cleanedTeams,
         activePlayerName: activePlayerName || null
@@ -1664,7 +1669,7 @@ function bindTeamMatrixControls() {
             const categoryButton = document.querySelector(`.category-option[data-category="${category}"]`);
             if (categoryButton) {
                 const rowButtons = document.querySelectorAll(`.difficulty-option[data-category="${category}"]`);
-                const isSelected = Array.from(rowButtons).some(item => item.classList.contains("selected"));
+                const isSelected = Array.from(rowButtons).every(item => item.classList.contains("selected"));
                 categoryButton.classList.toggle("selected", isSelected);
             }
         });
@@ -2035,22 +2040,14 @@ document
             currentTeam.score = (Number(currentTeam.score) || 0) + (Number(roundScore) || 0);
         }
 
-        if (!currentTurnSequence.length) {
-            currentTurnSequence = buildTurnSequenceForTeams(teams, currentRound);
-        }
-
         const nextTurnIndex = currentTurnIndex + 1;
         if (nextTurnIndex >= currentTurnSequence.length) {
             currentRound += 1;
             currentTurnIndex = 0;
             currentTurnSequence = buildTurnSequenceForTeams(teams, currentRound);
-            resetRoundPasses();
+            //resetRoundPasses();
         } else {
             currentTurnIndex = nextTurnIndex;
-        }
-
-        if (!currentTurnSequence.length) {
-            currentTurnSequence = buildTurnSequenceForTeams(teams, currentRound);
         }
 
         syncActiveTurnState();

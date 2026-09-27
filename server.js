@@ -408,10 +408,10 @@ webSocketServer.on("connection", socket => {
                 return;
             }
 
-            if (!participant.isHost) {
-                send(socket, { type: "error", error: "Only the host may replace session state." });
-                return;
-            }
+            //if (!participant.isHost) {
+            //    send(socket, { type: "error", error: "Only the host may replace session state." });
+            //    return;
+            //}
 
             session.state = nextState;
             broadcastSnapshot(session);
